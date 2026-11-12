@@ -252,3 +252,49 @@ footer {
     height: 70dvh;
   }
 }
+
+#combat {
+  width: min(560px, calc(100vw - 32px));
+  max-height: 85dvh;
+  overflow-y: auto;
+  padding: 28px;
+  border: 1px solid #8b9d78;
+  border-radius: 14px;
+  background: #17272d;
+  color: #e8eadb;
+  box-shadow: 0 24px 80px #0009;
+}
+#combat::backdrop {
+  background: #081215cc;
+}
+#combat-title {
+  font:
+    28px Georgia,
+    serif;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #f1d382;
+}
+#combat p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.combat-stats {
+  padding: 16px;
+  background: #243a40;
+  border-radius: 8px;
+  line-height: 1.8;
+}
+#combat-hand {
+  display: grid;
+  gap: 8px;
+}
+#combat-hand button {
+  text-align: left;
+}
+#resolve-combat {
+  margin-top: 12px;
+  background: #6a562b;
+  width: 100%;
+  padding: 14px;
+}

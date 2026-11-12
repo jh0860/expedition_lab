@@ -46,6 +46,7 @@ export function createGame(options = {}) {
     active: 0,
     round: 1,
     winner: null,
+    encounter: null,
     cleared: [],
     owners: {},
     log: [],
@@ -83,6 +84,11 @@ export function legalActions(s) {
   if (s.winner !== null) return [];
   const p = s.players[s.active],
     actions = [];
+  if (s.encounter) {
+    p.hand.forEach((_, index) => actions.push({ type: "play", index }));
+    actions.push({ type: "resolveCombat" });
+    return actions;
+  }
   if (s.turn.freeExit)
     return s.board.tiles[s.turn.freeExit].vertices
       .filter((v) => !occupied(s, v))
@@ -168,34 +174,45 @@ export function applyAction(state, action) {
           say("used a blazed trail.");
         }
       } else {
-        const power = troops[p.troop].power + s.turn.power,
-          health = troops[p.troop].health;
-        const monster =
-          tile.type === "black"
-            ? { power: 3, health: 6 }
-            : { power: 1, health: 3 };
-        const first = random(s) < 0.5;
-        const strikes = Math.ceil(monster.health / power),
-          hits = Math.ceil(health / monster.power);
-        if (first ? strikes <= hits : strikes < hits) {
-          s.cleared.push(tile.id);
-          p.treasure = Math.min(
-            s.config.carry,
-            p.treasure + (tile.type === "black" ? 5 : 2),
-          );
-          say(`cleared ${tile.type} forest.`);
-        } else {
-          p.position = `t:${p.base}`;
-          p.treasure = 0;
-          say("was defeated and returned home.");
-          return endTurn(s);
-        }
+        s.encounter = {
+          tile: tile.id,
+          name:
+            tile.type === "black"
+              ? "Black Forest guardian"
+              : "Dark Forest guardian",
+          power: tile.type === "black" ? 3 : 1,
+          health: tile.type === "black" ? 6 : 3,
+          speed: 2,
+          loot: tile.type === "black" ? 5 : 2,
+        };
+        say(`encountered ${s.encounter.name}.`);
       }
     }
     if (resources[tile.type] && !p.visited.includes(tile.id)) {
       p.visited.push(tile.id);
       p.discard.push(resources[tile.type]);
       say(`acquired ${cards[resources[tile.type]].name}.`);
+    }
+  }
+  if (action.type === "resolveCombat") {
+    const monster = s.encounter;
+    const tile = s.board.tiles[monster.tile];
+    const power = troops[p.troop].power + s.turn.power;
+    const health = troops[p.troop].health;
+    const first = random(s) < 0.5;
+    const strikes = Math.ceil(monster.health / power);
+    const hits = Math.ceil(health / monster.power);
+    s.encounter = null;
+    say(first ? "attacked first." : "the monster attacked first.");
+    if (first ? strikes <= hits : strikes < hits) {
+      s.cleared.push(tile.id);
+      p.treasure = Math.min(s.config.carry, p.treasure + monster.loot);
+      say(`cleared ${tile.type} forest and recovered to full Health.`);
+    } else {
+      p.position = `t:${p.base}`;
+      p.treasure = 0;
+      say("was defeated and returned home.");
+      return endTurn(s);
     }
   }
   if (action.type === "claim") {
@@ -269,6 +286,7 @@ export function chooseBot(s) {
     const action = actions.find((a) => a.type === type);
     if (action) return action;
   }
+  if (s.encounter) return { type: "resolveCombat" };
   const valuable = [...p.deck, ...p.hand, ...p.discard].some(
     (id) => cards[id].value > 0,
   );

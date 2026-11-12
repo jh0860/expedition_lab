@@ -40,3 +40,7 @@ git push -u origin main
 ```
 
 The site is buildless. Publish the repository root through a static host such as GitHub Pages. Relative URLs also work under a repository subpath. No dependencies need installation to run or test. A `.nojekyll` file is included. Online multiplayer requires additional infrastructure.
+
+## Encounter decision window
+
+Entering an uncleared hazard opens a combat dialog showing the monster, troop stats, reward, and hand. Play cards before pressing Resolve combat. All current cards can be played, including Movement and Focus cards whose bonuses can be used after victory. World actions are locked until combat resolves. The dialog cannot be dismissed to skip the encounter. Cleared forests use the trail rule without opening combat. Pending encounters survive save/load and use the shared bot rules.

@@ -27,3 +27,7 @@ Starting draft and Key Cards, actual resource decks and trailblazer top-three se
 ## Tabled design systems
 
 Multiple troops, roaming monsters, raiding and defenses, Cave/Chest/Artifact, Clock and day/night events, fog of war, and the proposed rival-progress commission bonus.
+
+## Combat preparation window
+
+An uncleared hazard reveals its encounter before initiative is rolled. The player may play any number of cards from hand, then chooses Resolve combat. The fight then resolves automatically. Movement, exit, deposits, purchases, and ending the turn are unavailable during preparation. Escape cannot dismiss the dialog. Power remains active for the turn after victory. There is no mid-attack response window in this implementation.

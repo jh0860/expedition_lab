@@ -74,6 +74,26 @@
         </section>
       </aside>
     </main>
+    <dialog
+      id="combat"
+      aria-labelledby="combat-title"
+      aria-describedby="combat-help"
+    >
+      <h2 id="combat-title">Encounter</h2>
+      <p id="combat-help">
+        Play cards to prepare, then resolve the fight. Power bonuses last for
+        the rest of this turn. Movement and Focus bonuses remain available if
+        you win.
+      </p>
+      <div id="combat-stats" class="combat-stats"></div>
+      <h3>Your hand</h3>
+      <div id="combat-hand"></div>
+      <p id="combat-note">
+        Equal Speed is decided by a coin flip when combat resolves. Defeat
+        returns you home, loses carried treasure, and ends your turn.
+      </p>
+      <button id="resolve-combat" autofocus>Resolve combat</button>
+    </dialog>
     <footer>
       Prototype 0.1 · Pass-and-play · Provisional cards and costs · Target 20
       treasure · Camp takeover 2 carried treasure · Recruitment 3

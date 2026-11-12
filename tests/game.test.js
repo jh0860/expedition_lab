@@ -56,6 +56,7 @@ test("defeat returns the same upgraded troop and loses treasure", () => {
   s.players[0].troop = "scout";
   s.players[0].treasure = 5;
   s = applyAction(s, { type: "enter", tile: tile.id });
+  s = applyAction(s, { type: "resolveCombat" });
   assert.equal(s.active, 1);
   assert.equal(s.players[0].troop, "scout");
   assert.equal(s.players[0].treasure, 0);
@@ -74,4 +75,51 @@ test("a seeded bot game can finish through the public action API", () => {
   for (let i = 0; i < 3000 && s.winner === null; i++)
     s = applyAction(s, chooseBot(s));
   assert.notEqual(s.winner, null);
+});
+
+test("entering a hazard reveals the encounter and locks world actions", () => {
+  let state = createGame();
+  const tile = Object.values(state.board.tiles).find(
+    (tile) => tile.type === "dark",
+  );
+  state.players[0].position = tile.vertices[0];
+  const rng = state.rng;
+  state = applyAction(state, { type: "enter", tile: tile.id });
+  assert.equal(state.encounter.tile, tile.id);
+  assert.equal(state.rng, rng);
+  assert.equal(state.active, 0);
+  assert.ok(
+    legalActions(state).every((action) =>
+      ["play", "resolveCombat"].includes(action.type),
+    ),
+  );
+  assert.throws(() => applyAction(state, { type: "end" }));
+  assert.throws(() =>
+    applyAction(state, { type: "exit", to: tile.vertices[0] }),
+  );
+});
+
+test("cards played in the decision window affect the pending fight", () => {
+  let state = createGame();
+  const tile = Object.values(state.board.tiles).find(
+    (tile) => tile.type === "dark",
+  );
+  state.players[0].position = tile.vertices[0];
+  state.players[0].hand = ["strike", "prepare"];
+  state = applyAction(state, { type: "enter", tile: tile.id });
+  state = applyAction(state, { type: "play", index: 0 });
+  assert.equal(state.turn.power, 2);
+  assert.equal(state.players[0].hand.length, 1);
+  assert.ok(state.encounter);
+  const restored = JSON.parse(JSON.stringify(state));
+  const result = applyAction(state, { type: "resolveCombat" });
+  assert.equal(
+    JSON.stringify(result),
+    JSON.stringify(applyAction(restored, { type: "resolveCombat" })),
+  );
+  assert.equal(result.encounter, null);
+  assert.ok(result.cleared.includes(tile.id));
+  assert.equal(result.active, 0);
+  assert.equal(result.turn.power, 2);
+  assert.equal(result.players[0].treasure, 2);
 });

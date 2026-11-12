@@ -1,5 +1,5 @@
 import { createGame, legalActions, applyAction, chooseBot } from "./game.js";
-import { cards } from "./content.js";
+import { cards, troops } from "./content.js";
 let state = createGame();
 const colors = ["#f0bd62", "#7ac9d6", "#de91b1", "#adce77"];
 const fills = {
@@ -41,6 +41,7 @@ function label(a) {
   return (
     {
       end: "End turn",
+      resolveCombat: "Resolve combat",
       bank: "Bank treasure",
       claim: "Claim Camp",
       buy: "Buy Nature (4)",
@@ -99,6 +100,7 @@ function render() {
       li.textContent = text;
       $("log").append(li);
     });
+  renderCombat();
   const svg = $("board");
   svg.replaceChildren();
   $("destination").textContent =
@@ -251,6 +253,39 @@ function render() {
     });
   });
 }
+function renderCombat() {
+  const dialog = $("combat");
+  if (!state.encounter) {
+    if (dialog.open) dialog.close();
+    return;
+  }
+  const monster = state.encounter;
+  const player = state.players[state.active];
+  const troop = troops[player.troop];
+  $("combat-title").textContent = monster.name;
+  $("combat-stats").textContent =
+    `Your ${player.troop}: ${troop.power + state.turn.power} Power · ${troop.health} Health · 2 Speed. ` +
+    `Monster: ${monster.power} Power · ${monster.health} Health · ${monster.speed} Speed. ` +
+    `Reward: ${monster.loot} treasure (carry limit applies).`;
+  $("combat-hand").replaceChildren();
+  player.hand.forEach((id, index) => {
+    const card = cards[id];
+    const effects = [];
+    if (card.power) effects.push(`+${card.power} Power`);
+    if (card.movement) effects.push(`+${card.movement} Movement`);
+    if (card.focus) effects.push(`+${card.focus} Focus`);
+    button(
+      `Play ${card.name} · ${effects.join(" · ")}`,
+      { type: "play", index },
+      $("combat-hand"),
+    );
+  });
+  if (!player.hand.length)
+    $("combat-hand").textContent = "No cards remaining in hand.";
+  if (!dialog.open) dialog.showModal();
+}
+$("combat").addEventListener("cancel", (event) => event.preventDefault());
+$("resolve-combat").onclick = () => act({ type: "resolveCombat" });
 $("new").onclick = () => {
   state = createGame({
     seed: Number($("seed").value),
