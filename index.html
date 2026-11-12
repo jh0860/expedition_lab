@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Expedition Lab</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <small>BOARD GAME PLAYTEST WORKSPACE</small>
+        <h1>Expedition Lab</h1>
+      </div>
+      <div class="settings">
+        <label>Seed <input id="seed" type="number" value="42" /></label
+        ><label
+          >Players
+          <select id="players">
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select></label
+        ><label
+          >Map
+          <select id="radius">
+            <option value="1">Small test map</option>
+            <option value="3">37 flowers</option>
+          </select></label
+        ><button id="new">New game</button>
+      </div>
+    </header>
+    <main>
+      <section class="map">
+        <div class="toolbar">
+          <span id="status"></span><button id="step">Bot action</button
+          ><button id="turn">Bot turn</button
+          ><button id="save">Save game</button
+          ><label class="file"
+            >Load game<input id="load" type="file" accept="application/json"
+          /></label>
+        </div>
+        <svg id="board" role="group" aria-label="Game board"></svg>
+        <p class="hint">
+          Click a highlighted vertex to move or exit. Click a highlighted tile
+          to enter. All board actions also appear in the action list.
+        </p>
+        <div class="legend">
+          Forest · Dark forest (1★) · Black forest (2★) · Mountain (blocked)<br />Forage
+          → Nature · Guild → Sorcery · Mine → Mine cards · Camp → +1 Focus
+        </div>
+      </section>
+      <aside>
+        <section id="scores"></section>
+        <section>
+          <h2>Current expedition</h2>
+          <div id="details"></div>
+        </section>
+        <section>
+          <h2>Hand</h2>
+          <div id="hand"></div>
+        </section>
+        <section>
+          <h2>Actions</h2>
+          <div id="actions"></div>
+        </section>
+        <section>
+          <h2>Field journal</h2>
+          <ol id="log"></ol>
+        </section>
+      </aside>
+    </main>
+    <footer>
+      Prototype 0.1 · Pass-and-play · Provisional cards and costs · Target 20
+      treasure · Camp takeover 2 carried treasure · Recruitment 3
+    </footer>
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
