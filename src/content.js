@@ -2,7 +2,7 @@
 export const defaults = {
   seed: 42,
   players: 2,
-  radius: 1,
+  radius: 2,
   goal: 20,
   movement: 3,
   focus: 2,

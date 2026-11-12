@@ -35,11 +35,11 @@ export function createGame(options = {}) {
     !Number.isInteger(config.players) ||
     config.players < 2 ||
     config.players > 4 ||
-    ![1, 3].includes(config.radius) ||
+    ![1, 2, 3].includes(config.radius) ||
     !Number.isFinite(config.goal) ||
     config.goal <= 0
   )
-    throw Error("Use 2–4 players, radius 1 or 3, and a positive goal.");
+    throw Error("Use 2–4 players, radius 1, 2 or 3, and a positive goal.");
   const state = {
     config,
     rng: Number(config.seed) >>> 0,

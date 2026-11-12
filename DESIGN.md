@@ -14,7 +14,7 @@ Unique troops replace the active profile. Scout gives +1 Focus. Fighter gives +1
 
 ## Provisional implementation choices
 
-The small test map has seven flowers and the full map has 37. Geometry follows the uploaded HTML's offset basis (-3,1) and (-2,3). Wilderness content distribution is simplified and uses repeated Forage, Camp, Recruit, Guild and Mine flowers rather than the design document's 25-flower draw pool. Mines in the small map permit frontier testing without long journeys.
+The default test map has 19 flowers (133 hexes) and the full map has 37. The former seven-flower size remains supported by the engine for older saves. Geometry follows the uploaded HTML's offset basis (-3,1) and (-2,3). Wilderness content distribution is simplified and uses repeated Forage, Camp, Recruit, Guild and Mine flowers rather than the design document's 25-flower draw pool. Mines in the small map permit frontier testing without long journeys.
 
 The target is 20 treasure for the tiny content set. The design document's provisional 100 remains a later calibration target. Six card definitions are provided. Starting cards are four Stride, three Prepare and three Strike. Each resource has one repeatable card definition. The market offers Nature cards for 4 carried treasure with unlimited stock. Recruitment costs 3 carried treasure and allows Scout/Fighter selection. These prices and selection rules are scaffolding.
 

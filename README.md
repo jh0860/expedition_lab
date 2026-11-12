@@ -10,7 +10,7 @@ Install Node 20.11 or newer, extract this folder, then run these commands from i
 npm start
 ```
 
-Open http://localhost:8080. Browser modules need the local server. Select a seed and map size, then choose New game. Click highlighted vertices to move or exit and highlighted tiles to enter. The sidebar exposes all legal actions as buttons. Play cards for extra actions or turn-long Power. Return inside your own base to bank treasure or deposit resource cards from hand. Bot action advances one decision and Bot turn completes the active player's turn. Save and load use versioned JSON files.
+Open http://localhost:8080. Browser modules need the local server. Select a seed and map size, then choose New game. The default map has 19 flowers. Click enlarged gold vertices to move or exit, and the center marker of a highlighted tile to enter. Hover or keyboard-focus a destination to see a ring, route line, and action cost before clicking. The sidebar exposes all legal actions as buttons. Play cards for extra actions or turn-long Power. Return inside your own base to bank treasure or deposit resource cards from hand. Bot action advances one decision and Bot turn completes the active player's turn. Save and load use versioned JSON files.
 
 ```sh
 npm test

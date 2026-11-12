@@ -24,7 +24,7 @@
         ><label
           >Map
           <select id="radius">
-            <option value="1">Small test map</option>
+            <option value="2">19 flowers (test map)</option>
             <option value="3">37 flowers</option>
           </select></label
         ><button id="new">New game</button>
@@ -41,9 +41,13 @@
           /></label>
         </div>
         <svg id="board" role="group" aria-label="Game board"></svg>
+        <p id="destination" class="destination" aria-live="polite">
+          Hover over a destination to preview your move.
+        </p>
         <p class="hint">
-          Click a highlighted vertex to move or exit. Click a highlighted tile
-          to enter. All board actions also appear in the action list.
+          Click a gold vertex to move or exit. Click the center marker of a
+          highlighted tile to enter. All board actions also appear in the action
+          list.
         </p>
         <div class="legend">
           Forest · Dark forest (1★) · Black forest (2★) · Mountain (blocked)<br />Forage

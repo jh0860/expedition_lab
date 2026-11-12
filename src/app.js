@@ -101,12 +101,14 @@ function render() {
     });
   const svg = $("board");
   svg.replaceChildren();
+  $("destination").textContent =
+    "Hover over a destination to preview your move.";
   const tiles = Object.values(state.board.tiles),
     xs = tiles.map((t) => t.x),
     ys = tiles.map((t) => t.y);
   svg.setAttribute(
     "viewBox",
-    `${Math.min(...xs) - 2} ${Math.min(...ys) - 2} ${Math.max(...xs) - Math.min(...xs) + 4} ${Math.max(...ys) - Math.min(...ys) + 4}`,
+    `${Math.min(...xs) - 1.15} ${Math.min(...ys) - 1.15} ${Math.max(...xs) - Math.min(...xs) + 2.3} ${Math.max(...ys) - Math.min(...ys) + 2.3}`,
   );
   const element = (tag, attrs) => {
     const el = document.createElementNS("http://www.w3.org/2000/svg", tag);
@@ -126,7 +128,7 @@ function render() {
       fill: fills[t.type],
       class: `tile ${a ? "legal" : ""}`,
     });
-    if (a) poly.onclick = () => act(a);
+
     const text = element("text", { x: t.x, y: t.y + 0.08, class: "label" });
     text.textContent = names[t.type];
     if (state.cleared.includes(t.id))
@@ -140,12 +142,101 @@ function render() {
         fill: colors[state.owners[t.id]],
       });
   }
-  for (const a of actions.filter(
-    (a) => a.type === "move" || a.type === "exit",
+  // Only explicit destination targets receive clicks. Tile faces are passive.
+  const preview = element("g", {
+    class: "move-preview",
+    "pointer-events": "none",
+  });
+  function clearPreview() {
+    preview.replaceChildren();
+    $("destination").textContent =
+      "Hover over a destination to preview your move.";
+  }
+  function bindDestination(target, action, destination, description) {
+    target.setAttribute("role", "button");
+    target.setAttribute("tabindex", "0");
+    target.setAttribute("aria-label", description);
+    function showPreview() {
+      clearPreview();
+      const from = p.position.startsWith("t:")
+        ? state.board.tiles[p.position.slice(2)]
+        : state.board.vertices[p.position];
+      const line = element("line", {
+        x1: from.x,
+        y1: from.y,
+        x2: destination.x,
+        y2: destination.y,
+        class: "preview-line",
+      });
+      const ring = element("circle", {
+        cx: destination.x,
+        cy: destination.y,
+        r: 0.32,
+        class: "preview-ring",
+      });
+      preview.append(line, ring);
+      // Keep overlays above the board while allowing targets to receive input.
+      svg.append(preview);
+      $("destination").textContent = description;
+    }
+    target.onpointerenter = showPreview;
+    target.onpointerleave = clearPreview;
+    target.onfocus = showPreview;
+    target.onblur = clearPreview;
+    target.onclick = (event) => {
+      event.stopPropagation();
+      act(action);
+    };
+    target.onkeydown = (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        act(action);
+      }
+    };
+  }
+  for (const action of actions.filter((action) => action.type === "enter")) {
+    const tile = state.board.tiles[action.tile];
+    const target = element("circle", {
+      cx: tile.x,
+      cy: tile.y,
+      r: 0.34,
+      class: "tile-target",
+    });
+    bindDestination(
+      target,
+      action,
+      tile,
+      `Enter ${tile.type} tile center · 1 Focus`,
+    );
+  }
+  for (const action of actions.filter(
+    (action) => action.type === "move" || action.type === "exit",
   )) {
-    const v = state.board.vertices[a.to];
-    element("circle", { cx: v.x, cy: v.y, r: 0.1, class: "vertex" }).onclick =
-      () => act(a);
+    const vertex = state.board.vertices[action.to];
+    const target = element("circle", {
+      cx: vertex.x,
+      cy: vertex.y,
+      r: 0.28,
+      class: "vertex-target",
+    });
+    element("circle", {
+      cx: vertex.x,
+      cy: vertex.y,
+      r: 0.18,
+      class: "vertex",
+    });
+    const cost =
+      action.type === "move"
+        ? "1 Movement"
+        : state.turn.freeExit
+          ? "free trail exit"
+          : "1 Focus";
+    bindDestination(
+      target,
+      action,
+      vertex,
+      `${action.type === "move" ? "Move" : "Exit"} to vertex · ${cost}`,
+    );
   }
   state.players.forEach((player, i) => {
     const pos = player.position.startsWith("t:")

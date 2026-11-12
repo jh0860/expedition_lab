@@ -11,7 +11,7 @@ body {
   margin: 0;
 }
 header {
-  padding: 24px 30px;
+  padding: 12px 20px;
   background: #17272d;
   border-bottom: 1px solid #385057;
   display: flex;
@@ -78,12 +78,12 @@ button:focus-visible {
 }
 main {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 340px;
-  max-width: 1600px;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  width: 100%;
   margin: auto;
 }
 .map {
-  padding: 24px;
+  padding: 12px;
   min-width: 0;
 }
 aside {
@@ -97,9 +97,9 @@ aside section {
 }
 #board {
   width: 100%;
-  height: 65vh;
-  min-height: 400px;
-  margin-top: 18px;
+  height: calc(100dvh - 190px);
+  min-height: 500px;
+  margin-top: 8px;
   background: radial-gradient(ellipse, #243d3c, #142127);
   border-radius: 12px;
 }
@@ -161,7 +161,6 @@ footer {
 .legal {
   stroke: #f1d382;
   stroke-width: 0.08;
-  cursor: pointer;
 }
 .vertex {
   fill: #e9cf80;
@@ -197,5 +196,59 @@ footer {
   }
   .map {
     padding: 12px;
+  }
+}
+
+.tile-target {
+  fill: #f1d38222;
+  stroke: #f1d382;
+  stroke-width: 0.045;
+  cursor: pointer;
+}
+.vertex-target {
+  fill: transparent;
+  cursor: pointer;
+}
+.vertex,
+.piece,
+.cleared {
+  pointer-events: none;
+}
+.vertex-target:hover,
+.vertex-target:focus {
+  fill: #f1d38244;
+  outline: none;
+}
+.tile-target:hover,
+.tile-target:focus {
+  fill: #f1d38277;
+  outline: none;
+}
+.preview-line {
+  stroke: #fff1ad;
+  stroke-width: 0.07;
+  stroke-dasharray: 0.16 0.12;
+}
+.preview-ring {
+  fill: #fff1ad44;
+  stroke: #fff1ad;
+  stroke-width: 0.06;
+}
+.destination {
+  min-height: 24px;
+  margin: 8px 0 0;
+  color: #f1d382;
+  font-size: 14px;
+}
+@media (min-width: 851px) {
+  aside {
+    max-height: calc(100dvh - 100px);
+    overflow-y: auto;
+  }
+}
+@media (max-width: 850px) {
+  #board {
+    min-height: 360px;
+    height: 70dvh;
   }
 }
