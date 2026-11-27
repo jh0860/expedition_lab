@@ -26,7 +26,7 @@ function conserve(s) {
     ...s.market.deck,
     ...s.market.offers.filter(Boolean),
     ...s.market.deposited,
-    ...s.destroyed,
+    ...s.destroyed.filter((id) => marketDeck.includes(id)),
     ...s.players.flatMap((p) =>
       [...p.deck, ...p.hand, ...p.discard].filter((id) => cards[id].singleUse),
     ),
@@ -41,16 +41,15 @@ test("market starts with two unique offers and four cards in reserve", () => {
   conserve(s);
 });
 
-test("purchases use Coin then carried treasure, never Standing, and wait for restock", () => {
+test("purchases spend carried treasure, never Standing, and wait for restock", () => {
   let s = createGame({ goal: 500 });
   offer(s, ["timeLord", "journey"]);
   s.players[0].position = marketVertex(s);
   s.players[0].bank = 100;
   assert.ok(!legalActions(s).some((a) => a.type === "buy"));
-  s.turn.coin = 2;
-  s.players[0].treasure = 3;
+  s.players[0].treasure = 5;
   s = applyAction(s, { type: "buy", index: 0 });
-  assert.equal(s.turn.coin, 0);
+  assert.ok(!("coin" in s.turn));
   assert.equal(s.players[0].treasure, 1);
   assert.equal(s.players[0].bank, 100);
   assert.ok(s.players[0].discard.includes("timeLord"));
@@ -71,7 +70,7 @@ test("the finite market never recycles used or converted cards", () => {
     s.destroyed.push(id);
   }
   s.players[0].position = marketVertex(s);
-  s.turn.coin = 3;
+  s.players[s.active].treasure += 3;
   s = applyAction(s, { type: "buy", index: 0 });
   s = applyAction(s, { type: "end" });
   assert.deepEqual(s.market.offers, [null, null]);
@@ -113,12 +112,13 @@ test("Time Lord grants a fresh turn after cleanup and market restocking", () => 
   let s = createGame();
   s.players[0].hand = [];
   give(s, "timeLord");
-  s.players[0].troop = "scout";
+  s.players[0].recruitSite = Object.values(s.board.tiles).find(t => t.type === "recruit").id;
+  s.owners[s.players[0].recruitSite] = 0;
   s = applyAction(s, { type: "play", index: 0 });
   s.turn.movement = 9;
   s.turn.power = 5;
   s.turn.health = 3;
-  s.turn.coin = 4;
+  s.players[s.active].treasure += 4;
   s.turn.remoteBanking = true;
   s = applyAction(s, { type: "end" });
   assert.equal(s.active, 0);
@@ -128,7 +128,7 @@ test("Time Lord grants a fresh turn after cleanup and market restocking", () => 
   assert.equal(s.turn.movement, 1);
   assert.equal(s.turn.power, 0);
   assert.equal(s.turn.health, 0);
-  assert.equal(s.turn.coin, 0);
+  assert.ok(!("coin" in s.turn));
   assert.equal(s.turn.remoteBanking, false);
   assert.equal(s.market.offers.filter(Boolean).length, 2);
   s = applyAction(s, { type: "end" });
@@ -186,7 +186,7 @@ test("Seize Control transfers a distant site and its benefit without paying norm
   s = applyAction(s, a);
   assert.equal(s.players[1].camp, null);
   assert.equal(s.players[0].camp, camp.id);
-  assert.equal(s.turn.movement, 1);
+  assert.equal(s.turn.movement, 0);
   assert.equal(s.players[0].treasure, 0);
   conserve(s);
   s = createGame();
@@ -199,10 +199,10 @@ test("Seize Control transfers a distant site and its benefit without paying norm
     type: "play",
     index: 0,
     tile: recruit.id,
-    troop: "fighter",
+    troop: "scout",
   });
   assert.equal(s.players[1].troop, "standard");
-  assert.equal(s.players[0].troop, "fighter");
+  assert.equal(s.players[0].troop, "scout");
   assert.equal(s.players[0].recruitSite, recruit.id);
   conserve(s);
 });
@@ -244,7 +244,7 @@ test("all strategies can buy and use market cards rather than converting them fo
     offer(s, ["journey", "timeLord"]);
     s.players[0].position = marketVertex(s);
     s.players[0].hand = [];
-    s.turn.coin = 4;
+    s.players[s.active].treasure += 4;
     assert.equal(chooseBot(s).type, "buy");
     s = createGame({ bots: [bot, "builder"] });
     s.players[0].hand = [];

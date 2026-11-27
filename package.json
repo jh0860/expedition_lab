@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node scripts/serve.js",
     "test": "node --test",
-    "simulate": "node scripts/simulate.js"
+    "simulate": "node scripts/simulate.js",
+    "dev": "node scripts/serve.js"
   },
   "engines": {
     "node": ">=20.11"

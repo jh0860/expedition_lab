@@ -32,7 +32,7 @@ test("investment Courier retains spendable treasure and deliberately recruits Sc
 test("Courier shifts when its reusable engine is ready, but Journey does not qualify", () => {
   const s = createGame();
   const p = s.players[0];
-  p.troop = "scout";
+  p.recruitSite = Object.values(s.board.tiles).find(t => t.type === "recruit").id;
   p.hand = [
     ...Array(5).fill("wander"),
     ...Array(3).fill("barter"),
@@ -83,4 +83,15 @@ test("investment Courier will convert treasure to win or avoid a full carrying l
   s.players[0].treasure = 10;
   s.players[0].bank = 40;
   assert.deepEqual(chooseBot(s), { type: "bank" });
+});
+
+test("legacy aggressive Courier skips the investment phase while current Courier retains it", () => {
+  const s = createGame();
+  s.players[0].hand = [];
+  s.players[0].deck = ["wander", "wander", "wander", "wander", "wander"];
+  s.players[0].discard = ["wildMight"];
+  s.turn.movement = 1;
+  assert.equal(chooseBot(s, "courierAggressive").type, "deposit");
+  assert.notEqual(chooseBot(s, "courier").type, "deposit");
+  assert.notEqual(chooseBot(s, "courierReplacement").type, "deposit");
 });

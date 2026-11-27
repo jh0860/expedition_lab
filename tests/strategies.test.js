@@ -18,7 +18,7 @@ test("strategy configuration persists per seat and rejects unknown names", () =>
   assert.throws(() => createGame({ bots: ["unknown", "courier"] }));
 });
 
-test("Builder recruits Scout while Delver recruits Fighter", () => {
+test("Recruitment grants Scout to both Builder and Delver", () => {
   const s = createGame();
   const tile = Object.values(s.board.tiles).find((t) => t.type === "recruit");
   s.players[0].position = `t:${tile.id}`;
@@ -30,7 +30,7 @@ test("Builder recruits Scout while Delver recruits Fighter", () => {
   });
   assert.deepEqual(chooseBot(s, "delver"), {
     type: "recruit",
-    troop: "fighter",
+    troop: "scout",
   });
 });
 

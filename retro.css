@@ -1,0 +1,162 @@
+/* Rough stone and muted parchment, with lightweight local SVG textures. */
+:root {
+  color-scheme: dark;
+  color: #e1d2ad;
+  background: #292923;
+  font-family: Georgia, 'Times New Roman', serif;
+  --stone: #4c4b41;
+  --bronze: #8b8671;
+  --paper: #c6bc9e;
+  --grain: url("assets/rough-stone.svg");
+  --paper-grain: url("assets/mottled-parchment.svg");
+}
+body { background: var(--grain), #292b25; background-blend-mode: soft-light; }
+header {
+  background: var(--grain), linear-gradient(#46463d, #2d2f28);
+  border-bottom: 4px ridge #777764;
+  box-shadow: 0 3px 10px #0008;
+}
+header small { color: #beaa7b; letter-spacing: .18em; font: 11px Verdana, sans-serif; }
+h1 { color: #e4cb86; font-family: Georgia, 'Times New Roman', serif; text-shadow: 2px 2px #17150f; font-weight: bold; letter-spacing: -.04em; }
+h2 { color: #e1c47d; text-shadow: 1px 1px #16130e; letter-spacing: .05em; font-family: Georgia, serif; font-size: 14px; }
+label, .toolbar, #status { font-family: Verdana, sans-serif; }
+input, select, button, .file {
+  color: #e9d9b2;
+  background: var(--grain), linear-gradient(#57574b, #373a30);
+  border: 2px solid;
+  border-color: #8d8a72 #26271f #26271f #8d8a72;
+  border-radius: 3px 5px 2px 4px;
+  box-shadow: inset 0 0 0 1px #393025, 0 1px 2px #0006;
+  font-family: Verdana, sans-serif;
+}
+input, select { background: var(--grain), #34352d; border-color: #25261f #817f68 #817f68 #25261f; }
+select option { color: #e9d9b2; background: #302b22; }
+button:hover, .file:hover { background: var(--grain), linear-gradient(#77745e, #535342); color: #ffe4a0; }
+button:active:not(:disabled) { border-color: #211e18 #9c8a64 #9c8a64 #211e18; }
+button:focus-visible, select:focus-visible { outline: 2px solid #f7d572; outline-offset: 3px; }
+button:disabled { opacity: .55; }
+aside { background: var(--grain), linear-gradient(90deg, #36392f, #424437 50%, #34372e); border-left: 4px ridge #777764; }
+aside section { border-color: #77705a #211c15 #211c15; border-bottom-style: groove; }
+.score { background: var(--grain), #33362d; border-radius: 0; box-shadow: inset 0 0 0 1px #7a7862, 1px 2px #17150f; color: #e9d7ac; }
+#details { font-family: Georgia, serif; font-size: 15px; color: #e4d4ad; }
+#board { border: 5px ridge #6c6d5a; border-radius: 3px; box-shadow: inset 0 0 35px #000b, 0 3px 10px #0007; background: radial-gradient(ellipse, #28251b, #100e0a); }
+.hint, .legend, footer, #log { color: #c8b995; }
+footer { background: var(--grain), #37392f; border-top: 3px ridge #74613f; }
+.destination { color: #e4c16c; font-family: Verdana, sans-serif; font-size: 13px; }
+.game-card {
+  --frame: #525942; --ink: #29331f; --wash: #b7bda0;
+  padding: 6px;
+  gap: 3px;
+  border: 6px solid #303129;
+  border-radius: 7px 10px 6px 8px;
+  color: #e1d7b6;
+  background: var(--grain), radial-gradient(ellipse at 20% 30%, #d5d2af22, transparent 65%), var(--frame);
+  box-shadow: inset 0 0 0 1px #9b997f, inset 0 0 7px 3px #0005, 2px 4px 7px #0009;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+.game-card[data-type="power"] { --frame: #665245; --ink: #652d1b; --wash: #c7a187; }
+.game-card[data-type="health"] { --frame: #4c594b; --ink: #2e4c36; --wash: #b0bc9e; }
+.game-card[data-type="coin"] { --frame: #66634f; --ink: #604921; --wash: #cebf94; }
+.game-card[data-type="treasure"] { --frame: #625c42; --ink: #61471e; --wash: #c5ae7c; }
+.game-card[data-type="arcane"] { --frame: #505b63; --ink: #2e445a; --wash: #b3bfc4; }
+.card-title {
+  display: flex; align-items: center;
+  min-height: 29px; padding: 3px 5px;
+  background: var(--grain), linear-gradient(110deg, #626351, #474c3e);
+  border: 1px solid; border-color: #9a9981 #30332a #30332a #9a9981;
+  border-radius: 1px;
+  color: #eee1b8; font-size: 16px; line-height: 1.05;
+  text-shadow: 1px 1px #26291f;
+}
+.card-art {
+  position: relative; height: 106px; border-radius: 0;
+  border: 2px solid; border-color: #454332 #e1d7b2 #e1d7b2 #454332;
+  background: #797b61; overflow: hidden;
+  box-shadow: 0 0 0 1px #393627;
+}
+.card-art svg { width: 100%; height: 100%; stroke: none; border-radius: 0; filter: sepia(.13) contrast(.95); }
+.card-art.is-compact { height: 78px; }
+.card-art.is-compact svg { height: 100%; }
+.card-rules {
+  min-height: 28px; padding: 6px 5px 1px; gap: 2px;
+  background: var(--paper-grain), radial-gradient(ellipse at 45% 35%, #c7bd9d, #aea584);
+  color: #27271e;
+  border: 1px solid #8d8a6f;
+  font: 13px/1.13 Georgia, 'Times New Roman', serif;
+  box-shadow: inset 1px 1px 3px #77633b33;
+}
+.card-rules:has(+ .card-lifetime) { border-bottom: 0; }
+.card-lifetime {
+  margin-top: -3px; padding: 3px 5px;
+  background: var(--paper-grain), #b8af90;
+  border: 1px solid #8d8a6f; border-top: 0;
+  font: italic 9px/1.15 Georgia, serif; color: #51452b;
+}
+.card-value { justify-content: flex-end; padding: 2px 0 0; border: 0; color: #e4d9b6; font: 9px/1.1 Georgia, serif; }
+.card-value strong { background: #d9c99b; border: 1px solid #58482c; padding: 0 4px; font: bold 17px Georgia, serif; color: #342a15; box-shadow: inset 1px 1px #eee2b7; }
+
+.hand-card:hover { background: var(--grain), radial-gradient(ellipse at top, #fff3, transparent 65%), var(--frame); }
+.card-hand {
+  padding: 9px 12px 5px; border: 3px ridge #85836c; border-radius: 5px 8px 4px 6px;
+  background: var(--grain), linear-gradient(#444638, #30352a);
+  box-shadow: inset 0 0 0 1px #18150f, 0 10px 24px #0008;
+}
+.hand-toggle { background: none; border: 0; box-shadow: none; color: #ebd086; text-shadow: 1px 1px #100e09; font-family: Georgia, serif; font-size: 16px; }
+.hand-toggle:hover { background: #61553c; }
+.hand-counts, .hand-hint, .empty-hand { color: #d2c096; font-family: Georgia, serif; }
+.hand-hint { font-size: 13px; }
+.selected-card-name { color: #f1d58a; }
+.is-expanded .hand-card.is-selected { outline: 2px solid #f5d16a; box-shadow: 0 0 0 4px #554523, 3px 8px 12px #000a; }
+.hand-controls:not(:empty) { border-color: #8c795b; }
+.play-card-button { background: var(--grain), linear-gradient(#8a7247, #514327); color: #ffe5a4; }
+.drop-instruction { background: var(--grain), #3a3329f2; border: 3px ridge #c3a35f; border-radius: 3px; color: #f5d482; }
+#combat { background: var(--grain), radial-gradient(ellipse at top, #535341, #2e3329); border: 5px ridge #85836c; border-radius: 6px 9px 5px 7px; }
+#combat-title { color: #ebcc7b; text-shadow: 2px 2px #1e190f; }
+#combat::backdrop { background: #100d08c9; }
+.combat-stats { background: var(--grain), #3a3d32; border: 2px inset #85836c; border-radius: 0; color: #e7d7ad; }
+#resolve-combat { background: var(--grain), linear-gradient(#785537, #483121); border: 3px outset #a28655; color: #f1d095; }
+.market-card { height: auto; aspect-ratio: 63 / 88; padding: 5px; border-width: 5px; gap: 3px; }
+.market-card .card-title { min-height: 34px; font-size: 14px; padding: 3px; }
+.market-card .card-art { height: 90px; }
+.market-card .card-art.is-compact { height: 78px; }
+.market-card .card-rules { font: 12px/1.15 Georgia, serif; padding: 5px 4px 1px; }
+.market-card .card-lifetime { font: italic 9px/1.1 Georgia, serif; padding: 3px 4px; }
+.market-card .card-value { font-family: Georgia, serif; }
+.market-offer button { font: 12px/1.4 Verdana, sans-serif; }
+#market > small { color: #cabc97; font: 12px/1.5 Georgia, serif; }
+.empty-offer { height: auto; aspect-ratio: 63 / 88; border: 3px inset #8e7b52; border-radius: 3px; background: var(--grain), #302a21; }
+.played-cards > span { background: #342d20ed; border: 1px solid #92805a; border-radius: 1px; color: #e7cf91; font-family: Georgia, serif; }
+.played-card .card-title { font-size: 11px; min-height: 21px; padding: 2px; }
+.played-card .card-art { height: 54px; }
+.played-card .card-rules { padding: 3px 2px 1px; font-size: 9px; }
+.played-card .card-lifetime { font-size: 7px; padding: 2px; }
+.played-card .card-value strong { font-size: 12px; }
+@media (max-width: 850px) { aside { border-left: 0; border-top: 4px ridge #777764; } }
+@media (max-width: 600px) {
+  .game-card.hand-card { padding: 5px; gap: 2px; }
+  .hand-card .card-title { font-size: 14px; min-height: 29px; }
+  .hand-card .card-rules { font-size: 12px; }
+  .hand-card .card-lifetime { font-size: 8px; }
+  .hand-toggle { font-size: 14px; }
+  .played-card .card-art { display: none; }
+}
+
+.game-card:hover { color: #e1d7b6; }
+
+/* Mottling is shared by the controls and panels; no masonry columns. */
+header, aside, .card-hand, #combat, .combat-stats, .score, .empty-offer,
+input, select, button, .file, .game-card, .card-title, .hand-card:hover {
+  background-blend-mode: overlay, normal;
+}
+.card-rules, .card-lifetime { background-blend-mode: multiply; }
+.hand-toggle { background: none; }
+.hand-toggle:hover { background: #696954; }
+.card-hand::before {
+  content: ""; pointer-events: none; position: absolute; inset: 1px;
+  border: 1px solid #a6a18a33; border-radius: 3px 7px 3px 5px;
+  box-shadow: inset 2px 2px 3px #c4bfa515, inset -2px -2px 4px #171b1680;
+}
+.play-card-button { background: var(--grain), linear-gradient(#78765d, #4e5140); }
+.drop-instruction { background: var(--grain), #424638f5; border-color: #9b9880; }
+.empty-offer { background: var(--grain), #3c3f34; border-color: #85836c; }
+.card-title, .card-art, .card-rules { border-radius: 2px 3px 1px 2px; }

@@ -1,7 +1,8 @@
 import {
   defaults,
   cards,
-  troops,
+  playerStats,
+  bonusKey,
   hazards,
   resources,
   startingDeck,
@@ -30,19 +31,19 @@ function draw(state, p, count = Math.max(0, 5 - p.hand.length)) {
 function begin(state) {
   const p = state.players[state.active];
   state.turn = {
-    movement:
-      state.config.movement + troops[p.troop].movement + (p.camp ? 1 : 0),
+    movement: state.config.movement + playerStats(p).movement,
     power: 0,
     health: 0,
-    coin: 0,
-    campBonus: Boolean(p.camp),
+    scoutBonus: Boolean(p.recruitSite),
     remoteBanking: false,
   };
   updateCourierPlans(state);
 }
 function updateCourierPlans(s) {
-  for (const p of s.players)
+  for (const p of s.players) {
+    p.troop = bonusKey(p);
     if (p.bot === "courier") p.courierPhase = courierPlan(s, p);
+  }
 }
 export function createGame(options = {}) {
   const config = { ...defaults, ...options };
@@ -127,16 +128,15 @@ export function legalActions(s) {
       tile.type === "training" &&
       s.owners[tile.id] !== s.active &&
       (s.owners[tile.id] === undefined ||
-        p.treasure + s.turn.coin >= s.config.takeoverCost)
+        p.treasure >= s.config.takeoverCost)
     )
       add("claim");
-    if (tile.type === "recruit")
-      for (const troop of ["scout", "fighter"])
-        if (
-          (p.troop !== troop || p.recruitSite !== tile.id) &&
-          p.treasure + s.turn.coin >= 3
-        )
-          add("recruit", { troop });
+    if (
+      tile.type === "recruit" &&
+      s.owners[tile.id] !== s.active &&
+      p.treasure >= 3
+    )
+      add("recruit", { troop: "scout" });
   } else {
     const v = s.board.vertices[p.position];
     if (s.turn.movement > 0)
@@ -146,7 +146,7 @@ export function legalActions(s) {
         if (s.board.tiles[id].type !== "mountain") add("enter", { tile: id });
     if (v.tiles.some((id) => s.board.tiles[id].type === "market"))
       s.market.offers.forEach((id, index) => {
-        if (id && p.treasure + s.turn.coin >= cards[id].cost)
+        if (id && p.treasure >= cards[id].cost)
           add("buy", { index });
       });
   }
@@ -173,8 +173,7 @@ export function legalActions(s) {
         )
         .forEach((tile) => {
           if (tile.type === "recruit") {
-            for (const troop of ["scout", "fighter"])
-              add("play", { index, tile: tile.id, troop });
+            add("play", { index, tile: tile.id, troop: "scout" });
           } else add("play", { index, tile: tile.id });
         });
     } else add("play", { index });
@@ -202,12 +201,8 @@ function ownCamp(s, p, id) {
   if (p.camp && p.camp !== id) delete s.owners[p.camp];
   s.owners[id] = s.active;
   p.camp = id;
-  if (!s.turn.campBonus) {
-    s.turn.movement++;
-    s.turn.campBonus = true;
-  }
 }
-function ownRecruit(s, p, id, troop) {
+function ownRecruit(s, p, id) {
   const old = s.owners[id];
   if (old !== undefined && old !== s.active) {
     s.players[old].recruitSite = null;
@@ -216,12 +211,10 @@ function ownRecruit(s, p, id, troop) {
   if (p.recruitSite && p.recruitSite !== id) delete s.owners[p.recruitSite];
   s.owners[id] = s.active;
   p.recruitSite = id;
-  const before = troops[p.troop].movement;
-  p.troop = troop;
-  s.turn.movement = Math.max(
-    0,
-    s.turn.movement + troops[troop].movement - before,
-  );
+  if (!s.turn.scoutBonus) {
+    s.turn.movement++;
+    s.turn.scoutBonus = true;
+  }
 }
 function occupied(s, vertex) {
   return (
@@ -230,9 +223,7 @@ function occupied(s, vertex) {
   );
 }
 function spend(s, p, cost) {
-  const coins = Math.min(cost, s.turn.coin);
-  s.turn.coin -= coins;
-  p.treasure -= cost - coins;
+  p.treasure -= cost;
 }
 function rewardSite(s, p, tile, say) {
   const pool = resources[tile.type];
@@ -288,8 +279,8 @@ export function applyAction(state, action) {
   if (action.type === "resolveCombat") {
     const monster = s.encounter;
     const tile = s.board.tiles[monster.tile];
-    const power = troops[p.troop].power + s.turn.power;
-    const health = troops[p.troop].health + s.turn.health;
+    const power = playerStats(p).power + s.turn.power;
+    const health = playerStats(p).health + s.turn.health;
     const first = random(s) < 0.5;
     const strikes = Math.ceil(monster.health / power);
     const hits = Math.ceil(health / monster.power);
@@ -310,12 +301,12 @@ export function applyAction(state, action) {
     const id = p.position.slice(2);
     if (s.owners[id] !== undefined) spend(s, p, s.config.takeoverCost);
     ownCamp(s, p, id);
-    say("claimed a Training Camp (+1 Energy).");
+    say("claimed a Training Camp (Fighter: +1 Power/+1 Health).");
   }
   if (action.type === "recruit") {
     spend(s, p, 3);
-    ownRecruit(s, p, p.position.slice(2), action.troop);
-    say(`claimed a recruitment site and recruited ${action.troop}.`);
+    ownRecruit(s, p, p.position.slice(2));
+    say(`claimed a Recruitment Site (Scout: +1 Energy).`);
   }
   if (action.type === "bank") {
     p.bank += p.treasure;
@@ -332,12 +323,11 @@ export function applyAction(state, action) {
   if (action.type === "play") {
     const id = p.hand.splice(action.index, 1)[0],
       card = cards[id];
-    if (card.singleUse) s.destroyed.push(id);
+    if (card.singleUse || card.destroyOnPlay) s.destroyed.push(id);
     else p.discard.push(id);
     s.turn.movement += card.movement || 0;
     s.turn.power += card.power || 0;
     s.turn.health += card.health || 0;
-    s.turn.coin += card.coin || 0;
     if (card.extraTurn) p.extraTurns++;
     if (card.draw) draw(s, p, card.draw);
     if (card.treasure)
@@ -346,9 +336,9 @@ export function applyAction(state, action) {
     if (card.seize) {
       const tile = s.board.tiles[action.tile];
       if (tile.type === "training") ownCamp(s, p, tile.id);
-      else ownRecruit(s, p, tile.id, action.troop);
+      else ownRecruit(s, p, tile.id);
     }
-    if (card.singleUse) say(`used and destroyed ${card.name}.`);
+    if (card.singleUse || card.destroyOnPlay) say(`used and destroyed ${card.name}.`);
     if (card.teleport) {
       const tile = s.board.tiles[action.tile];
       p.position = `t:${tile.id}`;
@@ -416,7 +406,7 @@ function chooseBasicBot(s) {
     (id) => cards[id].value >= 3,
   );
   const targets =
-    valuable || p.treasure + s.turn.coin >= 4
+    valuable || p.treasure >= 4
       ? [`t:${p.base}`]
       : Object.values(s.board.tiles)
           .filter((t) => resources[t.type] && !p.visited.includes(t.id))
@@ -443,8 +433,8 @@ function chooseBasicBot(s) {
               const type = s.board.tiles[id].type;
               if (type === "mountain") return false;
               if (!hazards.has(type) || s.cleared.includes(id)) return true;
-              const power = troops[p.troop].power + s.turn.power;
-              const health = troops[p.troop].health + s.turn.health;
+              const power = playerStats(p).power + s.turn.power;
+              const health = playerStats(p).health + s.turn.health;
               return (
                 Math.ceil((type === "black" ? 6 : 3) / power) <=
                 Math.ceil(health / (type === "black" ? 3 : 1))
@@ -470,7 +460,7 @@ function chooseBasicBot(s) {
 
 export function loadGame(save) {
   if (
-    ![1, 2, 3, 4].includes(save?.version) ||
+    ![1, 2, 3, 4, 5, 6].includes(save?.version) ||
     !save.state?.board ||
     !Array.isArray(save.state?.players) ||
     !save.state?.turn ||
@@ -484,6 +474,8 @@ export function loadGame(save) {
   state.turn.remoteBanking ??= false;
   delete state.turn.freeExit;
   delete state.turn.trail;
+  delete state.turn.campBonus;
+  state.turn.scoutBonus ??= Boolean(state.players[state.active].recruitSite);
   if (save.version === 1) {
     // Preserve the unfinished turn's remaining allowance. New turns use the new rules.
     state.turn.movement += state.turn.focus || 0;
@@ -491,7 +483,7 @@ export function loadGame(save) {
     delete state.turn.focus;
     delete state.config.focus;
     state.log.push(
-      "Legacy save converted: remaining actions merged into Energy; future turns start with troop and Camp bonuses only.",
+      "Legacy save converted: remaining actions merged into Energy; future turns start with Scout bonus only.",
     );
   }
   if (save.version < 3) {
@@ -507,11 +499,17 @@ export function loadGame(save) {
         p[zone] = p[zone].map((id) => translations[id] || id);
     }
     state.turn.health = 0;
-    state.turn.coin = 0;
     state.log.push(
       "Card roster updated: legacy cards translated to the new list; existing decks retained.",
     );
   }
+  if (save.version < 6 && state.turn.coin !== undefined) {
+    if (!Number.isFinite(state.turn.coin) || state.turn.coin < 0)
+      throw Error("Invalid legacy currency in save.");
+    const active = state.players[state.active];
+    active.treasure = Math.min(state.config.carry, active.treasure + state.turn.coin);
+  }
+  delete state.turn.coin;
   for (const p of state.players) {
     p.bot ||= "courier";
     p.recruitSite ??= null;
@@ -531,7 +529,7 @@ export function loadGame(save) {
       throw Error("Unknown card in save.");
   }
   if (
-    ![state.turn.health, state.turn.coin, state.turn.power].every(
+    ![state.turn.health, state.turn.power].every(
       (n) => Number.isFinite(n) && n >= 0,
     )
   )
@@ -549,8 +547,10 @@ export function loadGame(save) {
       ...state.market.deck,
       ...state.market.offers.filter(Boolean),
       ...state.market.deposited,
-      ...state.destroyed,
     ].some((id) => !marketDeck.includes(id)) ||
+    state.destroyed.some(
+      (id) => !cards[id] || !(cards[id].singleUse || cards[id].destroyOnPlay),
+    ) ||
     state.players.some(
       (p) => !Number.isInteger(p.extraTurns) || p.extraTurns < 0,
     ) ||

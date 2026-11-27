@@ -48,7 +48,6 @@ for (const [gameIndex, { seed, bots }] of schedule.entries()) {
   const limit = bots.length === 4 ? 30000 : 15000;
   const activity = bots.map(() => ({
     purchases: 0,
-    marketCoinSpent: 0,
     marketTreasureSpent: 0,
     uses: {},
     claims: 0,
@@ -94,7 +93,6 @@ for (const [gameIndex, { seed, bots }] of schedule.entries()) {
       const after = state.players[before.active];
       if (a.type === "buy") {
         stats.purchases++;
-        stats.marketCoinSpent += before.turn.coin - state.turn.coin;
         stats.marketTreasureSpent += p.treasure - after.treasure;
       }
       if (a.type === "deposit" || a.type === "bank") {
@@ -122,7 +120,7 @@ for (const [gameIndex, { seed, bots }] of schedule.entries()) {
         ...state.market.deck,
         ...state.market.offers.filter(Boolean),
         ...state.market.deposited,
-        ...state.destroyed,
+        ...state.destroyed.filter((id) => marketDeck.includes(id)),
         ...state.players.flatMap((p) =>
           [...p.hand, ...p.deck, ...p.discard].filter(
             (id) => cards[id].singleUse,

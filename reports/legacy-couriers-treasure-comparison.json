@@ -1,0 +1,6120 @@
+{
+  "rules_commit": "cf3a3ac",
+  "policy": "courierAggressive uses the previous aggressive weights and conversion logic without investment; courierReplacement keeps its replacement accounting. All use current treasure-card effects and corrected site stats.",
+  "multiplayer": {
+    "rules": "Trinket +5 and Relic +20 carried treasure on destruction; Scout Energy from Recruitment; Fighter combat stats from Camp",
+    "mode": "multiplayer",
+    "players": 4,
+    "games": 10,
+    "strategies": [
+      "delver",
+      "builder",
+      "opportunist",
+      "courierAggressive",
+      "courierReplacement"
+    ],
+    "goal": 50,
+    "radius": 2,
+    "roundLimit": 150,
+    "protocol": "Five omission lineups with reversed-seat repeats; eight appearances per policy, twice in each seat",
+    "results": [
+      {
+        "game": 1,
+        "seed": 42,
+        "bots": [
+          "builder",
+          "opportunist",
+          "courierAggressive",
+          "courierReplacement"
+        ],
+        "winner": "opportunist",
+        "winnerSeat": 2,
+        "rounds": 42,
+        "actions": 1301,
+        "standing": [
+          26,
+          50,
+          22,
+          17
+        ],
+        "troops": [
+          "fighter",
+          "scout+fighter",
+          "standard",
+          "standard"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 16,
+            "siteTreasureSpent": 6,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 2,
+            "marketTreasureSpent": 6,
+            "uses": {
+              "omnipotence": 1,
+              "strikeItRich": 1
+            },
+            "claims": 7,
+            "campTakeovers": 3,
+            "recruits": 2,
+            "recruitmentTakeovers": 0,
+            "combats": 7,
+            "defeats": 0,
+            "standingFromCards": 14,
+            "standingFromTreasure": 12,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 3,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 14,
+            "siteTreasureSpent": 4,
+            "treasureLost": 0,
+            "purchases": 3,
+            "marketCoinSpent": 6,
+            "marketTreasureSpent": 5,
+            "uses": {
+              "seizeControl": 1,
+              "timeLord": 1,
+              "journey": 1
+            },
+            "claims": 7,
+            "campTakeovers": 6,
+            "recruits": 1,
+            "recruitmentTakeovers": 1,
+            "combats": 12,
+            "defeats": 1,
+            "standingFromCards": 34,
+            "standingFromTreasure": 16,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 0,
+            "defeats": 0,
+            "standingFromCards": 22,
+            "standingFromTreasure": 0,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 3,
+            "firstPurchaseRound": 14,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 1,
+            "marketCoinSpent": 1,
+            "marketTreasureSpent": 2,
+            "uses": {
+              "banker": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 2,
+            "defeats": 0,
+            "standingFromCards": 5,
+            "standingFromTreasure": 12,
+            "remoteStanding": 4
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 2,
+        "seed": 43,
+        "bots": [
+          "opportunist",
+          "courierAggressive",
+          "courierReplacement",
+          "delver"
+        ],
+        "winner": "opportunist",
+        "winnerSeat": 1,
+        "rounds": 57,
+        "actions": 1716,
+        "standing": [
+          59,
+          30,
+          45,
+          35
+        ],
+        "troops": [
+          "scout+fighter",
+          "standard",
+          "fighter",
+          "standard"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": 11,
+            "firstPurchaseRound": 13,
+            "siteTreasureSpent": 12,
+            "treasureLost": 0,
+            "purchases": 3,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 9,
+            "uses": {
+              "strikeItRich": 1,
+              "timeLord": 1,
+              "omnipotence": 1
+            },
+            "claims": 10,
+            "campTakeovers": 9,
+            "recruits": 1,
+            "recruitmentTakeovers": 1,
+            "combats": 14,
+            "defeats": 0,
+            "standingFromCards": 37,
+            "standingFromTreasure": 22,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 0,
+            "defeats": 0,
+            "standingFromCards": 30,
+            "standingFromTreasure": 0,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": 3,
+            "firstPurchaseRound": 4,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 1,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 0,
+            "uses": {
+              "journey": 1
+            },
+            "claims": 3,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 7,
+            "defeats": 0,
+            "standingFromCards": 15,
+            "standingFromTreasure": 30,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 1
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 4,
+            "siteTreasureSpent": 4,
+            "treasureLost": 6,
+            "purchases": 2,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 4,
+            "uses": {
+              "seizeControl": 1,
+              "banker": 1
+            },
+            "claims": 7,
+            "campTakeovers": 3,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 9,
+            "defeats": 1,
+            "standingFromCards": 30,
+            "standingFromTreasure": 5,
+            "remoteStanding": 35
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 3,
+        "seed": 44,
+        "bots": [
+          "courierAggressive",
+          "courierReplacement",
+          "delver",
+          "builder"
+        ],
+        "winner": "delver",
+        "winnerSeat": 3,
+        "rounds": 30,
+        "actions": 759,
+        "standing": [
+          39,
+          9,
+          57,
+          5
+        ],
+        "troops": [
+          "standard",
+          "standard",
+          "scout+fighter",
+          "fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 1
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 1,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 1,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 0,
+            "uses": {
+              "banker": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 0,
+            "defeats": 0,
+            "standingFromCards": 39,
+            "standingFromTreasure": 0,
+            "remoteStanding": 3
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 19,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 1,
+            "defeats": 0,
+            "standingFromCards": 2,
+            "standingFromTreasure": 7,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 1
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 6,
+            "siteTreasureSpent": 5,
+            "treasureLost": 0,
+            "purchases": 5,
+            "marketCoinSpent": 6,
+            "marketTreasureSpent": 13,
+            "uses": {
+              "journey": 1,
+              "strikeItRich": 1,
+              "timeLord": 1,
+              "seizeControl": 1,
+              "omnipotence": 1
+            },
+            "claims": 2,
+            "campTakeovers": 1,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 12,
+            "defeats": 0,
+            "standingFromCards": 35,
+            "standingFromTreasure": 22,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 2,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 3,
+            "campTakeovers": 2,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 2,
+            "defeats": 0,
+            "standingFromCards": 5,
+            "standingFromTreasure": 0,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 4,
+        "seed": 45,
+        "bots": [
+          "courierReplacement",
+          "delver",
+          "builder",
+          "opportunist"
+        ],
+        "winner": "delver",
+        "winnerSeat": 2,
+        "rounds": 58,
+        "actions": 1538,
+        "standing": [
+          24,
+          60,
+          22,
+          33
+        ],
+        "troops": [
+          "standard",
+          "scout+fighter",
+          "scout+fighter",
+          "fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 3,
+              "relic": 0
+            },
+            "treasureCardPayout": 15,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": 3,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 0,
+            "defeats": 0,
+            "standingFromCards": 9,
+            "standingFromTreasure": 15,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 1
+            },
+            "firstLiquidationRound": 27,
+            "firstPurchaseRound": 8,
+            "siteTreasureSpent": 2,
+            "treasureLost": 4,
+            "purchases": 5,
+            "marketCoinSpent": 9,
+            "marketTreasureSpent": 8,
+            "uses": {
+              "timeLord": 1,
+              "seizeControl": 1,
+              "omnipotence": 1,
+              "journey": 1,
+              "banker": 1
+            },
+            "claims": 4,
+            "campTakeovers": 1,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 18,
+            "defeats": 3,
+            "standingFromCards": 36,
+            "standingFromTreasure": 24,
+            "remoteStanding": 13
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "firstLiquidationRound": 19,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 9,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 5,
+            "campTakeovers": 3,
+            "recruits": 2,
+            "recruitmentTakeovers": 1,
+            "combats": 2,
+            "defeats": 0,
+            "standingFromCards": 17,
+            "standingFromTreasure": 5,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 10,
+            "firstPurchaseRound": 19,
+            "siteTreasureSpent": 12,
+            "treasureLost": 0,
+            "purchases": 1,
+            "marketCoinSpent": 1,
+            "marketTreasureSpent": 4,
+            "uses": {
+              "strikeItRich": 1
+            },
+            "claims": 7,
+            "campTakeovers": 5,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 12,
+            "defeats": 1,
+            "standingFromCards": 12,
+            "standingFromTreasure": 21,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 5,
+        "seed": 46,
+        "bots": [
+          "delver",
+          "builder",
+          "opportunist",
+          "courierAggressive"
+        ],
+        "winner": "courierAggressive",
+        "winnerSeat": 4,
+        "rounds": 65,
+        "actions": 1764,
+        "standing": [
+          20,
+          19,
+          17,
+          50
+        ],
+        "troops": [
+          "scout+fighter",
+          "standard",
+          "scout",
+          "fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 11,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 8,
+            "campTakeovers": 4,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 16,
+            "defeats": 1,
+            "standingFromCards": 0,
+            "standingFromTreasure": 20,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 3,
+              "relic": 0
+            },
+            "treasureCardPayout": 15,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 7,
+            "firstPurchaseRound": 7,
+            "siteTreasureSpent": 6,
+            "treasureLost": 0,
+            "purchases": 4,
+            "marketCoinSpent": 4,
+            "marketTreasureSpent": 10,
+            "uses": {
+              "omnipotence": 1,
+              "strikeItRich": 1,
+              "journey": 1,
+              "banker": 1
+            },
+            "claims": 6,
+            "campTakeovers": 1,
+            "recruits": 2,
+            "recruitmentTakeovers": 0,
+            "combats": 1,
+            "defeats": 0,
+            "standingFromCards": 8,
+            "standingFromTreasure": 11,
+            "remoteStanding": 11
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 18,
+            "firstPurchaseRound": 6,
+            "siteTreasureSpent": 22,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 4,
+            "marketTreasureSpent": 4,
+            "uses": {
+              "seizeControl": 1,
+              "timeLord": 1
+            },
+            "claims": 13,
+            "campTakeovers": 12,
+            "recruits": 2,
+            "recruitmentTakeovers": 2,
+            "combats": 12,
+            "defeats": 1,
+            "standingFromCards": 11,
+            "standingFromTreasure": 6,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 11,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 2,
+            "campTakeovers": 1,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 1,
+            "defeats": 0,
+            "standingFromCards": 38,
+            "standingFromTreasure": 12,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 6,
+        "seed": 42,
+        "bots": [
+          "courierReplacement",
+          "courierAggressive",
+          "opportunist",
+          "builder"
+        ],
+        "winner": "builder",
+        "winnerSeat": 4,
+        "rounds": 85,
+        "actions": 2132,
+        "standing": [
+          19,
+          42,
+          39,
+          55
+        ],
+        "troops": [
+          "standard",
+          "fighter",
+          "scout+fighter",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 19,
+            "firstPurchaseRound": 21,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 2,
+            "marketTreasureSpent": 5,
+            "uses": {
+              "timeLord": 1,
+              "journey": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 2,
+            "defeats": 0,
+            "standingFromCards": 10,
+            "standingFromTreasure": 9,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 17,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 1,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 0,
+            "uses": {
+              "omnipotence": 1
+            },
+            "claims": 2,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 2,
+            "defeats": 0,
+            "standingFromCards": 40,
+            "standingFromTreasure": 2,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 1
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 18,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 12,
+            "campTakeovers": 11,
+            "recruits": 2,
+            "recruitmentTakeovers": 2,
+            "combats": 10,
+            "defeats": 0,
+            "standingFromCards": 34,
+            "standingFromTreasure": 5,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 58,
+            "firstPurchaseRound": 4,
+            "siteTreasureSpent": 11,
+            "treasureLost": 0,
+            "purchases": 3,
+            "marketCoinSpent": 4,
+            "marketTreasureSpent": 8,
+            "uses": {
+              "seizeControl": 1,
+              "strikeItRich": 1,
+              "banker": 1
+            },
+            "claims": 10,
+            "campTakeovers": 3,
+            "recruits": 3,
+            "recruitmentTakeovers": 0,
+            "combats": 15,
+            "defeats": 0,
+            "standingFromCards": 26,
+            "standingFromTreasure": 29,
+            "remoteStanding": 10
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 7,
+        "seed": 43,
+        "bots": [
+          "delver",
+          "courierReplacement",
+          "courierAggressive",
+          "opportunist"
+        ],
+        "winner": "delver",
+        "winnerSeat": 1,
+        "rounds": 42,
+        "actions": 1139,
+        "standing": [
+          52,
+          23,
+          23,
+          10
+        ],
+        "troops": [
+          "scout+fighter",
+          "standard",
+          "fighter",
+          "standard"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 28,
+            "firstPurchaseRound": 2,
+            "siteTreasureSpent": 2,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 4,
+            "uses": {
+              "journey": 1,
+              "seizeControl": 1
+            },
+            "claims": 3,
+            "campTakeovers": 1,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 16,
+            "defeats": 0,
+            "standingFromCards": 15,
+            "standingFromTreasure": 37,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 4,
+            "defeats": 0,
+            "standingFromCards": 15,
+            "standingFromTreasure": 8,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": 3,
+            "firstPurchaseRound": 8,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 2,
+            "marketTreasureSpent": 4,
+            "uses": {
+              "omnipotence": 1,
+              "banker": 1
+            },
+            "claims": 1,
+            "campTakeovers": 1,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 1,
+            "defeats": 0,
+            "standingFromCards": 15,
+            "standingFromTreasure": 8,
+            "remoteStanding": 8
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 6,
+            "siteTreasureSpent": 2,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 7,
+            "marketTreasureSpent": 2,
+            "uses": {
+              "timeLord": 1,
+              "strikeItRich": 1
+            },
+            "claims": 3,
+            "campTakeovers": 2,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 2,
+            "defeats": 0,
+            "standingFromCards": 0,
+            "standingFromTreasure": 10,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 8,
+        "seed": 44,
+        "bots": [
+          "builder",
+          "delver",
+          "courierReplacement",
+          "courierAggressive"
+        ],
+        "winner": "builder",
+        "winnerSeat": 1,
+        "rounds": 32,
+        "actions": 891,
+        "standing": [
+          53,
+          10,
+          13,
+          19
+        ],
+        "troops": [
+          "scout+fighter",
+          "scout+fighter",
+          "standard",
+          "standard"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 1
+            },
+            "firstLiquidationRound": 30,
+            "firstPurchaseRound": 1,
+            "siteTreasureSpent": 3,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 4,
+            "marketTreasureSpent": 4,
+            "uses": {
+              "strikeItRich": 1,
+              "banker": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 6,
+            "defeats": 0,
+            "standingFromCards": 33,
+            "standingFromTreasure": 20,
+            "remoteStanding": 13
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 4,
+            "siteTreasureSpent": 0,
+            "treasureLost": 10,
+            "purchases": 4,
+            "marketCoinSpent": 8,
+            "marketTreasureSpent": 6,
+            "uses": {
+              "journey": 1,
+              "seizeControl": 1,
+              "omnipotence": 1,
+              "timeLord": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 15,
+            "defeats": 1,
+            "standingFromCards": 0,
+            "standingFromTreasure": 10,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 4,
+            "defeats": 0,
+            "standingFromCards": 5,
+            "standingFromTreasure": 8,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 26,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 0,
+            "defeats": 0,
+            "standingFromCards": 14,
+            "standingFromTreasure": 5,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 9,
+        "seed": 45,
+        "bots": [
+          "opportunist",
+          "builder",
+          "delver",
+          "courierReplacement"
+        ],
+        "winner": "delver",
+        "winnerSeat": 3,
+        "rounds": 70,
+        "actions": 1831,
+        "standing": [
+          8,
+          16,
+          54,
+          35
+        ],
+        "troops": [
+          "fighter",
+          "scout+fighter",
+          "scout+fighter",
+          "standard"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 50,
+            "firstPurchaseRound": 11,
+            "siteTreasureSpent": 20,
+            "treasureLost": 0,
+            "purchases": 3,
+            "marketCoinSpent": 5,
+            "marketTreasureSpent": 5,
+            "uses": {
+              "seizeControl": 1,
+              "omnipotence": 1,
+              "journey": 1
+            },
+            "claims": 11,
+            "campTakeovers": 10,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 10,
+            "defeats": 0,
+            "standingFromCards": 8,
+            "standingFromTreasure": 0,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 3,
+              "relic": 0
+            },
+            "treasureCardPayout": 15,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 16,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 16,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 9,
+            "campTakeovers": 7,
+            "recruits": 1,
+            "recruitmentTakeovers": 1,
+            "combats": 3,
+            "defeats": 0,
+            "standingFromCards": 11,
+            "standingFromTreasure": 5,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 44,
+            "firstPurchaseRound": 12,
+            "siteTreasureSpent": 7,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 2,
+            "marketTreasureSpent": 5,
+            "uses": {
+              "timeLord": 1,
+              "banker": 1
+            },
+            "claims": 8,
+            "campTakeovers": 3,
+            "recruits": 2,
+            "recruitmentTakeovers": 1,
+            "combats": 11,
+            "defeats": 0,
+            "standingFromCards": 39,
+            "standingFromTreasure": 15,
+            "remoteStanding": 15
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 12,
+            "firstPurchaseRound": 12,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 1,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 5,
+            "uses": {
+              "strikeItRich": 1
+            },
+            "claims": 3,
+            "campTakeovers": 2,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 5,
+            "defeats": 0,
+            "standingFromCards": 9,
+            "standingFromTreasure": 26,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 10,
+        "seed": 46,
+        "bots": [
+          "courierAggressive",
+          "opportunist",
+          "builder",
+          "delver"
+        ],
+        "winner": "courierAggressive",
+        "winnerSeat": 1,
+        "rounds": 62,
+        "actions": 1796,
+        "standing": [
+          59,
+          23,
+          37,
+          5
+        ],
+        "troops": [
+          "standard",
+          "standard",
+          "scout+fighter",
+          "fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 1
+            },
+            "firstLiquidationRound": 3,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 1,
+            "defeats": 0,
+            "standingFromCards": 52,
+            "standingFromTreasure": 7,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 7,
+            "firstPurchaseRound": 7,
+            "siteTreasureSpent": 19,
+            "treasureLost": 0,
+            "purchases": 3,
+            "marketCoinSpent": 4,
+            "marketTreasureSpent": 7,
+            "uses": {
+              "journey": 1,
+              "seizeControl": 1,
+              "timeLord": 1
+            },
+            "claims": 11,
+            "campTakeovers": 10,
+            "recruits": 3,
+            "recruitmentTakeovers": 2,
+            "combats": 9,
+            "defeats": 0,
+            "standingFromCards": 18,
+            "standingFromTreasure": 5,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 5,
+              "relic": 0
+            },
+            "treasureCardPayout": 25,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 14,
+            "firstPurchaseRound": 15,
+            "siteTreasureSpent": 11,
+            "treasureLost": 0,
+            "purchases": 3,
+            "marketCoinSpent": 4,
+            "marketTreasureSpent": 7,
+            "uses": {
+              "omnipotence": 1,
+              "strikeItRich": 1,
+              "banker": 1
+            },
+            "claims": 8,
+            "campTakeovers": 4,
+            "recruits": 4,
+            "recruitmentTakeovers": 2,
+            "combats": 10,
+            "defeats": 0,
+            "standingFromCards": 0,
+            "standingFromTreasure": 37,
+            "remoteStanding": 8
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 24,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 10,
+            "treasureLost": 11,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 9,
+            "campTakeovers": 9,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 12,
+            "defeats": 4,
+            "standingFromCards": 5,
+            "standingFromTreasure": 0,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      }
+    ]
+  },
+  "duel": {
+    "rules": "Trinket +5 and Relic +20 carried treasure on destruction; Scout Energy from Recruitment; Fighter combat stats from Camp",
+    "mode": "duel",
+    "players": 2,
+    "games": 50,
+    "strategies": [
+      "delver",
+      "builder",
+      "opportunist",
+      "courierAggressive",
+      "courierReplacement"
+    ],
+    "goal": 50,
+    "radius": 2,
+    "roundLimit": 150,
+    "protocol": "All ten pairs: two mirrored seed blocks plus one balanced orientation; five games per pair, twenty appearances and ten first seats per policy",
+    "results": [
+      {
+        "game": 1,
+        "seed": 1,
+        "bots": [
+          "delver",
+          "builder"
+        ],
+        "winner": "delver",
+        "winnerSeat": 1,
+        "rounds": 53,
+        "actions": 754,
+        "standing": [
+          51,
+          19
+        ],
+        "troops": [
+          "fighter",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 2,
+            "siteTreasureSpent": 9,
+            "treasureLost": 0,
+            "purchases": 4,
+            "marketCoinSpent": 6,
+            "marketTreasureSpent": 8,
+            "uses": {
+              "omnipotence": 1,
+              "journey": 1,
+              "strikeItRich": 1,
+              "banker": 1
+            },
+            "claims": 4,
+            "campTakeovers": 3,
+            "recruits": 1,
+            "recruitmentTakeovers": 1,
+            "combats": 19,
+            "defeats": 1,
+            "standingFromCards": 22,
+            "standingFromTreasure": 29,
+            "remoteStanding": 12
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 20,
+            "siteTreasureSpent": 4,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 8,
+            "uses": {
+              "seizeControl": 1,
+              "timeLord": 1
+            },
+            "claims": 4,
+            "campTakeovers": 3,
+            "recruits": 1,
+            "recruitmentTakeovers": 1,
+            "combats": 9,
+            "defeats": 0,
+            "standingFromCards": 13,
+            "standingFromTreasure": 6,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 2,
+        "seed": 1,
+        "bots": [
+          "delver",
+          "opportunist"
+        ],
+        "winner": "delver",
+        "winnerSeat": 1,
+        "rounds": 45,
+        "actions": 735,
+        "standing": [
+          51,
+          29
+        ],
+        "troops": [
+          "standard",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 1
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 2,
+            "siteTreasureSpent": 6,
+            "treasureLost": 4,
+            "purchases": 4,
+            "marketCoinSpent": 4,
+            "marketTreasureSpent": 11,
+            "uses": {
+              "omnipotence": 1,
+              "timeLord": 1,
+              "strikeItRich": 1,
+              "banker": 1
+            },
+            "claims": 6,
+            "campTakeovers": 3,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 18,
+            "defeats": 1,
+            "standingFromCards": 25,
+            "standingFromTreasure": 26,
+            "remoteStanding": 11
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 22,
+            "siteTreasureSpent": 12,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 4,
+            "uses": {
+              "seizeControl": 1,
+              "journey": 1
+            },
+            "claims": 7,
+            "campTakeovers": 6,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 10,
+            "defeats": 0,
+            "standingFromCards": 26,
+            "standingFromTreasure": 3,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 3,
+        "seed": 1,
+        "bots": [
+          "delver",
+          "courierAggressive"
+        ],
+        "winner": "delver",
+        "winnerSeat": 1,
+        "rounds": 37,
+        "actions": 520,
+        "standing": [
+          50,
+          30
+        ],
+        "troops": [
+          "scout+fighter",
+          "standard"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 2,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 6,
+            "marketCoinSpent": 7,
+            "marketTreasureSpent": 15,
+            "uses": {
+              "omnipotence": 1,
+              "journey": 1,
+              "strikeItRich": 1,
+              "seizeControl": 1,
+              "timeLord": 1,
+              "banker": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 20,
+            "defeats": 0,
+            "standingFromCards": 15,
+            "standingFromTreasure": 35,
+            "remoteStanding": 13
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": 6,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 0,
+            "defeats": 0,
+            "standingFromCards": 20,
+            "standingFromTreasure": 10,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 4,
+        "seed": 1,
+        "bots": [
+          "delver",
+          "courierReplacement"
+        ],
+        "winner": "delver",
+        "winnerSeat": 1,
+        "rounds": 76,
+        "actions": 973,
+        "standing": [
+          51,
+          37
+        ],
+        "troops": [
+          "scout+fighter",
+          "fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 3,
+              "relic": 0
+            },
+            "treasureCardPayout": 15,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 25,
+            "firstPurchaseRound": 2,
+            "siteTreasureSpent": 2,
+            "treasureLost": 8,
+            "purchases": 6,
+            "marketCoinSpent": 6,
+            "marketTreasureSpent": 16,
+            "uses": {
+              "omnipotence": 1,
+              "banker": 1,
+              "strikeItRich": 1,
+              "seizeControl": 1,
+              "journey": 1,
+              "timeLord": 1
+            },
+            "claims": 3,
+            "campTakeovers": 1,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 20,
+            "defeats": 2,
+            "standingFromCards": 13,
+            "standingFromTreasure": 38,
+            "remoteStanding": 10
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": 6,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 2,
+            "campTakeovers": 2,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 10,
+            "defeats": 0,
+            "standingFromCards": 12,
+            "standingFromTreasure": 25,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 5,
+        "seed": 1,
+        "bots": [
+          "builder",
+          "opportunist"
+        ],
+        "winner": "opportunist",
+        "winnerSeat": 2,
+        "rounds": 34,
+        "actions": 578,
+        "standing": [
+          9,
+          50
+        ],
+        "troops": [
+          "scout+fighter",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 14,
+            "siteTreasureSpent": 11,
+            "treasureLost": 0,
+            "purchases": 3,
+            "marketCoinSpent": 2,
+            "marketTreasureSpent": 10,
+            "uses": {
+              "strikeItRich": 1,
+              "journey": 1,
+              "timeLord": 1
+            },
+            "claims": 3,
+            "campTakeovers": 1,
+            "recruits": 3,
+            "recruitmentTakeovers": 2,
+            "combats": 5,
+            "defeats": 0,
+            "standingFromCards": 6,
+            "standingFromTreasure": 3,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": 27,
+            "firstPurchaseRound": 5,
+            "siteTreasureSpent": 11,
+            "treasureLost": 0,
+            "purchases": 3,
+            "marketCoinSpent": 4,
+            "marketTreasureSpent": 6,
+            "uses": {
+              "seizeControl": 1,
+              "omnipotence": 1,
+              "banker": 1
+            },
+            "claims": 4,
+            "campTakeovers": 2,
+            "recruits": 3,
+            "recruitmentTakeovers": 1,
+            "combats": 17,
+            "defeats": 0,
+            "standingFromCards": 25,
+            "standingFromTreasure": 25,
+            "remoteStanding": 10
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 6,
+        "seed": 1,
+        "bots": [
+          "builder",
+          "courierAggressive"
+        ],
+        "winner": "builder",
+        "winnerSeat": 1,
+        "rounds": 44,
+        "actions": 657,
+        "standing": [
+          54,
+          30
+        ],
+        "troops": [
+          "scout+fighter",
+          "standard"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 3,
+              "relic": 0
+            },
+            "treasureCardPayout": 15,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 21,
+            "firstPurchaseRound": 13,
+            "siteTreasureSpent": 3,
+            "treasureLost": 0,
+            "purchases": 4,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 11,
+            "uses": {
+              "journey": 1,
+              "banker": 1,
+              "timeLord": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 16,
+            "defeats": 0,
+            "standingFromCards": 18,
+            "standingFromTreasure": 36,
+            "remoteStanding": 10
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 22,
+            "firstPurchaseRound": 15,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 4,
+            "marketTreasureSpent": 4,
+            "uses": {
+              "omnipotence": 1,
+              "strikeItRich": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 0,
+            "defeats": 0,
+            "standingFromCards": 19,
+            "standingFromTreasure": 11,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 7,
+        "seed": 1,
+        "bots": [
+          "builder",
+          "courierReplacement"
+        ],
+        "winner": "builder",
+        "winnerSeat": 1,
+        "rounds": 24,
+        "actions": 352,
+        "standing": [
+          52,
+          12
+        ],
+        "troops": [
+          "scout+fighter",
+          "standard"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 1
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 10,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 6,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 19,
+            "uses": {
+              "seizeControl": 1,
+              "strikeItRich": 1,
+              "omnipotence": 1,
+              "banker": 1,
+              "journey": 1,
+              "timeLord": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 11,
+            "defeats": 0,
+            "standingFromCards": 39,
+            "standingFromTreasure": 13,
+            "remoteStanding": 36
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 1,
+            "defeats": 0,
+            "standingFromCards": 7,
+            "standingFromTreasure": 5,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 8,
+        "seed": 1,
+        "bots": [
+          "opportunist",
+          "courierAggressive"
+        ],
+        "winner": "opportunist",
+        "winnerSeat": 1,
+        "rounds": 38,
+        "actions": 589,
+        "standing": [
+          50,
+          22
+        ],
+        "troops": [
+          "scout+fighter",
+          "standard"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 7,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 6,
+            "marketCoinSpent": 12,
+            "marketTreasureSpent": 10,
+            "uses": {
+              "seizeControl": 1,
+              "journey": 1,
+              "omnipotence": 1,
+              "timeLord": 1,
+              "strikeItRich": 1,
+              "banker": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 15,
+            "defeats": 0,
+            "standingFromCards": 20,
+            "standingFromTreasure": 30,
+            "remoteStanding": 9
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 0,
+            "defeats": 0,
+            "standingFromCards": 22,
+            "standingFromTreasure": 0,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 9,
+        "seed": 1,
+        "bots": [
+          "opportunist",
+          "courierReplacement"
+        ],
+        "winner": "opportunist",
+        "winnerSeat": 1,
+        "rounds": 46,
+        "actions": 671,
+        "standing": [
+          52,
+          22
+        ],
+        "troops": [
+          "scout+fighter",
+          "standard"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 25,
+            "firstPurchaseRound": 7,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 6,
+            "marketCoinSpent": 8,
+            "marketTreasureSpent": 14,
+            "uses": {
+              "omnipotence": 1,
+              "banker": 1,
+              "seizeControl": 1,
+              "timeLord": 1,
+              "strikeItRich": 1,
+              "journey": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 19,
+            "defeats": 0,
+            "standingFromCards": 13,
+            "standingFromTreasure": 39,
+            "remoteStanding": 6
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 28,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 4,
+            "defeats": 0,
+            "standingFromCards": 6,
+            "standingFromTreasure": 16,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 10,
+        "seed": 1,
+        "bots": [
+          "courierAggressive",
+          "courierReplacement"
+        ],
+        "winner": "courierAggressive",
+        "winnerSeat": 1,
+        "rounds": 68,
+        "actions": 979,
+        "standing": [
+          50,
+          38
+        ],
+        "troops": [
+          "fighter",
+          "fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 3,
+              "relic": 0
+            },
+            "treasureCardPayout": 15,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 6,
+            "firstPurchaseRound": 13,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 1,
+            "marketTreasureSpent": 6,
+            "uses": {
+              "banker": 1,
+              "timeLord": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 8,
+            "defeats": 0,
+            "standingFromCards": 25,
+            "standingFromTreasure": 25,
+            "remoteStanding": 5
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 12,
+            "firstPurchaseRound": 28,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 4,
+            "marketCoinSpent": 4,
+            "marketTreasureSpent": 11,
+            "uses": {
+              "omnipotence": 1,
+              "seizeControl": 1,
+              "journey": 1,
+              "strikeItRich": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 11,
+            "defeats": 0,
+            "standingFromCards": 4,
+            "standingFromTreasure": 34,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 11,
+        "seed": 1,
+        "bots": [
+          "builder",
+          "delver"
+        ],
+        "winner": "delver",
+        "winnerSeat": 2,
+        "rounds": 44,
+        "actions": 594,
+        "standing": [
+          36,
+          56
+        ],
+        "troops": [
+          "scout+fighter",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 19,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 6,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 2,
+            "recruitmentTakeovers": 1,
+            "combats": 9,
+            "defeats": 0,
+            "standingFromCards": 14,
+            "standingFromTreasure": 22,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 1
+            },
+            "firstLiquidationRound": 21,
+            "firstPurchaseRound": 2,
+            "siteTreasureSpent": 3,
+            "treasureLost": 8,
+            "purchases": 6,
+            "marketCoinSpent": 7,
+            "marketTreasureSpent": 15,
+            "uses": {
+              "omnipotence": 1,
+              "strikeItRich": 1,
+              "seizeControl": 1,
+              "journey": 1,
+              "timeLord": 1,
+              "banker": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 18,
+            "defeats": 1,
+            "standingFromCards": 30,
+            "standingFromTreasure": 26,
+            "remoteStanding": 16
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 12,
+        "seed": 1,
+        "bots": [
+          "opportunist",
+          "delver"
+        ],
+        "winner": "opportunist",
+        "winnerSeat": 1,
+        "rounds": 78,
+        "actions": 1111,
+        "standing": [
+          55,
+          34
+        ],
+        "troops": [
+          "scout+fighter",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 1
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 10,
+            "siteTreasureSpent": 14,
+            "treasureLost": 0,
+            "purchases": 1,
+            "marketCoinSpent": 2,
+            "marketTreasureSpent": 2,
+            "uses": {
+              "seizeControl": 1
+            },
+            "claims": 14,
+            "campTakeovers": 10,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 16,
+            "defeats": 1,
+            "standingFromCards": 41,
+            "standingFromTreasure": 14,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 3,
+              "relic": 0
+            },
+            "treasureCardPayout": 15,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": 48,
+            "firstPurchaseRound": 2,
+            "siteTreasureSpent": 15,
+            "treasureLost": 0,
+            "purchases": 5,
+            "marketCoinSpent": 6,
+            "marketTreasureSpent": 12,
+            "uses": {
+              "journey": 1,
+              "omnipotence": 1,
+              "timeLord": 1,
+              "strikeItRich": 1,
+              "banker": 1
+            },
+            "claims": 12,
+            "campTakeovers": 7,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 13,
+            "defeats": 0,
+            "standingFromCards": 12,
+            "standingFromTreasure": 22,
+            "remoteStanding": 19
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 13,
+        "seed": 1,
+        "bots": [
+          "courierAggressive",
+          "delver"
+        ],
+        "winner": "delver",
+        "winnerSeat": 2,
+        "rounds": 39,
+        "actions": 575,
+        "standing": [
+          42,
+          51
+        ],
+        "troops": [
+          "standard",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 1
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 0,
+            "defeats": 0,
+            "standingFromCards": 42,
+            "standingFromTreasure": 0,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 2,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 6,
+            "marketCoinSpent": 5,
+            "marketTreasureSpent": 17,
+            "uses": {
+              "omnipotence": 1,
+              "banker": 1,
+              "journey": 1,
+              "strikeItRich": 1,
+              "timeLord": 1,
+              "seizeControl": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 21,
+            "defeats": 0,
+            "standingFromCards": 10,
+            "standingFromTreasure": 41,
+            "remoteStanding": 12
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 14,
+        "seed": 1,
+        "bots": [
+          "courierReplacement",
+          "delver"
+        ],
+        "winner": "delver",
+        "winnerSeat": 2,
+        "rounds": 35,
+        "actions": 543,
+        "standing": [
+          26,
+          50
+        ],
+        "troops": [
+          "scout+fighter",
+          "fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": 6,
+            "firstPurchaseRound": 15,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 3,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 9,
+            "uses": {
+              "journey": 1,
+              "strikeItRich": 1,
+              "seizeControl": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 1,
+            "defeats": 0,
+            "standingFromCards": 13,
+            "standingFromTreasure": 13,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 34,
+            "firstPurchaseRound": 2,
+            "siteTreasureSpent": 2,
+            "treasureLost": 0,
+            "purchases": 3,
+            "marketCoinSpent": 4,
+            "marketTreasureSpent": 6,
+            "uses": {
+              "omnipotence": 1,
+              "banker": 1,
+              "timeLord": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 19,
+            "defeats": 0,
+            "standingFromCards": 15,
+            "standingFromTreasure": 35,
+            "remoteStanding": 10
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 15,
+        "seed": 1,
+        "bots": [
+          "opportunist",
+          "builder"
+        ],
+        "winner": "opportunist",
+        "winnerSeat": 1,
+        "rounds": 62,
+        "actions": 990,
+        "standing": [
+          54,
+          39
+        ],
+        "troops": [
+          "scout+fighter",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 1
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 8,
+            "siteTreasureSpent": 16,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 5,
+            "marketTreasureSpent": 2,
+            "uses": {
+              "seizeControl": 1,
+              "omnipotence": 1
+            },
+            "claims": 9,
+            "campTakeovers": 8,
+            "recruits": 2,
+            "recruitmentTakeovers": 2,
+            "combats": 14,
+            "defeats": 2,
+            "standingFromCards": 42,
+            "standingFromTreasure": 12,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 5,
+            "siteTreasureSpent": 10,
+            "treasureLost": 0,
+            "purchases": 4,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 12,
+            "uses": {
+              "strikeItRich": 1,
+              "timeLord": 1,
+              "journey": 1,
+              "banker": 1
+            },
+            "claims": 9,
+            "campTakeovers": 2,
+            "recruits": 3,
+            "recruitmentTakeovers": 0,
+            "combats": 17,
+            "defeats": 0,
+            "standingFromCards": 17,
+            "standingFromTreasure": 22,
+            "remoteStanding": 14
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 16,
+        "seed": 1,
+        "bots": [
+          "courierAggressive",
+          "builder"
+        ],
+        "winner": "builder",
+        "winnerSeat": 2,
+        "rounds": 56,
+        "actions": 744,
+        "standing": [
+          42,
+          53
+        ],
+        "troops": [
+          "fighter",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 35,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 1,
+            "marketCoinSpent": 2,
+            "marketTreasureSpent": 2,
+            "uses": {
+              "seizeControl": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 2,
+            "defeats": 0,
+            "standingFromCards": 40,
+            "standingFromTreasure": 2,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 50,
+            "firstPurchaseRound": 5,
+            "siteTreasureSpent": 1,
+            "treasureLost": 0,
+            "purchases": 5,
+            "marketCoinSpent": 8,
+            "marketTreasureSpent": 10,
+            "uses": {
+              "banker": 1,
+              "omnipotence": 1,
+              "journey": 1,
+              "timeLord": 1,
+              "strikeItRich": 1
+            },
+            "claims": 2,
+            "campTakeovers": 0,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 11,
+            "defeats": 0,
+            "standingFromCards": 24,
+            "standingFromTreasure": 29,
+            "remoteStanding": 10
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 17,
+        "seed": 1,
+        "bots": [
+          "courierReplacement",
+          "builder"
+        ],
+        "winner": "builder",
+        "winnerSeat": 2,
+        "rounds": 33,
+        "actions": 545,
+        "standing": [
+          40,
+          50
+        ],
+        "troops": [
+          "standard",
+          "scout+fighter"
+        ],
+        "marketRemaining": 1,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 1
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 6,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 1,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 0,
+            "uses": {
+              "omnipotence": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 1,
+            "defeats": 0,
+            "standingFromCards": 35,
+            "standingFromTreasure": 5,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 1
+            },
+            "firstLiquidationRound": 14,
+            "firstPurchaseRound": 5,
+            "siteTreasureSpent": 2,
+            "treasureLost": 0,
+            "purchases": 4,
+            "marketCoinSpent": 6,
+            "marketTreasureSpent": 8,
+            "uses": {
+              "banker": 1,
+              "journey": 1,
+              "timeLord": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 11,
+            "defeats": 0,
+            "standingFromCards": 25,
+            "standingFromTreasure": 25,
+            "remoteStanding": 9
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 18,
+        "seed": 1,
+        "bots": [
+          "courierAggressive",
+          "opportunist"
+        ],
+        "winner": "opportunist",
+        "winnerSeat": 2,
+        "rounds": 44,
+        "actions": 704,
+        "standing": [
+          25,
+          50
+        ],
+        "troops": [
+          "standard",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 13,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 1,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 0,
+            "uses": {
+              "omnipotence": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 0,
+            "defeats": 0,
+            "standingFromCards": 25,
+            "standingFromTreasure": 0,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 5,
+            "siteTreasureSpent": 0,
+            "treasureLost": 4,
+            "purchases": 5,
+            "marketCoinSpent": 6,
+            "marketTreasureSpent": 13,
+            "uses": {
+              "banker": 1,
+              "seizeControl": 1,
+              "strikeItRich": 1,
+              "journey": 1,
+              "timeLord": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 24,
+            "defeats": 1,
+            "standingFromCards": 11,
+            "standingFromTreasure": 39,
+            "remoteStanding": 8
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 19,
+        "seed": 1,
+        "bots": [
+          "courierReplacement",
+          "opportunist"
+        ],
+        "winner": "opportunist",
+        "winnerSeat": 2,
+        "rounds": 38,
+        "actions": 619,
+        "standing": [
+          20,
+          51
+        ],
+        "troops": [
+          "standard",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 6,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 1,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 0,
+            "uses": {
+              "omnipotence": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 5,
+            "defeats": 0,
+            "standingFromCards": 12,
+            "standingFromTreasure": 8,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 5,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 5,
+            "marketCoinSpent": 10,
+            "marketTreasureSpent": 9,
+            "uses": {
+              "seizeControl": 1,
+              "banker": 1,
+              "journey": 1,
+              "timeLord": 1,
+              "strikeItRich": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 15,
+            "defeats": 0,
+            "standingFromCards": 20,
+            "standingFromTreasure": 31,
+            "remoteStanding": 8
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 20,
+        "seed": 1,
+        "bots": [
+          "courierReplacement",
+          "courierAggressive"
+        ],
+        "winner": "courierReplacement",
+        "winnerSeat": 1,
+        "rounds": 50,
+        "actions": 749,
+        "standing": [
+          50,
+          24
+        ],
+        "troops": [
+          "scout+fighter",
+          "standard"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "firstLiquidationRound": 6,
+            "firstPurchaseRound": 10,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 6,
+            "marketCoinSpent": 16,
+            "marketTreasureSpent": 6,
+            "uses": {
+              "banker": 1,
+              "omnipotence": 1,
+              "seizeControl": 1,
+              "strikeItRich": 1,
+              "timeLord": 1,
+              "journey": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 9,
+            "defeats": 0,
+            "standingFromCards": 18,
+            "standingFromTreasure": 32,
+            "remoteStanding": 3
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 16,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 0,
+            "defeats": 0,
+            "standingFromCards": 14,
+            "standingFromTreasure": 10,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 21,
+        "seed": 2,
+        "bots": [
+          "delver",
+          "builder"
+        ],
+        "winner": "delver",
+        "winnerSeat": 1,
+        "rounds": 25,
+        "actions": 357,
+        "standing": [
+          54,
+          0
+        ],
+        "troops": [
+          "scout+fighter",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 1
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 10,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 5,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 15,
+            "uses": {
+              "strikeItRich": 1,
+              "omnipotence": 1,
+              "seizeControl": 1,
+              "journey": 1,
+              "banker": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 13,
+            "defeats": 0,
+            "standingFromCards": 30,
+            "standingFromTreasure": 24,
+            "remoteStanding": 11
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 15,
+            "firstPurchaseRound": 12,
+            "siteTreasureSpent": 6,
+            "treasureLost": 0,
+            "purchases": 1,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 4,
+            "uses": {
+              "timeLord": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 2,
+            "recruitmentTakeovers": 0,
+            "combats": 6,
+            "defeats": 0,
+            "standingFromCards": 0,
+            "standingFromTreasure": 0,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 22,
+        "seed": 2,
+        "bots": [
+          "delver",
+          "opportunist"
+        ],
+        "winner": "opportunist",
+        "winnerSeat": 2,
+        "rounds": 50,
+        "actions": 742,
+        "standing": [
+          25,
+          57
+        ],
+        "troops": [
+          "scout+fighter",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 32,
+            "firstPurchaseRound": 9,
+            "siteTreasureSpent": 5,
+            "treasureLost": 0,
+            "purchases": 4,
+            "marketCoinSpent": 6,
+            "marketTreasureSpent": 9,
+            "uses": {
+              "journey": 1,
+              "omnipotence": 1,
+              "timeLord": 1,
+              "strikeItRich": 1
+            },
+            "claims": 4,
+            "campTakeovers": 1,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 12,
+            "defeats": 0,
+            "standingFromCards": 0,
+            "standingFromTreasure": 25,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 1
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 7,
+            "siteTreasureSpent": 3,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 2,
+            "marketTreasureSpent": 5,
+            "uses": {
+              "seizeControl": 1,
+              "banker": 1
+            },
+            "claims": 5,
+            "campTakeovers": 3,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 11,
+            "defeats": 1,
+            "standingFromCards": 42,
+            "standingFromTreasure": 15,
+            "remoteStanding": 7
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 23,
+        "seed": 2,
+        "bots": [
+          "delver",
+          "courierAggressive"
+        ],
+        "winner": "delver",
+        "winnerSeat": 1,
+        "rounds": 39,
+        "actions": 542,
+        "standing": [
+          50,
+          21
+        ],
+        "troops": [
+          "scout+fighter",
+          "standard"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 9,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 6,
+            "marketCoinSpent": 8,
+            "marketTreasureSpent": 14,
+            "uses": {
+              "strikeItRich": 1,
+              "omnipotence": 1,
+              "journey": 1,
+              "seizeControl": 1,
+              "banker": 1,
+              "timeLord": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 23,
+            "defeats": 0,
+            "standingFromCards": 8,
+            "standingFromTreasure": 42,
+            "remoteStanding": 14
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 8,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 0,
+            "defeats": 0,
+            "standingFromCards": 11,
+            "standingFromTreasure": 10,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 24,
+        "seed": 2,
+        "bots": [
+          "delver",
+          "courierReplacement"
+        ],
+        "winner": "delver",
+        "winnerSeat": 1,
+        "rounds": 35,
+        "actions": 525,
+        "standing": [
+          50,
+          14
+        ],
+        "troops": [
+          "scout+fighter",
+          "standard"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 9,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 6,
+            "marketCoinSpent": 4,
+            "marketTreasureSpent": 18,
+            "uses": {
+              "strikeItRich": 1,
+              "omnipotence": 1,
+              "seizeControl": 1,
+              "timeLord": 1,
+              "journey": 1,
+              "banker": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 20,
+            "defeats": 0,
+            "standingFromCards": 15,
+            "standingFromTreasure": 35,
+            "remoteStanding": 10
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 2,
+            "defeats": 0,
+            "standingFromCards": 10,
+            "standingFromTreasure": 4,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 25,
+        "seed": 2,
+        "bots": [
+          "builder",
+          "opportunist"
+        ],
+        "winner": null,
+        "winnerSeat": null,
+        "rounds": 151,
+        "actions": 1662,
+        "standing": [
+          32,
+          32
+        ],
+        "troops": [
+          "scout+fighter",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 12,
+            "siteTreasureSpent": 8,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 4,
+            "marketTreasureSpent": 3,
+            "uses": {
+              "journey": 1,
+              "timeLord": 1
+            },
+            "claims": 26,
+            "campTakeovers": 16,
+            "recruits": 2,
+            "recruitmentTakeovers": 0,
+            "combats": 15,
+            "defeats": 0,
+            "standingFromCards": 13,
+            "standingFromTreasure": 19,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 34,
+            "firstPurchaseRound": 5,
+            "siteTreasureSpent": 6,
+            "treasureLost": 0,
+            "purchases": 4,
+            "marketCoinSpent": 5,
+            "marketTreasureSpent": 10,
+            "uses": {
+              "seizeControl": 1,
+              "omnipotence": 1,
+              "strikeItRich": 1,
+              "banker": 1
+            },
+            "claims": 34,
+            "campTakeovers": 25,
+            "recruits": 1,
+            "recruitmentTakeovers": 1,
+            "combats": 13,
+            "defeats": 1,
+            "standingFromCards": 9,
+            "standingFromTreasure": 23,
+            "remoteStanding": 10
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 26,
+        "seed": 2,
+        "bots": [
+          "builder",
+          "courierAggressive"
+        ],
+        "winner": "builder",
+        "winnerSeat": 1,
+        "rounds": 47,
+        "actions": 687,
+        "standing": [
+          50,
+          36
+        ],
+        "troops": [
+          "scout+fighter",
+          "standard"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "firstLiquidationRound": 8,
+            "firstPurchaseRound": 11,
+            "siteTreasureSpent": 3,
+            "treasureLost": 0,
+            "purchases": 5,
+            "marketCoinSpent": 7,
+            "marketTreasureSpent": 10,
+            "uses": {
+              "omnipotence": 1,
+              "journey": 1,
+              "banker": 1,
+              "timeLord": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 18,
+            "defeats": 0,
+            "standingFromCards": 22,
+            "standingFromTreasure": 28,
+            "remoteStanding": 7
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 4,
+              "relic": 0
+            },
+            "treasureCardPayout": 20,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 8,
+            "firstPurchaseRound": 23,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 1,
+            "marketCoinSpent": 1,
+            "marketTreasureSpent": 4,
+            "uses": {
+              "strikeItRich": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 1,
+            "defeats": 0,
+            "standingFromCards": 13,
+            "standingFromTreasure": 23,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 27,
+        "seed": 2,
+        "bots": [
+          "builder",
+          "courierReplacement"
+        ],
+        "winner": "builder",
+        "winnerSeat": 1,
+        "rounds": 38,
+        "actions": 574,
+        "standing": [
+          51,
+          24
+        ],
+        "troops": [
+          "scout+fighter",
+          "standard"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 12,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 3,
+            "marketCoinSpent": 6,
+            "marketTreasureSpent": 4,
+            "uses": {
+              "seizeControl": 1,
+              "omnipotence": 1,
+              "banker": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 15,
+            "defeats": 0,
+            "standingFromCards": 25,
+            "standingFromTreasure": 26,
+            "remoteStanding": 10
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 13,
+            "firstPurchaseRound": 15,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 3,
+            "marketCoinSpent": 5,
+            "marketTreasureSpent": 7,
+            "uses": {
+              "journey": 1,
+              "strikeItRich": 1,
+              "timeLord": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 4,
+            "defeats": 0,
+            "standingFromCards": 8,
+            "standingFromTreasure": 16,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 28,
+        "seed": 2,
+        "bots": [
+          "opportunist",
+          "courierAggressive"
+        ],
+        "winner": "opportunist",
+        "winnerSeat": 1,
+        "rounds": 59,
+        "actions": 739,
+        "standing": [
+          51,
+          32
+        ],
+        "troops": [
+          "scout+fighter",
+          "standard"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 15,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 5,
+            "marketCoinSpent": 11,
+            "marketTreasureSpent": 8,
+            "uses": {
+              "seizeControl": 1,
+              "strikeItRich": 1,
+              "banker": 1,
+              "omnipotence": 1,
+              "timeLord": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 19,
+            "defeats": 4,
+            "standingFromCards": 16,
+            "standingFromTreasure": 35,
+            "remoteStanding": 12
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 7,
+            "firstPurchaseRound": 30,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 1,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 0,
+            "uses": {
+              "journey": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 0,
+            "defeats": 0,
+            "standingFromCards": 22,
+            "standingFromTreasure": 10,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 29,
+        "seed": 2,
+        "bots": [
+          "opportunist",
+          "courierReplacement"
+        ],
+        "winner": "opportunist",
+        "winnerSeat": 1,
+        "rounds": 48,
+        "actions": 694,
+        "standing": [
+          51,
+          19
+        ],
+        "troops": [
+          "scout+fighter",
+          "standard"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 12,
+            "siteTreasureSpent": 2,
+            "treasureLost": 0,
+            "purchases": 6,
+            "marketCoinSpent": 11,
+            "marketTreasureSpent": 11,
+            "uses": {
+              "seizeControl": 1,
+              "omnipotence": 1,
+              "banker": 1,
+              "strikeItRich": 1,
+              "journey": 1,
+              "timeLord": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 24,
+            "defeats": 4,
+            "standingFromCards": 14,
+            "standingFromTreasure": 37,
+            "remoteStanding": 6
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 23,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 1,
+            "defeats": 0,
+            "standingFromCards": 7,
+            "standingFromTreasure": 12,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 30,
+        "seed": 2,
+        "bots": [
+          "courierAggressive",
+          "courierReplacement"
+        ],
+        "winner": "courierAggressive",
+        "winnerSeat": 1,
+        "rounds": 80,
+        "actions": 1008,
+        "standing": [
+          50,
+          27
+        ],
+        "troops": [
+          "fighter",
+          "fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 3,
+            "firstPurchaseRound": 34,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 4,
+            "marketCoinSpent": 10,
+            "marketTreasureSpent": 5,
+            "uses": {
+              "omnipotence": 1,
+              "banker": 1,
+              "timeLord": 1,
+              "strikeItRich": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 3,
+            "defeats": 0,
+            "standingFromCards": 34,
+            "standingFromTreasure": 16,
+            "remoteStanding": 5
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 29,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 4,
+            "uses": {
+              "seizeControl": 1,
+              "journey": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 11,
+            "defeats": 0,
+            "standingFromCards": 11,
+            "standingFromTreasure": 16,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 31,
+        "seed": 2,
+        "bots": [
+          "builder",
+          "delver"
+        ],
+        "winner": "delver",
+        "winnerSeat": 2,
+        "rounds": 31,
+        "actions": 481,
+        "standing": [
+          19,
+          50
+        ],
+        "troops": [
+          "scout+fighter",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 6,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 2,
+            "recruitmentTakeovers": 0,
+            "combats": 5,
+            "defeats": 0,
+            "standingFromCards": 19,
+            "standingFromTreasure": 0,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": 14,
+            "firstPurchaseRound": 5,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 6,
+            "marketCoinSpent": 7,
+            "marketTreasureSpent": 15,
+            "uses": {
+              "strikeItRich": 1,
+              "omnipotence": 1,
+              "seizeControl": 1,
+              "journey": 1,
+              "timeLord": 1,
+              "banker": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 19,
+            "defeats": 0,
+            "standingFromCards": 12,
+            "standingFromTreasure": 38,
+            "remoteStanding": 19
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 32,
+        "seed": 2,
+        "bots": [
+          "opportunist",
+          "delver"
+        ],
+        "winner": "opportunist",
+        "winnerSeat": 1,
+        "rounds": 49,
+        "actions": 669,
+        "standing": [
+          54,
+          36
+        ],
+        "troops": [
+          "scout+fighter",
+          "fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 1
+            },
+            "firstLiquidationRound": 33,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 10,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 6,
+            "campTakeovers": 4,
+            "recruits": 1,
+            "recruitmentTakeovers": 1,
+            "combats": 9,
+            "defeats": 1,
+            "standingFromCards": 40,
+            "standingFromTreasure": 14,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 6,
+            "siteTreasureSpent": 2,
+            "treasureLost": 0,
+            "purchases": 6,
+            "marketCoinSpent": 6,
+            "marketTreasureSpent": 16,
+            "uses": {
+              "strikeItRich": 1,
+              "omnipotence": 1,
+              "seizeControl": 1,
+              "journey": 1,
+              "timeLord": 1,
+              "banker": 1
+            },
+            "claims": 5,
+            "campTakeovers": 1,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 17,
+            "defeats": 0,
+            "standingFromCards": 10,
+            "standingFromTreasure": 26,
+            "remoteStanding": 11
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 33,
+        "seed": 2,
+        "bots": [
+          "courierAggressive",
+          "delver"
+        ],
+        "winner": "delver",
+        "winnerSeat": 2,
+        "rounds": 32,
+        "actions": 469,
+        "standing": [
+          21,
+          51
+        ],
+        "troops": [
+          "standard",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 15,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 0,
+            "defeats": 0,
+            "standingFromCards": 11,
+            "standingFromTreasure": 10,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 5,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 6,
+            "marketCoinSpent": 11,
+            "marketTreasureSpent": 11,
+            "uses": {
+              "seizeControl": 1,
+              "omnipotence": 1,
+              "journey": 1,
+              "timeLord": 1,
+              "strikeItRich": 1,
+              "banker": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 21,
+            "defeats": 0,
+            "standingFromCards": 10,
+            "standingFromTreasure": 41,
+            "remoteStanding": 12
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 34,
+        "seed": 2,
+        "bots": [
+          "courierReplacement",
+          "delver"
+        ],
+        "winner": "delver",
+        "winnerSeat": 2,
+        "rounds": 36,
+        "actions": 501,
+        "standing": [
+          17,
+          50
+        ],
+        "troops": [
+          "standard",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 5,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 2,
+            "defeats": 0,
+            "standingFromCards": 3,
+            "standingFromTreasure": 14,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 5,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 6,
+            "marketCoinSpent": 8,
+            "marketTreasureSpent": 14,
+            "uses": {
+              "strikeItRich": 1,
+              "omnipotence": 1,
+              "seizeControl": 1,
+              "journey": 1,
+              "timeLord": 1,
+              "banker": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 22,
+            "defeats": 0,
+            "standingFromCards": 10,
+            "standingFromTreasure": 40,
+            "remoteStanding": 15
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 35,
+        "seed": 2,
+        "bots": [
+          "opportunist",
+          "builder"
+        ],
+        "winner": "opportunist",
+        "winnerSeat": 1,
+        "rounds": 89,
+        "actions": 1322,
+        "standing": [
+          51,
+          24
+        ],
+        "troops": [
+          "fighter",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 15,
+            "siteTreasureSpent": 25,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 2,
+            "marketTreasureSpent": 7,
+            "uses": {
+              "timeLord": 1,
+              "strikeItRich": 1
+            },
+            "claims": 12,
+            "campTakeovers": 10,
+            "recruits": 6,
+            "recruitmentTakeovers": 6,
+            "combats": 22,
+            "defeats": 2,
+            "standingFromCards": 30,
+            "standingFromTreasure": 21,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 3,
+              "relic": 0
+            },
+            "treasureCardPayout": 15,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 26,
+            "firstPurchaseRound": 6,
+            "siteTreasureSpent": 11,
+            "treasureLost": 0,
+            "purchases": 4,
+            "marketCoinSpent": 9,
+            "marketTreasureSpent": 4,
+            "uses": {
+              "seizeControl": 1,
+              "omnipotence": 1,
+              "journey": 1,
+              "banker": 1
+            },
+            "claims": 11,
+            "campTakeovers": 4,
+            "recruits": 6,
+            "recruitmentTakeovers": 2,
+            "combats": 9,
+            "defeats": 0,
+            "standingFromCards": 3,
+            "standingFromTreasure": 21,
+            "remoteStanding": 14
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 36,
+        "seed": 2,
+        "bots": [
+          "courierAggressive",
+          "builder"
+        ],
+        "winner": "builder",
+        "winnerSeat": 2,
+        "rounds": 33,
+        "actions": 487,
+        "standing": [
+          21,
+          50
+        ],
+        "troops": [
+          "standard",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 29,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 1,
+            "defeats": 0,
+            "standingFromCards": 14,
+            "standingFromTreasure": 7,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": 20,
+            "firstPurchaseRound": 7,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 6,
+            "marketCoinSpent": 12,
+            "marketTreasureSpent": 10,
+            "uses": {
+              "seizeControl": 1,
+              "strikeItRich": 1,
+              "omnipotence": 1,
+              "journey": 1,
+              "timeLord": 1,
+              "banker": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 15,
+            "defeats": 0,
+            "standingFromCards": 15,
+            "standingFromTreasure": 35,
+            "remoteStanding": 9
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 37,
+        "seed": 2,
+        "bots": [
+          "courierReplacement",
+          "builder"
+        ],
+        "winner": "builder",
+        "winnerSeat": 2,
+        "rounds": 51,
+        "actions": 756,
+        "standing": [
+          40,
+          50
+        ],
+        "troops": [
+          "standard",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 3,
+              "relic": 0
+            },
+            "treasureCardPayout": 15,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 13,
+            "firstPurchaseRound": 13,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 5,
+            "uses": {
+              "strikeItRich": 1,
+              "journey": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 8,
+            "defeats": 0,
+            "standingFromCards": 6,
+            "standingFromTreasure": 34,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 3,
+              "relic": 0
+            },
+            "treasureCardPayout": 15,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": 28,
+            "firstPurchaseRound": 7,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 4,
+            "marketCoinSpent": 7,
+            "marketTreasureSpent": 7,
+            "uses": {
+              "seizeControl": 1,
+              "omnipotence": 1,
+              "timeLord": 1,
+              "banker": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 11,
+            "defeats": 0,
+            "standingFromCards": 20,
+            "standingFromTreasure": 30,
+            "remoteStanding": 11
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 38,
+        "seed": 2,
+        "bots": [
+          "courierAggressive",
+          "opportunist"
+        ],
+        "winner": "opportunist",
+        "winnerSeat": 2,
+        "rounds": 31,
+        "actions": 462,
+        "standing": [
+          21,
+          51
+        ],
+        "troops": [
+          "standard",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 15,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 0,
+            "defeats": 0,
+            "standingFromCards": 11,
+            "standingFromTreasure": 10,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 5,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 6,
+            "marketCoinSpent": 11,
+            "marketTreasureSpent": 11,
+            "uses": {
+              "seizeControl": 1,
+              "strikeItRich": 1,
+              "banker": 1,
+              "journey": 1,
+              "omnipotence": 1,
+              "timeLord": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 17,
+            "defeats": 0,
+            "standingFromCards": 18,
+            "standingFromTreasure": 33,
+            "remoteStanding": 19
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 39,
+        "seed": 2,
+        "bots": [
+          "courierReplacement",
+          "opportunist"
+        ],
+        "winner": "opportunist",
+        "winnerSeat": 2,
+        "rounds": 42,
+        "actions": 640,
+        "standing": [
+          19,
+          50
+        ],
+        "troops": [
+          "standard",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 19,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 2,
+            "marketTreasureSpent": 7,
+            "uses": {
+              "strikeItRich": 1,
+              "timeLord": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 6,
+            "defeats": 0,
+            "standingFromCards": 6,
+            "standingFromTreasure": 13,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": 30,
+            "firstPurchaseRound": 5,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 4,
+            "marketCoinSpent": 8,
+            "marketTreasureSpent": 5,
+            "uses": {
+              "omnipotence": 1,
+              "seizeControl": 1,
+              "banker": 1,
+              "journey": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 15,
+            "defeats": 0,
+            "standingFromCards": 20,
+            "standingFromTreasure": 30,
+            "remoteStanding": 6
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 40,
+        "seed": 2,
+        "bots": [
+          "courierReplacement",
+          "courierAggressive"
+        ],
+        "winner": "courierAggressive",
+        "winnerSeat": 2,
+        "rounds": 76,
+        "actions": 962,
+        "standing": [
+          27,
+          50
+        ],
+        "troops": [
+          "standard",
+          "fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 3,
+            "firstPurchaseRound": 61,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 1,
+            "marketCoinSpent": 4,
+            "marketTreasureSpent": 0,
+            "uses": {
+              "timeLord": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 10,
+            "defeats": 0,
+            "standingFromCards": 4,
+            "standingFromTreasure": 23,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": 14,
+            "firstPurchaseRound": 44,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 5,
+            "marketCoinSpent": 4,
+            "marketTreasureSpent": 14,
+            "uses": {
+              "strikeItRich": 1,
+              "journey": 1,
+              "omnipotence": 1,
+              "banker": 1,
+              "seizeControl": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 6,
+            "defeats": 0,
+            "standingFromCards": 32,
+            "standingFromTreasure": 18,
+            "remoteStanding": 6
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 41,
+        "seed": 3,
+        "bots": [
+          "delver",
+          "builder"
+        ],
+        "winner": "delver",
+        "winnerSeat": 1,
+        "rounds": 41,
+        "actions": 616,
+        "standing": [
+          52,
+          29
+        ],
+        "troops": [
+          "scout+fighter",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 15,
+            "firstPurchaseRound": 10,
+            "siteTreasureSpent": 3,
+            "treasureLost": 0,
+            "purchases": 4,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 12,
+            "uses": {
+              "strikeItRich": 1,
+              "journey": 1,
+              "seizeControl": 1,
+              "omnipotence": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 17,
+            "defeats": 0,
+            "standingFromCards": 15,
+            "standingFromTreasure": 37,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 5,
+            "siteTreasureSpent": 6,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 4,
+            "marketTreasureSpent": 3,
+            "uses": {
+              "timeLord": 1,
+              "banker": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 2,
+            "recruitmentTakeovers": 1,
+            "combats": 7,
+            "defeats": 0,
+            "standingFromCards": 24,
+            "standingFromTreasure": 5,
+            "remoteStanding": 7
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 42,
+        "seed": 3,
+        "bots": [
+          "delver",
+          "opportunist"
+        ],
+        "winner": "opportunist",
+        "winnerSeat": 2,
+        "rounds": 51,
+        "actions": 783,
+        "standing": [
+          10,
+          50
+        ],
+        "troops": [
+          "fighter",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 10,
+            "siteTreasureSpent": 5,
+            "treasureLost": 0,
+            "purchases": 3,
+            "marketCoinSpent": 2,
+            "marketTreasureSpent": 10,
+            "uses": {
+              "strikeItRich": 1,
+              "journey": 1,
+              "seizeControl": 1
+            },
+            "claims": 5,
+            "campTakeovers": 2,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 12,
+            "defeats": 0,
+            "standingFromCards": 0,
+            "standingFromTreasure": 10,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "firstLiquidationRound": 16,
+            "firstPurchaseRound": 5,
+            "siteTreasureSpent": 11,
+            "treasureLost": 0,
+            "purchases": 3,
+            "marketCoinSpent": 6,
+            "marketTreasureSpent": 4,
+            "uses": {
+              "timeLord": 1,
+              "omnipotence": 1,
+              "banker": 1
+            },
+            "claims": 6,
+            "campTakeovers": 4,
+            "recruits": 2,
+            "recruitmentTakeovers": 2,
+            "combats": 15,
+            "defeats": 0,
+            "standingFromCards": 30,
+            "standingFromTreasure": 20,
+            "remoteStanding": 15
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 43,
+        "seed": 3,
+        "bots": [
+          "courierAggressive",
+          "delver"
+        ],
+        "winner": "delver",
+        "winnerSeat": 2,
+        "rounds": 40,
+        "actions": 547,
+        "standing": [
+          20,
+          57
+        ],
+        "troops": [
+          "standard",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 0,
+            "defeats": 0,
+            "standingFromCards": 20,
+            "standingFromTreasure": 0,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 1
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 5,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 6,
+            "marketCoinSpent": 8,
+            "marketTreasureSpent": 14,
+            "uses": {
+              "strikeItRich": 1,
+              "banker": 1,
+              "journey": 1,
+              "timeLord": 1,
+              "omnipotence": 1,
+              "seizeControl": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 15,
+            "defeats": 0,
+            "standingFromCards": 25,
+            "standingFromTreasure": 32,
+            "remoteStanding": 13
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 44,
+        "seed": 3,
+        "bots": [
+          "courierReplacement",
+          "delver"
+        ],
+        "winner": "delver",
+        "winnerSeat": 2,
+        "rounds": 55,
+        "actions": 643,
+        "standing": [
+          13,
+          52
+        ],
+        "troops": [
+          "fighter",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 18,
+            "firstPurchaseRound": 20,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 1,
+            "marketCoinSpent": 1,
+            "marketTreasureSpent": 3,
+            "uses": {
+              "seizeControl": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 1,
+            "defeats": 0,
+            "standingFromCards": 4,
+            "standingFromTreasure": 9,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 1
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 5,
+            "siteTreasureSpent": 3,
+            "treasureLost": 10,
+            "purchases": 5,
+            "marketCoinSpent": 4,
+            "marketTreasureSpent": 14,
+            "uses": {
+              "timeLord": 1,
+              "journey": 1,
+              "omnipotence": 1,
+              "strikeItRich": 1,
+              "banker": 1
+            },
+            "claims": 2,
+            "campTakeovers": 0,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 19,
+            "defeats": 1,
+            "standingFromCards": 30,
+            "standingFromTreasure": 22,
+            "remoteStanding": 12
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 45,
+        "seed": 3,
+        "bots": [
+          "builder",
+          "opportunist"
+        ],
+        "winner": "builder",
+        "winnerSeat": 1,
+        "rounds": 41,
+        "actions": 595,
+        "standing": [
+          50,
+          12
+        ],
+        "troops": [
+          "scout+fighter",
+          "fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 30,
+            "firstPurchaseRound": 12,
+            "siteTreasureSpent": 5,
+            "treasureLost": 0,
+            "purchases": 3,
+            "marketCoinSpent": 7,
+            "marketTreasureSpent": 5,
+            "uses": {
+              "omnipotence": 1,
+              "seizeControl": 1,
+              "strikeItRich": 1
+            },
+            "claims": 2,
+            "campTakeovers": 0,
+            "recruits": 2,
+            "recruitmentTakeovers": 1,
+            "combats": 13,
+            "defeats": 0,
+            "standingFromCards": 19,
+            "standingFromTreasure": 31,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 5,
+            "siteTreasureSpent": 4,
+            "treasureLost": 0,
+            "purchases": 3,
+            "marketCoinSpent": 6,
+            "marketTreasureSpent": 4,
+            "uses": {
+              "timeLord": 1,
+              "banker": 1,
+              "journey": 1
+            },
+            "claims": 3,
+            "campTakeovers": 1,
+            "recruits": 1,
+            "recruitmentTakeovers": 1,
+            "combats": 5,
+            "defeats": 0,
+            "standingFromCards": 12,
+            "standingFromTreasure": 0,
+            "remoteStanding": 7
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 46,
+        "seed": 3,
+        "bots": [
+          "builder",
+          "courierAggressive"
+        ],
+        "winner": "builder",
+        "winnerSeat": 1,
+        "rounds": 48,
+        "actions": 654,
+        "standing": [
+          54,
+          24
+        ],
+        "troops": [
+          "scout+fighter",
+          "standard"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 12,
+            "siteTreasureSpent": 3,
+            "treasureLost": 0,
+            "purchases": 6,
+            "marketCoinSpent": 4,
+            "marketTreasureSpent": 18,
+            "uses": {
+              "strikeItRich": 1,
+              "timeLord": 1,
+              "journey": 1,
+              "omnipotence": 1,
+              "banker": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 20,
+            "defeats": 0,
+            "standingFromCards": 22,
+            "standingFromTreasure": 32,
+            "remoteStanding": 13
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 8,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 0,
+            "defeats": 0,
+            "standingFromCards": 14,
+            "standingFromTreasure": 10,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 47,
+        "seed": 3,
+        "bots": [
+          "courierReplacement",
+          "builder"
+        ],
+        "winner": "builder",
+        "winnerSeat": 2,
+        "rounds": 73,
+        "actions": 869,
+        "standing": [
+          26,
+          50
+        ],
+        "troops": [
+          "fighter",
+          "scout+fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 29,
+            "firstPurchaseRound": 21,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 2,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 4,
+            "uses": {
+              "omnipotence": 1,
+              "seizeControl": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 10,
+            "defeats": 0,
+            "standingFromCards": 7,
+            "standingFromTreasure": 19,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": 18,
+            "firstPurchaseRound": 6,
+            "siteTreasureSpent": 3,
+            "treasureLost": 0,
+            "purchases": 4,
+            "marketCoinSpent": 6,
+            "marketTreasureSpent": 9,
+            "uses": {
+              "timeLord": 1,
+              "journey": 1,
+              "strikeItRich": 1,
+              "banker": 1
+            },
+            "claims": 2,
+            "campTakeovers": 0,
+            "recruits": 1,
+            "recruitmentTakeovers": 0,
+            "combats": 14,
+            "defeats": 0,
+            "standingFromCards": 14,
+            "standingFromTreasure": 36,
+            "remoteStanding": 14
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 48,
+        "seed": 3,
+        "bots": [
+          "opportunist",
+          "courierAggressive"
+        ],
+        "winner": "opportunist",
+        "winnerSeat": 1,
+        "rounds": 53,
+        "actions": 734,
+        "standing": [
+          50,
+          27
+        ],
+        "troops": [
+          "scout+fighter",
+          "standard"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 2,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 6,
+            "marketCoinSpent": 10,
+            "marketTreasureSpent": 12,
+            "uses": {
+              "timeLord": 1,
+              "strikeItRich": 1,
+              "banker": 1,
+              "omnipotence": 1,
+              "journey": 1,
+              "seizeControl": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 15,
+            "defeats": 0,
+            "standingFromCards": 22,
+            "standingFromTreasure": 28,
+            "remoteStanding": 6
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 1,
+            "defeats": 0,
+            "standingFromCards": 25,
+            "standingFromTreasure": 2,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 49,
+        "seed": 3,
+        "bots": [
+          "opportunist",
+          "courierReplacement"
+        ],
+        "winner": "opportunist",
+        "winnerSeat": 1,
+        "rounds": 39,
+        "actions": 610,
+        "standing": [
+          53,
+          23
+        ],
+        "troops": [
+          "scout+fighter",
+          "standard"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "treasureCardPayout": 5,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 1
+            },
+            "firstLiquidationRound": 31,
+            "firstPurchaseRound": 2,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 5,
+            "marketCoinSpent": 6,
+            "marketTreasureSpent": 13,
+            "uses": {
+              "timeLord": 1,
+              "journey": 1,
+              "banker": 1,
+              "seizeControl": 1
+            },
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 9,
+            "defeats": 1,
+            "standingFromCards": 42,
+            "standingFromTreasure": 11,
+            "remoteStanding": 7
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": 19,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 1,
+            "marketCoinSpent": 3,
+            "marketTreasureSpent": 0,
+            "uses": {
+              "omnipotence": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 9,
+            "defeats": 0,
+            "standingFromCards": 7,
+            "standingFromTreasure": 16,
+            "remoteStanding": 0
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      },
+      {
+        "game": 50,
+        "seed": 3,
+        "bots": [
+          "courierAggressive",
+          "courierReplacement"
+        ],
+        "winner": "courierReplacement",
+        "winnerSeat": 2,
+        "rounds": 92,
+        "actions": 1184,
+        "standing": [
+          39,
+          51
+        ],
+        "troops": [
+          "fighter",
+          "fighter"
+        ],
+        "marketRemaining": 0,
+        "activity": [
+          {
+            "treasureCardsPlayed": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "treasureCardPayout": 0,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 0,
+              "relic": 0
+            },
+            "firstLiquidationRound": null,
+            "firstPurchaseRound": null,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 0,
+            "marketCoinSpent": 0,
+            "marketTreasureSpent": 0,
+            "uses": {},
+            "claims": 1,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 4,
+            "defeats": 0,
+            "standingFromCards": 33,
+            "standingFromTreasure": 6,
+            "remoteStanding": 0
+          },
+          {
+            "treasureCardsPlayed": {
+              "trinket": 2,
+              "relic": 0
+            },
+            "treasureCardPayout": 10,
+            "treasureCardOverflow": 0,
+            "treasureCardsConverted": {
+              "trinket": 1,
+              "relic": 0
+            },
+            "firstLiquidationRound": 3,
+            "firstPurchaseRound": 9,
+            "siteTreasureSpent": 0,
+            "treasureLost": 0,
+            "purchases": 6,
+            "marketCoinSpent": 9,
+            "marketTreasureSpent": 13,
+            "uses": {
+              "banker": 1,
+              "strikeItRich": 1,
+              "journey": 1,
+              "timeLord": 1,
+              "omnipotence": 1,
+              "seizeControl": 1
+            },
+            "claims": 0,
+            "campTakeovers": 0,
+            "recruits": 0,
+            "recruitmentTakeovers": 0,
+            "combats": 16,
+            "defeats": 0,
+            "standingFromCards": 12,
+            "standingFromTreasure": 39,
+            "remoteStanding": 7
+          }
+        ],
+        "courierPhases": [],
+        "error": null
+      }
+    ]
+  }
+}

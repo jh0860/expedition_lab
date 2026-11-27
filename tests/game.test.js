@@ -41,7 +41,8 @@ test("defeat returns the same upgraded troop and loses treasure", () => {
   let s = createGame();
   const tile = Object.values(s.board.tiles).find((t) => t.type === "black");
   s.players[0].position = tile.vertices[0];
-  s.players[0].troop = "scout";
+  s.players[0].recruitSite = Object.values(s.board.tiles).find(t => t.type === "recruit").id;
+  s.owners[s.players[0].recruitSite] = 0;
   s.players[0].treasure = 5;
   s.turn.movement = 1;
   s = applyAction(s, { type: "enter", tile: tile.id });
@@ -153,18 +154,19 @@ test("converting costs Energy and competes with leaving base", () => {
   assert.ok(!legalActions(state).some((a) => a.type === "exit"));
 });
 
-test("Scout and Camp allowances are the only automatic Energy bonuses", () => {
+test("Only Scout grants automatic Energy, including when Fighter is also held", () => {
   let state = createGame();
   const camp = Object.values(state.board.tiles).find(
     (t) => t.type === "training",
   );
-  state.players[0].troop = "scout";
+  state.players[0].recruitSite = Object.values(state.board.tiles).find(t => t.type === "recruit").id;
+  state.owners[state.players[0].recruitSite] = 0;
   state.players[0].camp = camp.id;
   state.owners[camp.id] = 0;
   state = applyAction(state, { type: "end" });
   assert.equal(state.turn.movement, 0);
   state = applyAction(state, { type: "end" });
-  assert.equal(state.turn.movement, 2);
+  assert.equal(state.turn.movement, 1);
   assert.ok(!("focus" in state.turn));
 });
 
@@ -175,10 +177,10 @@ test("switching Camps cannot repeatedly generate Energy", () => {
   );
   state.players[0].position = `t:${camps[0].id}`;
   state = applyAction(state, { type: "claim" });
-  assert.equal(state.turn.movement, 1);
+  assert.equal(state.turn.movement, 0);
   state.players[0].position = `t:${camps[1].id}`;
   state = applyAction(state, { type: "claim" });
-  assert.equal(state.turn.movement, 1);
+  assert.equal(state.turn.movement, 0);
 });
 
 test("combat cards generate Energy usable after victory", () => {
@@ -216,7 +218,7 @@ test("legacy save migration preserves pending actions but removes future baselin
   assert.deepEqual(loadGame({ version: 3, state }), state);
   state = applyAction(state, { type: "end" });
   assert.equal(state.turn.movement, 0);
-  assert.throws(() => loadGame({ version: 5, state }));
+  assert.throws(() => loadGame({ version: 7, state }));
 });
 
 test("new roster and ten-card starter deck match the design", async () => {
@@ -271,33 +273,29 @@ test("site rewards are seeded, from the right pool, and once per player", async 
   }
 });
 
-test("Coin pays costs first, cannot bank, and expires with other turn bonuses", () => {
+test("income cards produce spendable carried treasure that converts to Standing", () => {
   let s = createGame();
-  const recruit = Object.values(s.board.tiles).find(
-    (t) => t.type === "recruit",
-  );
+  const recruit = Object.values(s.board.tiles).find(t => t.type === "recruit");
   s.players[0].position = `t:${recruit.id}`;
   s.players[0].hand = ["barter", "alchemy", "ancientBlessing"];
   s.players[0].treasure = 2;
-  s = applyAction(s, { type: "play", index: 0 });
-  s = applyAction(s, { type: "play", index: 0 });
-  assert.equal(s.turn.coin, 3);
-  s = applyAction(s, { type: "recruit", troop: "fighter" });
-  assert.equal(s.turn.coin, 0);
-  assert.equal(s.players[0].treasure, 2);
-  s = applyAction(s, { type: "play", index: 0 });
-  assert.equal(s.turn.health, 5);
-  assert.equal(s.turn.power, 5);
-  assert.equal(s.turn.movement, 5);
+  s = applyAction(s, { type:"play", index:0 });
+  s = applyAction(s, { type:"play", index:0 });
+  assert.equal(s.players[0].treasure,5);
+  assert.ok(!("coin" in s.turn));
+  s = applyAction(s, {type:"recruit",troop:"scout"});
+  assert.equal(s.players[0].treasure,2);
+  s = applyAction(s, {type:"play",index:0});
+  assert.equal(s.turn.health,5);
+  assert.equal(s.turn.power,5);
+  assert.equal(s.turn.movement,6);
   s.players[0].position = `t:${s.players[0].base}`;
-  s.turn.coin = 5;
-  s = applyAction(s, { type: "bank" });
-  assert.equal(s.players[0].bank, 2);
-  assert.equal(s.turn.coin, 5);
-  s = applyAction(s, { type: "end" });
-  assert.equal(s.turn.coin, 0);
-  assert.equal(s.turn.health, 0);
-  assert.equal(s.turn.power, 0);
+  s = applyAction(s, {type:"bank"});
+  assert.equal(s.players[0].bank,2);
+  assert.equal(s.players[0].treasure,0);
+  s = applyAction(s, {type:"end"});
+  assert.equal(s.turn.health,0);
+  assert.equal(s.turn.power,0);
 });
 
 test("Health cards affect the pending combat without granting permanent Health", () => {

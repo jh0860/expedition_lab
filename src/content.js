@@ -11,11 +11,11 @@ export const defaults = {
 export const cards = {
   wander: { name: "Wander", movement: 1, value: 1 },
   strike: { name: "Strike", power: 1, value: 1 },
-  barter: { name: "Barter", coin: 1, value: 1 },
+  barter: { name: "Barter", treasure: 1, value: 1 },
   hike: { name: "Hike", movement: 2, value: 3 },
   supplyCache: { name: "Supply Cache", health: 2, value: 3 },
   wildMight: { name: "Wild Might", power: 2, value: 3 },
-  trinket: { name: "Trinket", value: 7 },
+  trinket: { name: "Trinket", treasure: 5, destroyOnPlay: true, value: 7 },
   arcanePassage: { name: "Arcane Passage", teleport: "guild", value: 5 },
   healer: { name: "Healer", health: 5, value: 5 },
   magicalImbuement: {
@@ -24,9 +24,9 @@ export const cards = {
     power: 1,
     value: 5,
   },
-  alchemy: { name: "Alchemy", coin: 2, value: 5 },
-  preciousCache: { name: "Precious Cache", coin: 5, value: 10 },
-  relic: { name: "Relic", value: 25 },
+  alchemy: { name: "Alchemy", treasure: 2, value: 5 },
+  preciousCache: { name: "Precious Cache", treasure: 5, value: 10 },
+  relic: { name: "Relic", treasure: 20, destroyOnPlay: true, value: 25 },
   ancientBlessing: {
     name: "Ancient Blessing",
     power: 5,
@@ -97,3 +97,17 @@ export const resources = {
   guild: ["arcanePassage", "healer", "magicalImbuement", "alchemy"],
   mine: ["preciousCache", "relic", "ancientBlessing"],
 };
+
+// Site bonuses are independent; troop labels are retained only for compatibility.
+export function playerStats(p) {
+  return {
+    power: 1 + (p.camp ? 1 : 0),
+    health: 2 + (p.camp ? 1 : 0),
+    movement: p.recruitSite ? 1 : 0,
+  };
+}
+export function bonusKey(p) {
+  return p.recruitSite
+    ? p.camp ? "scout+fighter" : "scout"
+    : p.camp ? "fighter" : "standard";
+}

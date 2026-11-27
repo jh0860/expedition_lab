@@ -1,4 +1,4 @@
-import { cards, troops, resources, hazards } from "./content.js";
+import { cards, playerStats, resources, hazards } from "./content.js";
 
 // Strategy weights are provisional. Decisions are deterministic and use no RNG.
 export const botStrategies = {
@@ -40,15 +40,15 @@ export const botStrategies = {
   },
   delver: {
     name: "Delver",
-    description: "Combat preparation and Mine expeditions",
+    description: "Fighter bonus, combat preparation and Mine expeditions",
     bankAt: 10,
     homeValue: 10,
     risk: 0.5,
     forage: 7,
     guild: 12,
     mine: 28,
-    training: 8,
-    recruit: 20,
+    training: 24,
+    recruit: 10,
     fight: 12,
     keep: {
       hike: 2,
@@ -85,6 +85,12 @@ export const botStrategies = {
   },
 };
 
+botStrategies.courierAggressive = {
+  ...botStrategies.courier,
+  name: "Courier — aggressive (legacy)",
+  description: "Convert aggressively from the outset, without an investment phase",
+};
+
 botStrategies.courierReplacement = {
   ...botStrategies.courier,
   name: "Courier — replacements",
@@ -97,9 +103,9 @@ export function courierPlan(s, p) {
     (id) => !cards[id].singleUse,
   );
   const energy = owned.reduce((n, id) => n + (cards[id].movement || 0), 0);
-  const coin = owned.reduce((n, id) => n + (cards[id].coin || 0), 0);
+  const income = owned.filter(id => !cards[id].destroyOnPlay).reduce((n, id) => n + (cards[id].treasure || 0), 0);
   const ready =
-    energy >= 8 && coin >= 5 && (p.troop !== "standard" || Boolean(p.camp));
+    energy >= 8 && income >= 5 && Boolean(p.recruitSite || p.camp);
   const close =
     p.bank >= 0.6 * s.config.goal ||
     p.bank + p.treasure >= s.config.goal ||
@@ -133,9 +139,9 @@ const courierInvestment = {
   },
 };
 
-const effectKeys = ["movement", "power", "health", "coin"];
+const effectKeys = ["movement", "power", "health", "treasure"];
 const hasEffect = (id) =>
-  cards[id].teleport || effectKeys.some((key) => cards[id][key]);
+  !cards[id].destroyOnPlay && (cards[id].teleport || effectKeys.some((key) => cards[id][key]));
 function upgrades(better, weaker) {
   if (!hasEffect(weaker) || cards[weaker].teleport || cards[better].teleport)
     return false;
@@ -205,7 +211,7 @@ export function chooseStrategy(s, actions, strategy) {
   const profile = investing
     ? { ...baseProfile, ...courierInvestment }
     : baseProfile;
-  const isCourier = strategy === "courier" || strategy === "courierReplacement";
+  const isCourier = ["courier", "courierAggressive", "courierReplacement"].includes(strategy);
   const depositedId = (a) => p[a.zone || "hand"][a.index];
   const all = [...p.hand, ...p.deck, ...p.discard];
   const count = (id) => all.filter((card) => card === id).length;
@@ -214,15 +220,14 @@ export function chooseStrategy(s, actions, strategy) {
     .reduce((n, id) => n + (cards[id].movement || 0), 0);
   const spendable =
     p.treasure +
-    s.turn.coin +
-    p.hand.reduce((n, id) => n + (cards[id].coin || 0), 0);
+    p.hand.reduce((n, id) => n + (cards[id].treasure || 0), 0);
   const canDeposit = (id) => {
     if (cards[id].singleUse) return p.bank + cards[id].value >= s.config.goal;
     if (p.bank + p.treasure + cards[id].value >= s.config.goal) return true;
     // Keep a functioning travel deck until the final scoring push.
     if (cards[id].movement && totalMovement - cards[id].movement < 5)
       return false;
-    if (cards[id].value === 1) return id !== "wander"; // trim starter combat/Coin only near the finish
+    if (cards[id].value === 1) return id !== "wander"; // trim starter combat/income only near the finish
     return count(id) > (profile.keep[id] || 0);
   };
   const depositable =
@@ -260,8 +265,9 @@ export function chooseStrategy(s, actions, strategy) {
       !deposit.zone &&
       !card.teleport &&
       !card.singleUse &&
+      !card.destroyOnPlay &&
       p.bank + card.value < s.config.goal &&
-      (card.movement || card.power || card.health || card.coin)
+      (card.movement || card.power || card.health || card.treasure)
     ) {
       const play = actions.find(
         (a) => a.type === "play" && a.index === deposit.index && !a.tile,
@@ -282,13 +288,13 @@ export function chooseStrategy(s, actions, strategy) {
   const drawCards = playWhere((card) => card.draw);
   if (drawCards) return drawCards;
   if (s.encounter) {
-    // Only spend enough combat cards to guarantee victory; retain Movement/Coin
+    // Only spend enough combat cards to guarantee victory; retain Energy/treasure
     // in hand until the world window returns (unless attached to a needed buff).
     const strikes = Math.ceil(
-      s.encounter.health / (troops[p.troop].power + s.turn.power),
+      s.encounter.health / (playerStats(p).power + s.turn.power),
     );
     const hits = Math.ceil(
-      (troops[p.troop].health + s.turn.health) / s.encounter.power,
+      (playerStats(p).health + s.turn.health) / s.encounter.power,
     );
     if (strikes >= hits) {
       const buff = playWhere((card) => card.power || card.health);
@@ -298,7 +304,14 @@ export function chooseStrategy(s, actions, strategy) {
   }
   const atBase = p.position === `t:${p.base}`;
   const riches = playWhere(
-    (card) => card.treasure && s.config.carry - p.treasure >= card.treasure,
+    (card) =>
+      card.treasure &&
+      s.config.carry - p.treasure >= card.treasure &&
+      (!card.destroyOnPlay ||
+        (!atBase &&
+          !s.turn.remoteBanking &&
+          p.bank + card.value < s.config.goal &&
+          !p.hand.some((id) => cards[id].remoteBanking))),
   );
   if (riches) return riches;
   const banker = playWhere((card) => card.remoteBanking);
@@ -314,7 +327,7 @@ export function chooseStrategy(s, actions, strategy) {
       (depositValue >= profile.homeValue && potentialMove > 0))
   )
     return banker;
-  const desiredTroop = strategy === "delver" ? "fighter" : "scout";
+  const desiredTroop = "scout";
   const seize = plays
     .filter((a) => cards[p.hand[a.index]].seize)
     .map((a) => {
@@ -326,7 +339,7 @@ export function chooseStrategy(s, actions, strategy) {
       const gain =
         tile.type === "training"
           ? !p.camp
-          : p.troop === "standard" || p.troop !== desiredTroop;
+          : !p.recruitSite;
       return {
         a,
         score:
@@ -339,7 +352,7 @@ export function chooseStrategy(s, actions, strategy) {
   if (seize) return seize.a;
   const mayRecruit = (id) => {
     const owner = s.owners[id];
-    if (owner === s.active) return p.troop !== desiredTroop;
+    if (owner === s.active) return false;
     return (
       !p.recruitSite || (strategy === "opportunist" && owner !== undefined)
     );
@@ -358,7 +371,7 @@ export function chooseStrategy(s, actions, strategy) {
       s.owners[tileId] !== undefined &&
       s.owners[tileId] !== s.active);
   if (claim && mayClaim(p.position.slice(2))) return claim;
-  const coin = playWhere((card) => card.coin);
+  const incomeCard = playWhere((card) => card.treasure && !card.destroyOnPlay && !card.singleUse && p.treasure < s.config.carry);
   const onRecruit =
     p.position.startsWith("t:") &&
     s.board.tiles[p.position.slice(2)].type === "recruit";
@@ -420,7 +433,7 @@ export function chooseStrategy(s, actions, strategy) {
   const wantsPurchase =
     marketOptions.length > 0 && p.bank + p.treasure < s.config.goal;
   if (
-    coin &&
+    incomeCard &&
     ((onRecruit &&
       (!isCourier || investing) &&
       mayRecruit(p.position.slice(2)) &&
@@ -431,7 +444,7 @@ export function chooseStrategy(s, actions, strategy) {
         spendable >= s.config.takeoverCost) ||
       (atMarket && wantsPurchase))
   )
-    return coin;
+    return incomeCard;
   const buy = actions
     .filter((a) => a.type === "buy")
     .sort(
@@ -454,11 +467,11 @@ export function chooseStrategy(s, actions, strategy) {
     return { type: "end" };
 
   const power =
-    troops[p.troop].power +
+    playerStats(p).power +
     s.turn.power +
     p.hand.reduce((n, id) => n + (cards[id].power || 0), 0);
   const health =
-    troops[p.troop].health +
+    playerStats(p).health +
     s.turn.health +
     p.hand.reduce((n, id) => n + (cards[id].health || 0), 0);
   const allowedFight = (type) => {

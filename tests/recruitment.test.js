@@ -13,7 +13,7 @@ test("recruiting claims a site and takeover removes the previous owner's upgrade
   let s = createGame();
   const tile = sites(s)[0];
   s.players[0].position = `t:${tile.id}`;
-  s.turn.coin = 3;
+  s.players[s.active].treasure += 3;
   s = applyAction(s, { type: "recruit", troop: "scout" });
   assert.equal(s.owners[tile.id], 0);
   assert.equal(s.players[0].recruitSite, tile.id);
@@ -21,13 +21,13 @@ test("recruiting claims a site and takeover removes the previous owner's upgrade
   s = applyAction(s, { type: "end" });
   s.players[1].position = `t:${tile.id}`;
   s.players[1].treasure = 2;
-  s.turn.coin = 1;
-  s = applyAction(s, { type: "recruit", troop: "fighter" });
+  s.players[s.active].treasure += 1;
+  s = applyAction(s, { type: "recruit", troop: "scout" });
   assert.equal(s.players[0].troop, "standard");
   assert.equal(s.players[0].recruitSite, null);
-  assert.equal(s.players[1].troop, "fighter");
+  assert.equal(s.players[1].troop, "scout");
   assert.equal(s.owners[tile.id], 1);
-  assert.equal(s.turn.coin, 0);
+  assert.ok(!("coin" in s.turn));
   assert.equal(s.players[1].treasure, 0);
 });
 
@@ -44,6 +44,7 @@ test("recruitment transfer releases the old site and preserves Camp ownership", 
   });
   s.owners[a.id] = 0;
   s.owners[camp.id] = 0;
+  s.turn.scoutBonus = true;
   s = applyAction(s, { type: "recruit", troop: "scout" });
   assert.equal(s.owners[a.id], undefined);
   assert.equal(s.players[0].recruitSite, b.id);

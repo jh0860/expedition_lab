@@ -66,7 +66,7 @@ for (let rotation = 0; rotation < 4; rotation++) {
         ...state.market.deck,
         ...state.market.offers.filter(Boolean),
         ...state.market.deposited,
-        ...state.destroyed,
+        ...state.destroyed.filter((id) => marketDeck.includes(id)),
         ...state.players.flatMap((p) =>
           [...p.hand, ...p.deck, ...p.discard].filter(
             (id) => cards[id].singleUse,

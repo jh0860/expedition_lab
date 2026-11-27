@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Expedition Lab</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="retro.css" />
   </head>
   <body>
     <header>
       <div>
-        <small>BOARD GAME PLAYTEST WORKSPACE</small>
+        <small>A DECKBUILDING EXPEDITION</small>
         <h1>Expedition Lab</h1>
       </div>
       <div class="settings">
@@ -47,7 +48,12 @@
             >Load game<input id="load" type="file" accept="application/json"
           /></label>
         </div>
-        <svg id="board" role="group" aria-label="Game board"></svg>
+        <div id="world-playzone" class="table-playzone" aria-label="Card play area">
+          <svg id="board" role="group" aria-label="Game board"></svg>
+          <div class="drop-instruction" aria-hidden="true">Release to play your card</div>
+          <div id="played-cards" class="played-cards" aria-live="polite"></div>
+        </div>
+        <section id="hand" aria-label="Your cards"></section>
         <p id="destination" class="destination" aria-live="polite">
           Hover over a destination to preview your move.
         </p>
@@ -59,8 +65,7 @@
         </p>
         <div class="legend">
           Forest · Dark forest (1★) · Black forest (2★) · Mountain (blocked)<br />Forage
-          → Foraging cards · Guild → Guild cards · Mine → Mine cards · Camp → +1
-          Energy
+          → Foraging cards · Guild → Guild cards · Mine → Mine cards · Recruitment Site → Scout (+1 Energy) · Training Camp → Fighter (+1 Power/+1 Health)<br />Black outlines group each seven-hex flower.
         </div>
       </section>
       <aside>
@@ -68,10 +73,6 @@
         <section>
           <h2>Current expedition</h2>
           <div id="details"></div>
-        </section>
-        <section>
-          <h2>Hand</h2>
-          <div id="hand"></div>
         </section>
         <section>
           <h2>Shared Marketplace</h2>
@@ -98,8 +99,10 @@
         last for the rest of this turn. Energy bonuses remain available if you
         win.
       </p>
-      <div id="combat-stats" class="combat-stats"></div>
-      <h3>Your hand</h3>
+      <div id="combat-playzone" class="table-playzone combat-playzone">
+        <div id="combat-stats" class="combat-stats"></div>
+        <div class="drop-instruction" aria-hidden="true">Release to prepare your troop</div>
+      </div>
       <div id="combat-hand"></div>
       <p id="combat-note">
         Equal Speed is decided by a coin flip when combat resolves. Defeat
@@ -109,7 +112,7 @@
     </dialog>
     <footer>
       Prototype · Card-driven Energy · Pass-and-play · Provisional cards and
-      costs · Target 50 Standing · Camp takeover 2 Coin/treasure · Recruitment 3
+      costs · Target 50 Standing · Camp takeover 2 treasure · Recruitment 3
     </footer>
     <script type="module" src="src/app.js"></script>
   </body>
