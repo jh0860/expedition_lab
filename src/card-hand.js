@@ -85,7 +85,7 @@ export function createCardHand(root, { onPlay, targetLabel, dropTarget }) {
     counts.textContent = `Deck ${context.deckCount} · Discard ${context.discardCount}`;
     fan.replaceChildren(); controls.replaceChildren();
     controls.dataset.index = String(selected);
-    const width = Math.min(root.parentElement.clientWidth - 24, window.innerWidth - 32, 1000);
+    const width = Math.min(root.clientWidth - 24, window.innerWidth - 32, 1000);
     const cardWidth = window.innerWidth <= 600 ? 138 : 164;
     const count = context.hand.length;
     const spread = Math.min(cardWidth * 0.88, Math.max(12, (width - cardWidth) / Math.max(1, count - 1)));
@@ -200,7 +200,9 @@ export function createCardHand(root, { onPlay, targetLabel, dropTarget }) {
       event.preventDefault(); event.stopImmediatePropagation(); return;
     }
     if (expanded && !root.contains(event.target)) {
-      collapse(); event.preventDefault(); event.stopImmediatePropagation();
+      collapse();
+      if (event.target.closest("[data-hand-action]")) return;
+      event.preventDefault(); event.stopImmediatePropagation();
     }
   }, true);
   document.addEventListener("keydown", event => {
@@ -210,8 +212,13 @@ export function createCardHand(root, { onPlay, targetLabel, dropTarget }) {
       collapse(); toggle.focus();
     }
   });
-  const resize = new ResizeObserver(() => { if (!drag) paint(); });
-  resize.observe(root.parentElement);
+  let previousWidth = 0;
+  const resize = new ResizeObserver(([entry]) => {
+    if (entry.contentRect.width === previousWidth) return;
+    previousWidth = entry.contentRect.width;
+    if (!drag) paint();
+  });
+  resize.observe(root);
   return {
     update(next) {
       if (drag) finishDrag({clientX:-1,clientY:-1},true);

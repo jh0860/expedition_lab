@@ -5,6 +5,7 @@ import {
   chooseBot,
   loadGame,
 } from "./game.js";
+import { renderActionMenu, travelDescription, travelKey } from "./action-menu.js";
 import { botStrategies } from "./bots.js";
 import { cards, playerStats } from "./content.js";
 import { tileColors, tileIconUrl } from "./tile-art.js";
@@ -27,12 +28,20 @@ function handContext(actions) {
   const p = state.players[state.active];
   return {hand:p.hand, actions, owner:`${state.active}:${state.round}`, playerLabel:`Player ${state.active+1}'s hand`, deckCount:p.deck.length, discardCount:p.discard.length};
 }
-function resetTable() { playedCards = []; worldHand.reset(); combatHand.reset(); }
+function closeActions() {
+  $("action-menu").hidden = true;
+  $("toggle-actions").setAttribute("aria-expanded", "false");
+  const preview = $("board").querySelector(".move-preview");
+  preview?.replaceChildren();
+  $("destination").textContent = "Hover over a destination to preview your move.";
+}
+function resetTable() { playedCards = []; worldHand.reset(); combatHand.reset(); closeActions(); }
 function act(action) {
   try {
     const before = state;
     const played = action.type === "play" ? before.players[before.active].hand[action.index] : null;
     state = applyAction(state, action);
+    closeActions();
     if (state.active !== before.active || state.round !== before.round || action.type === "end") resetTable();
     else if (played) playedCards.push(played);
     render();
@@ -41,6 +50,7 @@ function act(action) {
   }
 }
 function label(a) {
+  if (["move", "exit", "enter"].includes(a.type)) return travelDescription(state, a);
   return (
     {
       end: "End turn",
@@ -121,18 +131,12 @@ function render() {
     caption.textContent = `${cards[latest].name} played · ${playedCards.length} this turn`;
     $("played-cards").append(caption);
   }
-  $("actions").replaceChildren();
-  const actionButtons = actions.filter((a) => a.type !== "play");
-  const fromDeck = (a) => a.type === "deposit" && a.zone === "deck";
-  // Search choices expose card identities, not their shuffled draw order.
-  const deckDeposits = actionButtons
-    .filter(fromDeck)
-    .sort((a, b) =>
-      cards[p.deck[a.index]].name.localeCompare(cards[p.deck[b.index]].name),
-    );
-  [...actionButtons.filter((a) => !fromDeck(a)), ...deckDeposits].forEach((a) =>
-    button(label(a), a, $("actions")),
-  );
+  renderActionMenu($("actions"), state, actions, {onAction: act, label});
+  $("action-count").textContent = $("actions").querySelectorAll(".action-menu-option").length || "";
+  const end = actions.find(a => a.type === "end");
+  $("end-turn").disabled = !end;
+  $("end-turn").title = state.encounter ? "Resolve combat before ending your turn" : state.winner !== null ? "Game finished" : "Finish your turn and draw a new hand";
+  if (state.encounter || state.winner !== null) closeActions();
   $("log").replaceChildren();
   state.log
     .slice(-12)
@@ -295,12 +299,10 @@ function render() {
       r: 0.34,
       class: "tile-target",
     });
-    bindDestination(
-      target,
-      action,
-      tile,
-      `Enter ${tile.type} tile center · 1 Energy`,
-    );
+    const description = `${travelDescription(state, action)} · 1 Energy`;
+    bindDestination(target, action, tile, description);
+    for (const option of $("actions").querySelectorAll("[data-travel-key]"))
+      if (option.dataset.travelKey === travelKey(action)) bindDestination(option, action, tile, description);
   }
   for (const action of actions.filter(
     (action) => action.type === "move" || action.type === "exit",
@@ -319,12 +321,10 @@ function render() {
       class: "vertex",
     });
     const cost = "1 Energy";
-    bindDestination(
-      target,
-      action,
-      vertex,
-      `${action.type === "move" ? "Move" : "Exit"} to vertex · ${cost}`,
-    );
+    const description = `${travelDescription(state, action)} · ${cost}`;
+    bindDestination(target, action, vertex, description);
+    for (const option of $("actions").querySelectorAll("[data-travel-key]"))
+      if (option.dataset.travelKey === travelKey(action)) bindDestination(option, action, vertex, description);
   }
   state.players.forEach((player, i) => {
     const pos = player.position.startsWith("t:")
@@ -361,6 +361,24 @@ function renderCombat() {
   combatHand.update(handContext(legalActions(state)));
   if (!dialog.open) dialog.showModal();
 }
+$("toggle-actions").onclick = () => {
+  if (!$("action-menu").hidden) { closeActions(); return; }
+  worldHand.reset();
+  $("action-menu").hidden = false;
+  $("toggle-actions").setAttribute("aria-expanded", "true");
+};
+$("close-actions").onclick = () => { closeActions(); $("toggle-actions").focus(); };
+$("end-turn").onclick = () => act({type:"end"});
+document.addEventListener("click", event => {
+  if ($("action-menu").hidden || $("action-dock").contains(event.target)) return;
+  closeActions();
+  if (!$("hand").contains(event.target)) { event.preventDefault(); event.stopImmediatePropagation(); }
+}, true);
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && !$("action-menu").hidden) {
+    closeActions(); $("toggle-actions").focus(); event.preventDefault(); event.stopImmediatePropagation();
+  }
+}, true);
 $("combat").addEventListener("cancel", (event) => event.preventDefault());
 $("resolve-combat").onclick = () => act({ type: "resolveCombat" });
 $("new").onclick = () => {

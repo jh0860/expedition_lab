@@ -10,7 +10,7 @@ Use Node 20.11 or newer. Extract the download and run this command from the fold
 npm start
 ```
 
-Open http://localhost:8080. Select a seed, player count and map size, then choose New game. The default map has 19 flowers. Each flower is one central site plus its six surrounding hexes, enclosed by a black outline. Hover or keyboard-focus destinations to preview the cost. Click a gold vertex to travel or exit, or a tile's center marker to enter. All legal actions are also available in the action panel. Save/load uses versioned JSON.
+Open http://localhost:8080. Select a seed, player count and map size, then choose New game. The default map has 19 flowers. Each flower is one central site plus its six surrounding hexes, enclosed by a black outline. Hover or keyboard-focus destinations to preview the cost. Click a gold vertex to travel or exit, or a tile's center marker to enter. Open Actions beside the hand to see grouped travel and conversion choices. Travel options name their direction and preview their destination on hover or keyboard focus. Click outside or press Escape to close the menu. End turn stays separate below the hand, including when the hand is expanded; resolve combat before ending a turn. Save/load uses versioned JSON.
 
 ## Playing cards at the table
 

@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Expedition Lab</title>
-    <link rel="stylesheet" href="style.css?v=decba9311a9f" />
-    <link rel="stylesheet" href="retro.css?v=decba9311a9f" />
+    <link rel="stylesheet" href="style.css?v=0cd0c73cd9c9" />
+    <link rel="stylesheet" href="retro.css?v=0cd0c73cd9c9" />
   </head>
   <body>
     <header>
@@ -53,15 +53,24 @@
           <div class="drop-instruction" aria-hidden="true">Release to play your card</div>
           <div id="played-cards" class="played-cards" aria-live="polite"></div>
         </div>
-        <section id="hand" aria-label="Your cards"></section>
+        <div id="table-dock">
+          <section id="hand" aria-label="Your cards"></section>
+          <div id="action-dock" data-hand-action>
+            <button id="toggle-actions" aria-expanded="false" aria-controls="action-menu">Actions <span id="action-count"></span></button>
+            <button id="end-turn" class="end-turn-button">End turn</button>
+            <section id="action-menu" aria-labelledby="action-menu-title" hidden>
+              <div class="action-menu-heading"><h2 id="action-menu-title">Expedition actions</h2><button id="close-actions" aria-label="Close actions">×</button></div>
+              <div id="actions"></div>
+            </section>
+          </div>
+        </div>
         <p id="destination" class="destination" aria-live="polite">
           Hover over a destination to preview your move.
         </p>
         <p class="hint">
           Play cards to gain Energy. Each move, entry, or exit costs 1 Energy.
           Click a gold vertex to move or exit. Click the center marker of a
-          highlighted tile to enter. All board actions also appear in the action
-          list.
+          highlighted tile to enter. Open Actions beside your hand for destination previews and conversions.
         </p>
         <div class="legend">
           Forest · Dark forest (1★) · Black forest (2★) · Mountain (blocked)<br />Forage
@@ -77,10 +86,6 @@
         <section>
           <h2>Shared Marketplace</h2>
           <div id="market"></div>
-        </section>
-        <section>
-          <h2>Actions</h2>
-          <div id="actions"></div>
         </section>
         <section>
           <h2>Field journal</h2>
@@ -114,7 +119,7 @@
       Prototype · Card-driven Energy · Pass-and-play · Provisional cards and
       costs · Target 50 Standing · Camp takeover 2 treasure · Recruitment 3
     </footer>
-    <script type="importmap" id="asset-versions">{"imports":{"./src/app.js":"./src/app.js?v=decba9311a9f","./src/board.js":"./src/board.js?v=decba9311a9f","./src/bots.js":"./src/bots.js?v=decba9311a9f","./src/card-art.js":"./src/card-art.js?v=decba9311a9f","./src/card-hand.js":"./src/card-hand.js?v=decba9311a9f","./src/content.js":"./src/content.js?v=decba9311a9f","./src/expedition-panel.js":"./src/expedition-panel.js?v=decba9311a9f","./src/flower-outlines.js":"./src/flower-outlines.js?v=decba9311a9f","./src/game.js":"./src/game.js?v=decba9311a9f","./src/tile-art.js":"./src/tile-art.js?v=decba9311a9f"}}</script>
-    <script type="module" src="src/app.js?v=decba9311a9f"></script>
+    <script type="importmap" id="asset-versions">{"imports":{"./src/action-menu.js":"./src/action-menu.js?v=0cd0c73cd9c9","./src/app.js":"./src/app.js?v=0cd0c73cd9c9","./src/board.js":"./src/board.js?v=0cd0c73cd9c9","./src/bots.js":"./src/bots.js?v=0cd0c73cd9c9","./src/card-art.js":"./src/card-art.js?v=0cd0c73cd9c9","./src/card-hand.js":"./src/card-hand.js?v=0cd0c73cd9c9","./src/content.js":"./src/content.js?v=0cd0c73cd9c9","./src/expedition-panel.js":"./src/expedition-panel.js?v=0cd0c73cd9c9","./src/flower-outlines.js":"./src/flower-outlines.js?v=0cd0c73cd9c9","./src/game.js":"./src/game.js?v=0cd0c73cd9c9","./src/tile-art.js":"./src/tile-art.js?v=0cd0c73cd9c9"}}</script>
+    <script type="module" src="src/app.js?v=0cd0c73cd9c9"></script>
   </body>
 </html>
