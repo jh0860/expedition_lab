@@ -20,6 +20,8 @@ Click outside the hand, click its heading, or press Escape to restack. The first
 
 The fantasy skin uses mottled olive-gray stone frames and panels, subtly worn edges, muted parchment rules panels, and original landscape vignettes. `retro.css` contains the theme; `src/card-art.js` supplies lightweight inline SVG art. Repeating stone and parchment textures live in `assets/` and require no external downloads. Card type strips and reusable-card discard reminders are omitted; only single-use market cards show a destruction reminder.
 
+The Current Expedition ledger shows available Energy, effective Power and Health (including site and card bonuses), carried treasure with its capacity bar, and separate hand/draw/discard counts. Ownership badges and active Banker permission appear when applicable.
+
 ## Resources and conversion
 
 | Resource         | Purpose                                                                 |
@@ -127,3 +129,10 @@ Trinket can be played and destroyed for 5 carried treasure, or converted normall
 Barter, Alchemy, and Precious Cache now generate 1, 2, and 5 carried treasure respectively. There is no separate Coin pool. Treasure is persistent, spendable, limited to 20, vulnerable to defeat, and freely convertible to Standing at base or under Banker. Income cards remain reusable; converting the card itself still costs 1 Energy and removes it for its original Standing value. Converting treasure remains free, including treasure generated at base. The central-town conversion alternative is not implemented.
 
 Save v6 migrates any unspent Coin in an older unfinished turn into the active player’s carried treasure, capped at capacity, and removes the old pool. Bots evaluate recurring treasure income separately from destroy-on-play treasure cards. Replacement upgrades compare recurring income amounts; Trinket and Relic cannot replace reusable income cards. Reports before `treasure-economy-comparison.md` use the earlier currency rules.
+
+
+## Refreshing a GitHub Pages deployment
+
+Before uploading changed source files, run `npm run refresh-assets`. This updates asset URLs from the contents of the current files, including nested JavaScript modules and textures, so browsers request matching versions. Upload the updated `index.html` along with the source, styles, and `assets/` folder. The generated import map preserves relative project URLs such as `/expedition_lab/`; no bundler is required. Run the command again after further edits.
+
+If a page still shows an older layout immediately after deployment, use Ctrl+Shift+R (Windows) or Command+Shift+R (Mac). An incognito/private window can help check whether the ordinary browser has cached an older release. Existing game saves are unaffected.

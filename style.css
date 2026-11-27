@@ -162,8 +162,8 @@ footer {
   cursor: pointer;
 }
 .piece {
-  stroke: white;
-  stroke-width: 0.06;
+  stroke: #050504;
+  stroke-width: 0.085;
 }
 .label {
   font-size: 0.22px;

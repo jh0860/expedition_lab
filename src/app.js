@@ -9,6 +9,7 @@ import { botStrategies } from "./bots.js";
 import { cards, playerStats } from "./content.js";
 import { tileColors, tileIconUrl } from "./tile-art.js";
 import { flowerOutlines } from "./flower-outlines.js";
+import { renderExpedition } from "./expedition-panel.js";
 import { createCardHand, cardFace } from "./card-hand.js";
 let state = createGame();
 const colors = ["#f0bd62", "#7ac9d6", "#de91b1", "#adce77"];
@@ -77,8 +78,7 @@ function render() {
     div.textContent = `Player ${i + 1} · ${[player.recruitSite ? "Scout" : null, player.camp ? "Fighter" : null].filter(Boolean).join(" + ") || "No bonuses"} · Standing ${player.bank} / ${state.config.goal}`;
     $("scores").append(div);
   });
-  $("details").textContent =
-    `Energy ${state.turn.movement} · Power +${state.turn.power} · Health +${state.turn.health} · Carried treasure ${p.treasure}${state.turn.remoteBanking ? " · Remote conversion active" : ""} · Deck ${p.deck.length} · Discard ${p.discard.length}${p.bot === "courier" ? ` · Courier: ${p.courierPhase === "convert" ? "conversion" : "investment"}` : ""}`;
+  renderExpedition($("details"), state, colors[state.active]);
   $("market").replaceChildren();
   state.market.offers.forEach((id, index) => {
     const offer = document.createElement("div");
@@ -330,10 +330,13 @@ function render() {
     const pos = player.position.startsWith("t:")
       ? state.board.tiles[player.position.slice(2)]
       : state.board.vertices[player.position];
+    const occupants = state.players.filter(other => other.position === player.position);
+    const seat = occupants.indexOf(player);
+    const shared = occupants.length > 1;
     element("circle", {
-      cx: pos.x + (player.position.startsWith("t:") ? (i - 0.5) * 0.18 : 0),
-      cy: pos.y - 0.13,
-      r: 0.15,
+      cx: pos.x + (shared ? (seat % 2 - 0.5) * 0.62 : 0),
+      cy: pos.y - 0.13 + (shared ? (Math.floor(seat / 2) - (Math.ceil(occupants.length / 2) - 1) / 2) * 0.62 : 0),
+      r: 0.27,
       fill: colors[i],
       class: "piece",
     });
