@@ -1,33 +1,15 @@
-import { createGame, legalActions, applyAction, chooseBot } from "./game.js";
+import {
+  createGame,
+  legalActions,
+  applyAction,
+  chooseBot,
+  loadGame,
+} from "./game.js";
+import { botStrategies } from "./bots.js";
 import { cards, troops } from "./content.js";
+import { tileColors, tileIconUrl } from "./tile-art.js";
 let state = createGame();
 const colors = ["#f0bd62", "#7ac9d6", "#de91b1", "#adce77"];
-const fills = {
-  market: "#87532f",
-  town: "#69766a",
-  forest: "#315949",
-  mountain: "#555f63",
-  dark: "#233a34",
-  black: "#302d49",
-  forage: "#83703b",
-  training: "#455e85",
-  recruit: "#5a6b42",
-  guild: "#5c4980",
-  mine: "#66503b",
-};
-const names = {
-  market: "Market",
-  town: "Town",
-  forest: "",
-  mountain: "▲",
-  dark: "1★",
-  black: "2★",
-  forage: "Forage",
-  training: "Camp",
-  recruit: "Recruit",
-  guild: "Guild",
-  mine: "Mine",
-};
 const $ = (id) => document.getElementById(id);
 function act(action) {
   try {
@@ -42,11 +24,11 @@ function label(a) {
     {
       end: "End turn",
       resolveCombat: "Resolve combat",
-      bank: "Bank treasure",
+      bank: "Convert treasure to Standing (free)",
       claim: "Claim Camp",
-      buy: "Buy Nature (4)",
-      recruit: `Recruit ${a.troop} (3)`,
-      deposit: `Deposit ${cards[state.players[state.active].hand[a.index]]?.name}`,
+      buy: `Buy ${cards[state.market.offers[a.index]]?.name} (${cards[state.market.offers[a.index]]?.cost} Coin/treasure)`,
+      recruit: `Claim recruitment site / ${a.troop} (3 Coin/treasure)`,
+      deposit: `Convert ${cards[state.players[state.active][a.zone || "hand"][a.index]]?.name} (${a.zone || "hand"}) · 1 Energy`,
       move: "Move",
       exit: "Exit",
       enter: `Enter ${state.board.tiles[a.tile]?.type}`,
@@ -59,9 +41,62 @@ function button(text, action, parent) {
   b.onclick = () => act(action);
   parent.append(b);
 }
+function cardEffects(card) {
+  const effects = ["movement", "power", "health", "coin"]
+    .filter((key) => card[key])
+    .map(
+      (key) =>
+        `+${card[key]} ${key === "movement" ? "Energy" : key[0].toUpperCase() + key.slice(1)}`,
+    );
+  if (card.teleport) effects.push("Move to any Guild");
+  if (card.extraTurn) effects.push("Extra turn after normal cleanup");
+  if (card.draw) effects.push(`Draw ${card.draw} cards`);
+  if (card.treasure) effects.push(`+${card.treasure} carried treasure`);
+  if (card.seize) effects.push("Take a Camp or recruitment site");
+  if (card.remoteBanking)
+    effects.push("Convert treasure and cards anywhere this turn");
+  if (card.singleUse) effects.push("Destroy on use");
+  return effects.join(" · ") || "No play effect";
+}
+function renderCard(id, index, actions, parent) {
+  const card = cards[id];
+  const plays = actions.filter((a) => a.type === "play" && a.index === index);
+  const text = `${card.name} · ${cardEffects(card)} · Conversion ${card.value} Standing`;
+  if ((card.teleport || card.seize) && plays.length) {
+    const row = document.createElement("div");
+    const select = document.createElement("select");
+    select.setAttribute(
+      "aria-label",
+      card.seize
+        ? "Seize Control target site"
+        : "Arcane Passage destination Guild",
+    );
+    plays.forEach((a, i) => {
+      const option = document.createElement("option");
+      option.value = i;
+      option.textContent = card.seize
+        ? `${state.board.tiles[a.tile].type} ${a.tile}${a.troop ? ` — ${a.troop}` : ""} (${state.owners[a.tile] === undefined ? "unowned" : `Player ${state.owners[a.tile] + 1}`})`
+        : `Guild ${a.tile}${state.players[state.active].visited.includes(a.tile) ? " (visited)" : " (unvisited)"}`;
+      select.append(option);
+    });
+    row.append(select);
+    const b = document.createElement("button");
+    b.textContent = text;
+    b.onclick = () => act(plays[Number(select.value)]);
+    row.append(b);
+    parent.append(row);
+  } else if (plays.length) button(text, plays[0], parent);
+  else {
+    const b = document.createElement("button");
+    b.textContent = `${text} · Unavailable now`;
+    b.disabled = true;
+    parent.append(b);
+  }
+}
 function render() {
   const p = state.players[state.active],
     actions = legalActions(state);
+  $("bot-strategy").value = p.bot || "courier";
   $("status").textContent =
     state.winner === null
       ? `Round ${state.round} · Player ${state.active + 1}`
@@ -71,26 +106,38 @@ function render() {
     const div = document.createElement("div");
     div.className = "score";
     div.style.setProperty("--player", colors[i]);
-    div.textContent = `Player ${i + 1} · ${player.troop}     ${player.bank} / ${state.config.goal}`;
+    div.textContent = `Player ${i + 1} · ${player.troop} · Standing ${player.bank} / ${state.config.goal}`;
     $("scores").append(div);
   });
   $("details").textContent =
-    `Movement ${state.turn.movement} · Focus ${state.turn.focus} · Power +${state.turn.power} · Carried treasure ${p.treasure} · Deck ${p.deck.length} · Discard ${p.discard.length}`;
-  $("hand").replaceChildren();
-  p.hand.forEach((id, index) => {
-    const c = cards[id],
-      a = actions.find((a) => a.type === "play" && a.index === index);
-    if (a)
-      button(
-        `${c.name} · ${c.movement ? `+${c.movement} Move` : c.focus ? `+${c.focus} Focus` : `+${c.power} Power`} · Deposit ${c.value}`,
-        a,
-        $("hand"),
-      );
+    `Energy ${state.turn.movement} · Power +${state.turn.power} · Health +${state.turn.health} · Coin ${state.turn.coin} · Carried treasure ${p.treasure}${state.turn.remoteBanking ? " · Remote conversion active" : ""} · Deck ${p.deck.length} · Discard ${p.discard.length}${p.bot === "courier" ? ` · Courier: ${p.courierPhase === "convert" ? "conversion" : "investment"}` : ""}`;
+  $("market").replaceChildren();
+  state.market.offers.forEach((id, index) => {
+    const line = document.createElement("p");
+    line.textContent = id
+      ? `${cards[id].name} · Cost ${cards[id].cost} · ${cardEffects(cards[id])} · Conversion ${cards[id].value} Standing`
+      : "Empty slot — restocks at turn end if stock remains";
+    $("market").append(line);
+    const buy = actions.find((a) => a.type === "buy" && a.index === index);
+    if (buy) button(label(buy), buy, $("market"));
   });
+  const stock = document.createElement("small");
+  stock.textContent = `${state.market.deck.length} cards in reserve · ${state.destroyed.length} destroyed. Pay with Coin/carried treasure; Standing cannot be spent.`;
+  $("market").append(stock);
+  $("hand").replaceChildren();
+  p.hand.forEach((id, index) => renderCard(id, index, actions, $("hand")));
   $("actions").replaceChildren();
-  actions
-    .filter((a) => a.type !== "play")
-    .forEach((a) => button(label(a), a, $("actions")));
+  const actionButtons = actions.filter((a) => a.type !== "play");
+  const fromDeck = (a) => a.type === "deposit" && a.zone === "deck";
+  // Search choices expose card identities, not their shuffled draw order.
+  const deckDeposits = actionButtons
+    .filter(fromDeck)
+    .sort((a, b) =>
+      cards[p.deck[a.index]].name.localeCompare(cards[p.deck[b.index]].name),
+    );
+  [...actionButtons.filter((a) => !fromDeck(a)), ...deckDeposits].forEach((a) =>
+    button(label(a), a, $("actions")),
+  );
   $("log").replaceChildren();
   state.log
     .slice(-12)
@@ -118,6 +165,9 @@ function render() {
     svg.append(el);
     return el;
   };
+  const defs = element("defs", {});
+  defs.innerHTML =
+    '<linearGradient id="tile-light" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="white" stop-opacity=".07"/><stop offset=".65" stop-color="white" stop-opacity="0"/></linearGradient>';
   for (const t of tiles) {
     const a = actions.find((a) => a.type === "enter" && a.tile === t.id);
     const poly = element("polygon", {
@@ -127,14 +177,48 @@ function render() {
           return `${v.x},${v.y}`;
         })
         .join(" "),
-      fill: fills[t.type],
-      class: `tile ${a ? "legal" : ""}`,
+      fill: tileColors[t.type],
+      class: `tile terrain-${t.type} ${a ? "legal" : ""}`,
     });
 
-    const text = element("text", { x: t.x, y: t.y + 0.08, class: "label" });
-    text.textContent = names[t.type];
+    const title = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "title",
+    );
+    title.textContent =
+      t.type === "dark"
+        ? "Dark Forest · 1-star encounter"
+        : t.type === "black"
+          ? "Black Forest · 2-star encounter"
+          : t.type;
+    poly.append(title);
+    element("polygon", {
+      points: poly.getAttribute("points"),
+      fill: "url(#tile-light)",
+      class: "tile-light",
+    });
+    if (["forage", "training", "recruit", "guild"].includes(t.type)) {
+      element("polygon", {
+        points: t.vertices
+          .map((id) => {
+            const vertex = state.board.vertices[id];
+            return `${t.x + (vertex.x - t.x) * 0.8},${t.y + (vertex.y - t.y) * 0.8}`;
+          })
+          .join(" "),
+        class: "tile-inset",
+      });
+    }
+    element("image", {
+      href: tileIconUrl(t.type),
+      x: t.x - 1,
+      y: t.y - 1,
+      width: 2,
+      height: 2,
+      class: "terrain-icon",
+      "aria-hidden": "true",
+    });
     if (state.cleared.includes(t.id))
-      element("text", { x: t.x, y: t.y - 0.25, class: "cleared" }).textContent =
+      element("text", { x: t.x, y: t.y + 0.68, class: "cleared" }).textContent =
         "✓";
     if (state.owners[t.id] !== undefined)
       element("circle", {
@@ -208,7 +292,7 @@ function render() {
       target,
       action,
       tile,
-      `Enter ${tile.type} tile center · 1 Focus`,
+      `Enter ${tile.type} tile center · 1 Energy`,
     );
   }
   for (const action of actions.filter(
@@ -227,12 +311,7 @@ function render() {
       r: 0.18,
       class: "vertex",
     });
-    const cost =
-      action.type === "move"
-        ? "1 Movement"
-        : state.turn.freeExit
-          ? "free trail exit"
-          : "1 Focus";
+    const cost = "1 Energy";
     bindDestination(
       target,
       action,
@@ -264,22 +343,14 @@ function renderCombat() {
   const troop = troops[player.troop];
   $("combat-title").textContent = monster.name;
   $("combat-stats").textContent =
-    `Your ${player.troop}: ${troop.power + state.turn.power} Power · ${troop.health} Health · 2 Speed. ` +
+    `Your ${player.troop}: ${troop.power + state.turn.power} Power · ${troop.health + state.turn.health} Health · 2 Speed. ` +
     `Monster: ${monster.power} Power · ${monster.health} Health · ${monster.speed} Speed. ` +
     `Reward: ${monster.loot} treasure (carry limit applies).`;
   $("combat-hand").replaceChildren();
-  player.hand.forEach((id, index) => {
-    const card = cards[id];
-    const effects = [];
-    if (card.power) effects.push(`+${card.power} Power`);
-    if (card.movement) effects.push(`+${card.movement} Movement`);
-    if (card.focus) effects.push(`+${card.focus} Focus`);
-    button(
-      `Play ${card.name} · ${effects.join(" · ")}`,
-      { type: "play", index },
-      $("combat-hand"),
-    );
-  });
+  const actions = legalActions(state);
+  player.hand.forEach((id, index) =>
+    renderCard(id, index, actions, $("combat-hand")),
+  );
   if (!player.hand.length)
     $("combat-hand").textContent = "No cards remaining in hand.";
   if (!dialog.open) dialog.showModal();
@@ -294,6 +365,22 @@ $("new").onclick = () => {
   });
   render();
 };
+$("bot-strategy").onchange = (event) => {
+  state = structuredClone(state);
+  state.players[state.active].bot = event.target.value;
+  render();
+};
+for (const [id, strategy] of Object.entries(botStrategies)) {
+  const option = document.createElement("option");
+  option.value = id;
+  option.textContent = strategy.name;
+  option.title = strategy.description;
+  $("bot-strategy").append(option);
+}
+const basicOption = document.createElement("option");
+basicOption.value = "basic";
+basicOption.textContent = "Basic (previous bot)";
+$("bot-strategy").append(basicOption);
 $("step").onclick = () => {
   if (state.winner === null) act(chooseBot(state));
 };
@@ -306,7 +393,7 @@ $("turn").onclick = () => {
 };
 $("save").onclick = () => {
   const url = URL.createObjectURL(
-    new Blob([JSON.stringify({ version: 1, state })], {
+    new Blob([JSON.stringify({ version: 4, state })], {
       type: "application/json",
     }),
   );
@@ -319,10 +406,7 @@ $("save").onclick = () => {
 $("load").onchange = async (event) => {
   try {
     const data = JSON.parse(await event.target.files[0].text());
-    if (data.version !== 1 || !data.state?.board || !data.state?.players)
-      throw Error("Unsupported save.");
-    legalActions(data.state);
-    state = data.state;
+    state = loadGame(data);
     render();
   } catch (error) {
     alert(`Could not load save. ${error.message}`);

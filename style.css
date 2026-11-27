@@ -100,7 +100,7 @@ aside section {
   height: calc(100dvh - 190px);
   min-height: 500px;
   margin-top: 8px;
-  background: radial-gradient(ellipse, #243d3c, #142127);
+  background: radial-gradient(ellipse, #16120a, #0a0805);
   border-radius: 12px;
 }
 .hint,
@@ -155,12 +155,12 @@ footer {
   display: none;
 }
 .tile {
-  stroke: #111c20;
-  stroke-width: 0.045;
+  stroke: #604820;
+  stroke-width: 0.055;
 }
 .legal {
-  stroke: #f1d382;
-  stroke-width: 0.08;
+  stroke: #b2904d;
+  stroke-width: 0.06;
 }
 .vertex {
   fill: #e9cf80;
@@ -200,9 +200,9 @@ footer {
 }
 
 .tile-target {
-  fill: #f1d38222;
-  stroke: #f1d382;
-  stroke-width: 0.045;
+  fill: transparent;
+  stroke: #f1d38288;
+  stroke-width: 0.035;
   cursor: pointer;
 }
 .vertex-target {
@@ -297,4 +297,23 @@ footer {
   background: #6a562b;
   width: 100%;
   padding: 14px;
+}
+
+.tile-light,
+.tile-inset,
+.terrain-icon {
+  pointer-events: none;
+}
+.tile-inset {
+  fill: none;
+  stroke: #ffffff2e;
+  stroke-width: 0.045;
+}
+.terrain-market {
+  stroke: #f0b43c;
+  stroke-width: 0.075;
+}
+.terrain-black {
+  stroke: #7060a0aa;
+  stroke-width: 0.055;
 }

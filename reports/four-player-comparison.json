@@ -1,0 +1,417 @@
+{
+  "summary": {
+    "games": 4,
+    "completed": 4,
+    "errors": [],
+    "medianRounds": 59.0,
+    "strategies": {
+      "delver": {
+        "wins": 1,
+        "score": 147,
+        "purchases": 11,
+        "claims": 8,
+        "campTakeovers": 5,
+        "recruitmentTakeovers": 6,
+        "combats": 56,
+        "defeats": 5,
+        "remoteBankValue": 28,
+        "remoteDepositValue": 30,
+        "depositValue": 92
+      },
+      "builder": {
+        "wins": 2,
+        "score": 166,
+        "purchases": 3,
+        "claims": 29,
+        "campTakeovers": 10,
+        "recruitmentTakeovers": 6,
+        "combats": 30,
+        "defeats": 0,
+        "remoteBankValue": 0,
+        "remoteDepositValue": 0,
+        "depositValue": 128
+      },
+      "opportunist": {
+        "wins": 1,
+        "score": 129,
+        "purchases": 10,
+        "claims": 30,
+        "campTakeovers": 27,
+        "recruitmentTakeovers": 9,
+        "combats": 37,
+        "defeats": 7,
+        "remoteBankValue": 2,
+        "remoteDepositValue": 5,
+        "depositValue": 95
+      },
+      "courier": {
+        "wins": 0,
+        "score": 150,
+        "purchases": 0,
+        "claims": 3,
+        "campTakeovers": 2,
+        "recruitmentTakeovers": 0,
+        "combats": 0,
+        "defeats": 0,
+        "remoteBankValue": 0,
+        "remoteDepositValue": 0,
+        "depositValue": 150
+      }
+    }
+  },
+  "players": 4,
+  "seed": 42,
+  "goal": 50,
+  "radius": 2,
+  "roundLimit": 150,
+  "actionLimit": 30000,
+  "protocol": "Four cyclic seat rotations on one map seed; replacement Courier excluded",
+  "results": [
+    {
+      "seed": 42,
+      "rotation": 0,
+      "bots": [
+        "delver",
+        "builder",
+        "opportunist",
+        "courier"
+      ],
+      "winner": "builder",
+      "winnerSeat": 2,
+      "rounds": 82,
+      "actions": 2138,
+      "scores": [
+        28,
+        59,
+        36,
+        44
+      ],
+      "troops": [
+        "fighter",
+        "scout",
+        "standard",
+        "standard"
+      ],
+      "marketRemaining": 0,
+      "activity": [
+        {
+          "purchases": 5,
+          "uses": {
+            "timeLord": 1,
+            "journey": 1,
+            "strikeItRich": 1,
+            "seizeControl": 1,
+            "banker": 1
+          },
+          "claims": 4,
+          "campTakeovers": 3,
+          "recruitmentTakeovers": 0,
+          "combats": 16,
+          "defeats": 1,
+          "remoteBankValue": 10,
+          "remoteDepositValue": 0,
+          "depositValue": 8
+        },
+        {
+          "purchases": 1,
+          "uses": {
+            "omnipotence": 1
+          },
+          "claims": 8,
+          "campTakeovers": 3,
+          "recruitmentTakeovers": 1,
+          "combats": 10,
+          "defeats": 0,
+          "remoteBankValue": 0,
+          "remoteDepositValue": 0,
+          "depositValue": 44
+        },
+        {
+          "purchases": 0,
+          "uses": {},
+          "claims": 9,
+          "campTakeovers": 8,
+          "recruitmentTakeovers": 1,
+          "combats": 6,
+          "defeats": 1,
+          "remoteBankValue": 0,
+          "remoteDepositValue": 0,
+          "depositValue": 33
+        },
+        {
+          "purchases": 0,
+          "uses": {},
+          "claims": 1,
+          "campTakeovers": 1,
+          "recruitmentTakeovers": 0,
+          "combats": 0,
+          "defeats": 0,
+          "remoteBankValue": 0,
+          "remoteDepositValue": 0,
+          "depositValue": 44
+        }
+      ],
+      "error": null
+    },
+    {
+      "seed": 42,
+      "rotation": 1,
+      "bots": [
+        "builder",
+        "opportunist",
+        "courier",
+        "delver"
+      ],
+      "winner": "opportunist",
+      "winnerSeat": 2,
+      "rounds": 62,
+      "actions": 1712,
+      "scores": [
+        13,
+        52,
+        34,
+        32
+      ],
+      "troops": [
+        "standard",
+        "scout",
+        "standard",
+        "fighter"
+      ],
+      "marketRemaining": 0,
+      "activity": [
+        {
+          "purchases": 1,
+          "uses": {
+            "omnipotence": 1
+          },
+          "claims": 8,
+          "campTakeovers": 3,
+          "recruitmentTakeovers": 4,
+          "combats": 3,
+          "defeats": 0,
+          "remoteBankValue": 0,
+          "remoteDepositValue": 0,
+          "depositValue": 12
+        },
+        {
+          "purchases": 3,
+          "uses": {
+            "seizeControl": 1,
+            "timeLord": 1,
+            "strikeItRich": 1
+          },
+          "claims": 7,
+          "campTakeovers": 7,
+          "recruitmentTakeovers": 3,
+          "combats": 7,
+          "defeats": 2,
+          "remoteBankValue": 0,
+          "remoteDepositValue": 0,
+          "depositValue": 42
+        },
+        {
+          "purchases": 0,
+          "uses": {},
+          "claims": 2,
+          "campTakeovers": 1,
+          "recruitmentTakeovers": 0,
+          "combats": 0,
+          "defeats": 0,
+          "remoteBankValue": 0,
+          "remoteDepositValue": 0,
+          "depositValue": 34
+        },
+        {
+          "purchases": 2,
+          "uses": {
+            "journey": 1,
+            "banker": 1
+          },
+          "claims": 2,
+          "campTakeovers": 2,
+          "recruitmentTakeovers": 4,
+          "combats": 22,
+          "defeats": 2,
+          "remoteBankValue": 11,
+          "remoteDepositValue": 5,
+          "depositValue": 15
+        }
+      ],
+      "error": null
+    },
+    {
+      "seed": 42,
+      "rotation": 2,
+      "bots": [
+        "opportunist",
+        "courier",
+        "delver",
+        "builder"
+      ],
+      "winner": "delver",
+      "winnerSeat": 3,
+      "rounds": 51,
+      "actions": 1579,
+      "scores": [
+        31,
+        34,
+        55,
+        40
+      ],
+      "troops": [
+        "scout",
+        "standard",
+        "standard",
+        "standard"
+      ],
+      "marketRemaining": 0,
+      "activity": [
+        {
+          "purchases": 3,
+          "uses": {
+            "seizeControl": 1,
+            "banker": 1,
+            "strikeItRich": 1
+          },
+          "claims": 8,
+          "campTakeovers": 8,
+          "recruitmentTakeovers": 2,
+          "combats": 12,
+          "defeats": 2,
+          "remoteBankValue": 2,
+          "remoteDepositValue": 5,
+          "depositValue": 17
+        },
+        {
+          "purchases": 0,
+          "uses": {},
+          "claims": 0,
+          "campTakeovers": 0,
+          "recruitmentTakeovers": 0,
+          "combats": 0,
+          "defeats": 0,
+          "remoteBankValue": 0,
+          "remoteDepositValue": 0,
+          "depositValue": 34
+        },
+        {
+          "purchases": 3,
+          "uses": {
+            "omnipotence": 1,
+            "journey": 1,
+            "timeLord": 1
+          },
+          "claims": 1,
+          "campTakeovers": 0,
+          "recruitmentTakeovers": 0,
+          "combats": 9,
+          "defeats": 1,
+          "remoteBankValue": 0,
+          "remoteDepositValue": 0,
+          "depositValue": 44
+        },
+        {
+          "purchases": 0,
+          "uses": {},
+          "claims": 8,
+          "campTakeovers": 2,
+          "recruitmentTakeovers": 1,
+          "combats": 6,
+          "defeats": 0,
+          "remoteBankValue": 0,
+          "remoteDepositValue": 0,
+          "depositValue": 34
+        }
+      ],
+      "error": null
+    },
+    {
+      "seed": 42,
+      "rotation": 3,
+      "bots": [
+        "courier",
+        "delver",
+        "builder",
+        "opportunist"
+      ],
+      "winner": "builder",
+      "winnerSeat": 3,
+      "rounds": 56,
+      "actions": 1581,
+      "scores": [
+        38,
+        32,
+        54,
+        10
+      ],
+      "troops": [
+        "standard",
+        "fighter",
+        "scout",
+        "standard"
+      ],
+      "marketRemaining": 0,
+      "activity": [
+        {
+          "purchases": 0,
+          "uses": {},
+          "claims": 0,
+          "campTakeovers": 0,
+          "recruitmentTakeovers": 0,
+          "combats": 0,
+          "defeats": 0,
+          "remoteBankValue": 0,
+          "remoteDepositValue": 0,
+          "depositValue": 38
+        },
+        {
+          "purchases": 1,
+          "uses": {
+            "banker": 1
+          },
+          "claims": 1,
+          "campTakeovers": 0,
+          "recruitmentTakeovers": 2,
+          "combats": 9,
+          "defeats": 1,
+          "remoteBankValue": 7,
+          "remoteDepositValue": 25,
+          "depositValue": 25
+        },
+        {
+          "purchases": 1,
+          "uses": {
+            "timeLord": 1
+          },
+          "claims": 5,
+          "campTakeovers": 2,
+          "recruitmentTakeovers": 0,
+          "combats": 11,
+          "defeats": 0,
+          "remoteBankValue": 0,
+          "remoteDepositValue": 0,
+          "depositValue": 38
+        },
+        {
+          "purchases": 4,
+          "uses": {
+            "seizeControl": 1,
+            "journey": 1,
+            "omnipotence": 1,
+            "strikeItRich": 1
+          },
+          "claims": 6,
+          "campTakeovers": 4,
+          "recruitmentTakeovers": 3,
+          "combats": 12,
+          "defeats": 2,
+          "remoteBankValue": 0,
+          "remoteDepositValue": 0,
+          "depositValue": 3
+        }
+      ],
+      "error": null
+    }
+  ]
+}

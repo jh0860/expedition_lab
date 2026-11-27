@@ -1,0 +1,3356 @@
+{
+  "summary": {
+    "courier": {
+      "games": 30,
+      "completed": 30,
+      "wins": 0,
+      "losses": 30,
+      "unfinished": 0,
+      "errors": [],
+      "rounds": {
+        "min": 22,
+        "median": 38.0,
+        "mean": 40.3,
+        "max": 60
+      },
+      "activity": {
+        "deposits": 158,
+        "depositValue": 692,
+        "claims": 1,
+        "takeovers": 0,
+        "recruits": 0,
+        "recruitmentTakeovers": 0,
+        "purchases": 0,
+        "teleports": 1,
+        "combats": 13,
+        "defeats": 0,
+        "powerCards": 55,
+        "healthCards": 41
+      },
+      "pairs": {
+        "builder": {
+          "wins": 0,
+          "losses": 10,
+          "unfinished": 0
+        },
+        "delver": {
+          "wins": 0,
+          "losses": 10,
+          "unfinished": 0
+        },
+        "opportunist": {
+          "wins": 0,
+          "losses": 10,
+          "unfinished": 0
+        }
+      }
+    },
+    "courierReplacement": {
+      "games": 30,
+      "completed": 29,
+      "wins": 1,
+      "losses": 28,
+      "unfinished": 1,
+      "errors": [],
+      "rounds": {
+        "min": 32,
+        "median": 40,
+        "mean": 42.4,
+        "max": 60
+      },
+      "activity": {
+        "deposits": 152,
+        "depositValue": 422,
+        "claims": 15,
+        "takeovers": 4,
+        "recruits": 0,
+        "recruitmentTakeovers": 0,
+        "purchases": 0,
+        "teleports": 60,
+        "combats": 117,
+        "defeats": 0,
+        "powerCards": 283,
+        "healthCards": 63
+      },
+      "pairs": {
+        "builder": {
+          "wins": 1,
+          "losses": 9,
+          "unfinished": 0
+        },
+        "delver": {
+          "wins": 0,
+          "losses": 10,
+          "unfinished": 0
+        },
+        "opportunist": {
+          "wins": 0,
+          "losses": 9,
+          "unfinished": 1
+        }
+      }
+    }
+  },
+  "runs": {
+    "courier": {
+      "focus": "courier",
+      "goal": 50,
+      "radius": 2,
+      "roundLimit": 150,
+      "actionLimit": 15000,
+      "seedsPerPairPerSeat": 5,
+      "results": [
+        {
+          "seed": 1,
+          "bots": [
+            "courier",
+            "builder"
+          ],
+          "winner": "builder",
+          "winnerSeat": 2,
+          "rounds": 49,
+          "actions": 631,
+          "scores": [
+            30,
+            51
+          ],
+          "troops": [
+            "standard",
+            "scout"
+          ],
+          "visited": [
+            7,
+            9
+          ],
+          "activity": [
+            {
+              "deposits": 6,
+              "depositValue": 28,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 1,
+              "defeats": 0,
+              "powerCards": 3,
+              "healthCards": 1
+            },
+            {
+              "deposits": 6,
+              "depositValue": 22,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 1,
+              "teleports": 9,
+              "combats": 15,
+              "defeats": 0,
+              "powerCards": 15,
+              "healthCards": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 1,
+          "bots": [
+            "builder",
+            "courier"
+          ],
+          "winner": "builder",
+          "winnerSeat": 1,
+          "rounds": 25,
+          "actions": 336,
+          "scores": [
+            51,
+            9
+          ],
+          "troops": [
+            "scout",
+            "standard"
+          ],
+          "visited": [
+            9,
+            4
+          ],
+          "activity": [
+            {
+              "deposits": 4,
+              "depositValue": 40,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 1,
+              "teleports": 1,
+              "combats": 7,
+              "defeats": 0,
+              "powerCards": 3,
+              "healthCards": 5
+            },
+            {
+              "deposits": 3,
+              "depositValue": 9,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 0,
+              "defeats": 0,
+              "powerCards": 1,
+              "healthCards": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 2,
+          "bots": [
+            "courier",
+            "builder"
+          ],
+          "winner": "builder",
+          "winnerSeat": 2,
+          "rounds": 37,
+          "actions": 555,
+          "scores": [
+            26,
+            50
+          ],
+          "troops": [
+            "standard",
+            "scout"
+          ],
+          "visited": [
+            7,
+            9
+          ],
+          "activity": [
+            {
+              "deposits": 6,
+              "depositValue": 26,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 0,
+              "defeats": 0,
+              "powerCards": 1,
+              "healthCards": 1
+            },
+            {
+              "deposits": 6,
+              "depositValue": 24,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 2,
+              "teleports": 4,
+              "combats": 18,
+              "defeats": 0,
+              "powerCards": 19,
+              "healthCards": 8
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 2,
+          "bots": [
+            "builder",
+            "courier"
+          ],
+          "winner": "builder",
+          "winnerSeat": 1,
+          "rounds": 48,
+          "actions": 680,
+          "scores": [
+            51,
+            31
+          ],
+          "troops": [
+            "scout",
+            "standard"
+          ],
+          "visited": [
+            9,
+            7
+          ],
+          "activity": [
+            {
+              "deposits": 5,
+              "depositValue": 29,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 12,
+              "defeats": 0,
+              "powerCards": 18,
+              "healthCards": 3
+            },
+            {
+              "deposits": 5,
+              "depositValue": 29,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 1,
+              "defeats": 0,
+              "powerCards": 3,
+              "healthCards": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 3,
+          "bots": [
+            "courier",
+            "builder"
+          ],
+          "winner": "builder",
+          "winnerSeat": 2,
+          "rounds": 52,
+          "actions": 717,
+          "scores": [
+            20,
+            51
+          ],
+          "troops": [
+            "standard",
+            "scout"
+          ],
+          "visited": [
+            8,
+            9
+          ],
+          "activity": [
+            {
+              "deposits": 6,
+              "depositValue": 20,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 0,
+              "defeats": 0,
+              "powerCards": 2,
+              "healthCards": 3
+            },
+            {
+              "deposits": 4,
+              "depositValue": 18,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 3,
+              "combats": 17,
+              "defeats": 0,
+              "powerCards": 21,
+              "healthCards": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 3,
+          "bots": [
+            "builder",
+            "courier"
+          ],
+          "winner": "builder",
+          "winnerSeat": 1,
+          "rounds": 38,
+          "actions": 480,
+          "scores": [
+            51,
+            17
+          ],
+          "troops": [
+            "scout",
+            "standard"
+          ],
+          "visited": [
+            9,
+            6
+          ],
+          "activity": [
+            {
+              "deposits": 6,
+              "depositValue": 32,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 11,
+              "defeats": 0,
+              "powerCards": 18,
+              "healthCards": 0
+            },
+            {
+              "deposits": 5,
+              "depositValue": 17,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 0,
+              "defeats": 0,
+              "powerCards": 2,
+              "healthCards": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 4,
+          "bots": [
+            "courier",
+            "builder"
+          ],
+          "winner": "builder",
+          "winnerSeat": 2,
+          "rounds": 42,
+          "actions": 595,
+          "scores": [
+            28,
+            50
+          ],
+          "troops": [
+            "standard",
+            "scout"
+          ],
+          "visited": [
+            7,
+            9
+          ],
+          "activity": [
+            {
+              "deposits": 6,
+              "depositValue": 24,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 2,
+              "defeats": 0,
+              "powerCards": 1,
+              "healthCards": 3
+            },
+            {
+              "deposits": 6,
+              "depositValue": 18,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 7,
+              "combats": 17,
+              "defeats": 0,
+              "powerCards": 11,
+              "healthCards": 6
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 4,
+          "bots": [
+            "builder",
+            "courier"
+          ],
+          "winner": "builder",
+          "winnerSeat": 1,
+          "rounds": 36,
+          "actions": 464,
+          "scores": [
+            52,
+            23
+          ],
+          "troops": [
+            "scout",
+            "standard"
+          ],
+          "visited": [
+            9,
+            7
+          ],
+          "activity": [
+            {
+              "deposits": 8,
+              "depositValue": 42,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 1,
+              "teleports": 0,
+              "combats": 6,
+              "defeats": 0,
+              "powerCards": 6,
+              "healthCards": 5
+            },
+            {
+              "deposits": 5,
+              "depositValue": 23,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 0,
+              "defeats": 0,
+              "powerCards": 1,
+              "healthCards": 0
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 5,
+          "bots": [
+            "courier",
+            "builder"
+          ],
+          "winner": "builder",
+          "winnerSeat": 2,
+          "rounds": 37,
+          "actions": 539,
+          "scores": [
+            27,
+            68
+          ],
+          "troops": [
+            "standard",
+            "scout"
+          ],
+          "visited": [
+            5,
+            10
+          ],
+          "activity": [
+            {
+              "deposits": 5,
+              "depositValue": 25,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 1,
+              "defeats": 0,
+              "powerCards": 2,
+              "healthCards": 2
+            },
+            {
+              "deposits": 6,
+              "depositValue": 48,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 1,
+              "teleports": 0,
+              "combats": 11,
+              "defeats": 0,
+              "powerCards": 13,
+              "healthCards": 7
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 5,
+          "bots": [
+            "builder",
+            "courier"
+          ],
+          "winner": "builder",
+          "winnerSeat": 1,
+          "rounds": 48,
+          "actions": 665,
+          "scores": [
+            51,
+            24
+          ],
+          "troops": [
+            "scout",
+            "standard"
+          ],
+          "visited": [
+            9,
+            8
+          ],
+          "activity": [
+            {
+              "deposits": 6,
+              "depositValue": 32,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 2,
+              "teleports": 8,
+              "combats": 14,
+              "defeats": 0,
+              "powerCards": 17,
+              "healthCards": 6
+            },
+            {
+              "deposits": 6,
+              "depositValue": 22,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 1,
+              "defeats": 0,
+              "powerCards": 3,
+              "healthCards": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 1,
+          "bots": [
+            "courier",
+            "delver"
+          ],
+          "winner": "delver",
+          "winnerSeat": 2,
+          "rounds": 25,
+          "actions": 317,
+          "scores": [
+            15,
+            50
+          ],
+          "troops": [
+            "standard",
+            "fighter"
+          ],
+          "visited": [
+            3,
+            3
+          ],
+          "activity": [
+            {
+              "deposits": 3,
+              "depositValue": 13,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 1,
+              "defeats": 0,
+              "powerCards": 4,
+              "healthCards": 0
+            },
+            {
+              "deposits": 1,
+              "depositValue": 25,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 1,
+              "teleports": 0,
+              "combats": 16,
+              "defeats": 2,
+              "powerCards": 9,
+              "healthCards": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 1,
+          "bots": [
+            "delver",
+            "courier"
+          ],
+          "winner": "delver",
+          "winnerSeat": 1,
+          "rounds": 37,
+          "actions": 546,
+          "scores": [
+            50,
+            16
+          ],
+          "troops": [
+            "fighter",
+            "standard"
+          ],
+          "visited": [
+            5,
+            6
+          ],
+          "activity": [
+            {
+              "deposits": 3,
+              "depositValue": 13,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 2,
+              "teleports": 0,
+              "combats": 25,
+              "defeats": 2,
+              "powerCards": 15,
+              "healthCards": 0
+            },
+            {
+              "deposits": 4,
+              "depositValue": 16,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 0,
+              "defeats": 0,
+              "powerCards": 0,
+              "healthCards": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 2,
+          "bots": [
+            "courier",
+            "delver"
+          ],
+          "winner": "delver",
+          "winnerSeat": 2,
+          "rounds": 38,
+          "actions": 524,
+          "scores": [
+            29,
+            50
+          ],
+          "troops": [
+            "standard",
+            "fighter"
+          ],
+          "visited": [
+            6,
+            5
+          ],
+          "activity": [
+            {
+              "deposits": 5,
+              "depositValue": 29,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 0,
+              "defeats": 0,
+              "powerCards": 0,
+              "healthCards": 1
+            },
+            {
+              "deposits": 3,
+              "depositValue": 19,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 2,
+              "teleports": 3,
+              "combats": 24,
+              "defeats": 2,
+              "powerCards": 19,
+              "healthCards": 0
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 2,
+          "bots": [
+            "delver",
+            "courier"
+          ],
+          "winner": "delver",
+          "winnerSeat": 1,
+          "rounds": 55,
+          "actions": 635,
+          "scores": [
+            51,
+            35
+          ],
+          "troops": [
+            "fighter",
+            "standard"
+          ],
+          "visited": [
+            7,
+            7
+          ],
+          "activity": [
+            {
+              "deposits": 4,
+              "depositValue": 16,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 1,
+              "teleports": 0,
+              "combats": 24,
+              "defeats": 4,
+              "powerCards": 8,
+              "healthCards": 1
+            },
+            {
+              "deposits": 7,
+              "depositValue": 35,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 0,
+              "defeats": 0,
+              "powerCards": 2,
+              "healthCards": 0
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 3,
+          "bots": [
+            "courier",
+            "delver"
+          ],
+          "winner": "delver",
+          "winnerSeat": 2,
+          "rounds": 44,
+          "actions": 509,
+          "scores": [
+            28,
+            54
+          ],
+          "troops": [
+            "standard",
+            "fighter"
+          ],
+          "visited": [
+            6,
+            4
+          ],
+          "activity": [
+            {
+              "deposits": 6,
+              "depositValue": 28,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 0,
+              "defeats": 0,
+              "powerCards": 1,
+              "healthCards": 1
+            },
+            {
+              "deposits": 2,
+              "depositValue": 30,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 2,
+              "teleports": 0,
+              "combats": 20,
+              "defeats": 2,
+              "powerCards": 8,
+              "healthCards": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 3,
+          "bots": [
+            "delver",
+            "courier"
+          ],
+          "winner": "delver",
+          "winnerSeat": 1,
+          "rounds": 60,
+          "actions": 795,
+          "scores": [
+            50,
+            31
+          ],
+          "troops": [
+            "fighter",
+            "standard"
+          ],
+          "visited": [
+            8,
+            7
+          ],
+          "activity": [
+            {
+              "deposits": 1,
+              "depositValue": 10,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 25,
+              "defeats": 2,
+              "powerCards": 7,
+              "healthCards": 5
+            },
+            {
+              "deposits": 7,
+              "depositValue": 31,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 0,
+              "defeats": 0,
+              "powerCards": 1,
+              "healthCards": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 4,
+          "bots": [
+            "courier",
+            "delver"
+          ],
+          "winner": "delver",
+          "winnerSeat": 2,
+          "rounds": 40,
+          "actions": 520,
+          "scores": [
+            21,
+            51
+          ],
+          "troops": [
+            "standard",
+            "fighter"
+          ],
+          "visited": [
+            6,
+            3
+          ],
+          "activity": [
+            {
+              "deposits": 5,
+              "depositValue": 21,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 0,
+              "defeats": 0,
+              "powerCards": 3,
+              "healthCards": 1
+            },
+            {
+              "deposits": 3,
+              "depositValue": 15,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 2,
+              "teleports": 7,
+              "combats": 22,
+              "defeats": 0,
+              "powerCards": 2,
+              "healthCards": 0
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 4,
+          "bots": [
+            "delver",
+            "courier"
+          ],
+          "winner": "delver",
+          "winnerSeat": 1,
+          "rounds": 34,
+          "actions": 478,
+          "scores": [
+            50,
+            16
+          ],
+          "troops": [
+            "fighter",
+            "standard"
+          ],
+          "visited": [
+            7,
+            6
+          ],
+          "activity": [
+            {
+              "deposits": 3,
+              "depositValue": 17,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 2,
+              "teleports": 0,
+              "combats": 23,
+              "defeats": 2,
+              "powerCards": 14,
+              "healthCards": 3
+            },
+            {
+              "deposits": 4,
+              "depositValue": 14,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 1,
+              "defeats": 0,
+              "powerCards": 2,
+              "healthCards": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 5,
+          "bots": [
+            "courier",
+            "delver"
+          ],
+          "winner": "delver",
+          "winnerSeat": 2,
+          "rounds": 38,
+          "actions": 543,
+          "scores": [
+            25,
+            51
+          ],
+          "troops": [
+            "standard",
+            "fighter"
+          ],
+          "visited": [
+            6,
+            5
+          ],
+          "activity": [
+            {
+              "deposits": 5,
+              "depositValue": 25,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 0,
+              "defeats": 0,
+              "powerCards": 0,
+              "healthCards": 1
+            },
+            {
+              "deposits": 3,
+              "depositValue": 11,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 2,
+              "teleports": 9,
+              "combats": 27,
+              "defeats": 2,
+              "powerCards": 13,
+              "healthCards": 0
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 5,
+          "bots": [
+            "delver",
+            "courier"
+          ],
+          "winner": "delver",
+          "winnerSeat": 1,
+          "rounds": 35,
+          "actions": 548,
+          "scores": [
+            50,
+            26
+          ],
+          "troops": [
+            "fighter",
+            "standard"
+          ],
+          "visited": [
+            7,
+            7
+          ],
+          "activity": [
+            {
+              "deposits": 5,
+              "depositValue": 23,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 2,
+              "teleports": 0,
+              "combats": 22,
+              "defeats": 2,
+              "powerCards": 18,
+              "healthCards": 0
+            },
+            {
+              "deposits": 6,
+              "depositValue": 26,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 0,
+              "defeats": 0,
+              "powerCards": 3,
+              "healthCards": 0
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 1,
+          "bots": [
+            "courier",
+            "opportunist"
+          ],
+          "winner": "opportunist",
+          "winnerSeat": 2,
+          "rounds": 24,
+          "actions": 330,
+          "scores": [
+            22,
+            50
+          ],
+          "troops": [
+            "standard",
+            "scout"
+          ],
+          "visited": [
+            5,
+            7
+          ],
+          "activity": [
+            {
+              "deposits": 3,
+              "depositValue": 20,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 1,
+              "defeats": 0,
+              "powerCards": 2,
+              "healthCards": 1
+            },
+            {
+              "deposits": 3,
+              "depositValue": 37,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 1,
+              "teleports": 5,
+              "combats": 12,
+              "defeats": 3,
+              "powerCards": 13,
+              "healthCards": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 1,
+          "bots": [
+            "opportunist",
+            "courier"
+          ],
+          "winner": "opportunist",
+          "winnerSeat": 1,
+          "rounds": 22,
+          "actions": 280,
+          "scores": [
+            50,
+            9
+          ],
+          "troops": [
+            "standard",
+            "standard"
+          ],
+          "visited": [
+            5,
+            4
+          ],
+          "activity": [
+            {
+              "deposits": 3,
+              "depositValue": 37,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 7,
+              "defeats": 1,
+              "powerCards": 12,
+              "healthCards": 1
+            },
+            {
+              "deposits": 3,
+              "depositValue": 9,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 0,
+              "defeats": 0,
+              "powerCards": 0,
+              "healthCards": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 2,
+          "bots": [
+            "courier",
+            "opportunist"
+          ],
+          "winner": "opportunist",
+          "winnerSeat": 2,
+          "rounds": 46,
+          "actions": 663,
+          "scores": [
+            39,
+            51
+          ],
+          "troops": [
+            "standard",
+            "scout"
+          ],
+          "visited": [
+            8,
+            9
+          ],
+          "activity": [
+            {
+              "deposits": 7,
+              "depositValue": 37,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 1,
+              "defeats": 0,
+              "powerCards": 2,
+              "healthCards": 1
+            },
+            {
+              "deposits": 7,
+              "depositValue": 31,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 1,
+              "teleports": 0,
+              "combats": 15,
+              "defeats": 2,
+              "powerCards": 17,
+              "healthCards": 8
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 2,
+          "bots": [
+            "opportunist",
+            "courier"
+          ],
+          "winner": "opportunist",
+          "winnerSeat": 1,
+          "rounds": 36,
+          "actions": 529,
+          "scores": [
+            50,
+            23
+          ],
+          "troops": [
+            "scout",
+            "standard"
+          ],
+          "visited": [
+            9,
+            6
+          ],
+          "activity": [
+            {
+              "deposits": 6,
+              "depositValue": 28,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 1,
+              "teleports": 6,
+              "combats": 24,
+              "defeats": 6,
+              "powerCards": 35,
+              "healthCards": 0
+            },
+            {
+              "deposits": 5,
+              "depositValue": 23,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 0,
+              "defeats": 0,
+              "powerCards": 2,
+              "healthCards": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 3,
+          "bots": [
+            "courier",
+            "opportunist"
+          ],
+          "winner": "opportunist",
+          "winnerSeat": 2,
+          "rounds": 56,
+          "actions": 792,
+          "scores": [
+            30,
+            51
+          ],
+          "troops": [
+            "standard",
+            "scout"
+          ],
+          "visited": [
+            9,
+            9
+          ],
+          "activity": [
+            {
+              "deposits": 8,
+              "depositValue": 30,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 1,
+              "combats": 0,
+              "defeats": 0,
+              "powerCards": 1,
+              "healthCards": 1
+            },
+            {
+              "deposits": 6,
+              "depositValue": 24,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 1,
+              "teleports": 13,
+              "combats": 33,
+              "defeats": 8,
+              "powerCards": 26,
+              "healthCards": 9
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 3,
+          "bots": [
+            "opportunist",
+            "courier"
+          ],
+          "winner": "opportunist",
+          "winnerSeat": 1,
+          "rounds": 58,
+          "actions": 801,
+          "scores": [
+            50,
+            31
+          ],
+          "troops": [
+            "scout",
+            "standard"
+          ],
+          "visited": [
+            9,
+            9
+          ],
+          "activity": [
+            {
+              "deposits": 6,
+              "depositValue": 22,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 24,
+              "defeats": 5,
+              "powerCards": 24,
+              "healthCards": 8
+            },
+            {
+              "deposits": 7,
+              "depositValue": 29,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 1,
+              "defeats": 0,
+              "powerCards": 2,
+              "healthCards": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 4,
+          "bots": [
+            "courier",
+            "opportunist"
+          ],
+          "winner": "opportunist",
+          "winnerSeat": 2,
+          "rounds": 33,
+          "actions": 467,
+          "scores": [
+            20,
+            50
+          ],
+          "troops": [
+            "standard",
+            "scout"
+          ],
+          "visited": [
+            5,
+            8
+          ],
+          "activity": [
+            {
+              "deposits": 4,
+              "depositValue": 18,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 1,
+              "defeats": 0,
+              "powerCards": 2,
+              "healthCards": 3
+            },
+            {
+              "deposits": 4,
+              "depositValue": 27,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 1,
+              "teleports": 5,
+              "combats": 16,
+              "defeats": 2,
+              "powerCards": 22,
+              "healthCards": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 4,
+          "bots": [
+            "opportunist",
+            "courier"
+          ],
+          "winner": "opportunist",
+          "winnerSeat": 1,
+          "rounds": 37,
+          "actions": 552,
+          "scores": [
+            51,
+            26
+          ],
+          "troops": [
+            "scout",
+            "standard"
+          ],
+          "visited": [
+            9,
+            6
+          ],
+          "activity": [
+            {
+              "deposits": 7,
+              "depositValue": 32,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 22,
+              "defeats": 4,
+              "powerCards": 18,
+              "healthCards": 19
+            },
+            {
+              "deposits": 5,
+              "depositValue": 26,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 0,
+              "defeats": 0,
+              "powerCards": 3,
+              "healthCards": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 5,
+          "bots": [
+            "courier",
+            "opportunist"
+          ],
+          "winner": "opportunist",
+          "winnerSeat": 2,
+          "rounds": 37,
+          "actions": 548,
+          "scores": [
+            17,
+            50
+          ],
+          "troops": [
+            "standard",
+            "scout"
+          ],
+          "visited": [
+            5,
+            9
+          ],
+          "activity": [
+            {
+              "deposits": 5,
+              "depositValue": 17,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 0,
+              "defeats": 0,
+              "powerCards": 1,
+              "healthCards": 3
+            },
+            {
+              "deposits": 4,
+              "depositValue": 18,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 13,
+              "combats": 24,
+              "defeats": 4,
+              "powerCards": 29,
+              "healthCards": 0
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 5,
+          "bots": [
+            "opportunist",
+            "courier"
+          ],
+          "winner": "opportunist",
+          "winnerSeat": 1,
+          "rounds": 41,
+          "actions": 658,
+          "scores": [
+            51,
+            24
+          ],
+          "troops": [
+            "scout",
+            "standard"
+          ],
+          "visited": [
+            8,
+            8
+          ],
+          "activity": [
+            {
+              "deposits": 5,
+              "depositValue": 25,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 22,
+              "defeats": 5,
+              "powerCards": 29,
+              "healthCards": 6
+            },
+            {
+              "deposits": 6,
+              "depositValue": 22,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 1,
+              "defeats": 0,
+              "powerCards": 5,
+              "healthCards": 1
+            }
+          ],
+          "error": null
+        }
+      ]
+    },
+    "courierReplacement": {
+      "focus": "courierReplacement",
+      "goal": 50,
+      "radius": 2,
+      "roundLimit": 150,
+      "actionLimit": 15000,
+      "seedsPerPairPerSeat": 5,
+      "results": [
+        {
+          "seed": 1,
+          "bots": [
+            "courierReplacement",
+            "builder"
+          ],
+          "winner": "builder",
+          "winnerSeat": 2,
+          "rounds": 60,
+          "actions": 726,
+          "scores": [
+            28,
+            50
+          ],
+          "troops": [
+            "standard",
+            "scout"
+          ],
+          "visited": [
+            8,
+            9
+          ],
+          "activity": [
+            {
+              "deposits": 6,
+              "depositValue": 26,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 1,
+              "defeats": 0,
+              "powerCards": 3,
+              "healthCards": 1
+            },
+            {
+              "deposits": 7,
+              "depositValue": 25,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 2,
+              "teleports": 9,
+              "combats": 14,
+              "defeats": 0,
+              "powerCards": 15,
+              "healthCards": 0
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 1,
+          "bots": [
+            "builder",
+            "courierReplacement"
+          ],
+          "winner": "builder",
+          "winnerSeat": 1,
+          "rounds": 40,
+          "actions": 638,
+          "scores": [
+            51,
+            21
+          ],
+          "troops": [
+            "scout",
+            "standard"
+          ],
+          "visited": [
+            9,
+            6
+          ],
+          "activity": [
+            {
+              "deposits": 6,
+              "depositValue": 22,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 16,
+              "defeats": 0,
+              "powerCards": 33,
+              "healthCards": 2
+            },
+            {
+              "deposits": 5,
+              "depositValue": 19,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 1,
+              "defeats": 0,
+              "powerCards": 4,
+              "healthCards": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 2,
+          "bots": [
+            "courierReplacement",
+            "builder"
+          ],
+          "winner": "builder",
+          "winnerSeat": 2,
+          "rounds": 52,
+          "actions": 737,
+          "scores": [
+            33,
+            50
+          ],
+          "troops": [
+            "standard",
+            "scout"
+          ],
+          "visited": [
+            9,
+            9
+          ],
+          "activity": [
+            {
+              "deposits": 7,
+              "depositValue": 19,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 7,
+              "defeats": 0,
+              "powerCards": 36,
+              "healthCards": 1
+            },
+            {
+              "deposits": 5,
+              "depositValue": 21,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 1,
+              "teleports": 9,
+              "combats": 18,
+              "defeats": 0,
+              "powerCards": 14,
+              "healthCards": 6
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 2,
+          "bots": [
+            "builder",
+            "courierReplacement"
+          ],
+          "winner": "builder",
+          "winnerSeat": 1,
+          "rounds": 36,
+          "actions": 530,
+          "scores": [
+            54,
+            24
+          ],
+          "troops": [
+            "scout",
+            "standard"
+          ],
+          "visited": [
+            10,
+            6
+          ],
+          "activity": [
+            {
+              "deposits": 4,
+              "depositValue": 23,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 7,
+              "combats": 14,
+              "defeats": 0,
+              "powerCards": 14,
+              "healthCards": 6
+            },
+            {
+              "deposits": 4,
+              "depositValue": 16,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 4,
+              "defeats": 0,
+              "powerCards": 1,
+              "healthCards": 4
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 3,
+          "bots": [
+            "courierReplacement",
+            "builder"
+          ],
+          "winner": "builder",
+          "winnerSeat": 2,
+          "rounds": 34,
+          "actions": 514,
+          "scores": [
+            18,
+            52
+          ],
+          "troops": [
+            "standard",
+            "scout"
+          ],
+          "visited": [
+            5,
+            11
+          ],
+          "activity": [
+            {
+              "deposits": 4,
+              "depositValue": 12,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 3,
+              "defeats": 0,
+              "powerCards": 5,
+              "healthCards": 1
+            },
+            {
+              "deposits": 5,
+              "depositValue": 26,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 1,
+              "teleports": 4,
+              "combats": 12,
+              "defeats": 0,
+              "powerCards": 24,
+              "healthCards": 9
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 3,
+          "bots": [
+            "builder",
+            "courierReplacement"
+          ],
+          "winner": "builder",
+          "winnerSeat": 1,
+          "rounds": 49,
+          "actions": 562,
+          "scores": [
+            50,
+            11
+          ],
+          "troops": [
+            "scout",
+            "standard"
+          ],
+          "visited": [
+            9,
+            7
+          ],
+          "activity": [
+            {
+              "deposits": 6,
+              "depositValue": 34,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 1,
+              "teleports": 8,
+              "combats": 11,
+              "defeats": 0,
+              "powerCards": 7,
+              "healthCards": 3
+            },
+            {
+              "deposits": 3,
+              "depositValue": 5,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 4,
+              "defeats": 0,
+              "powerCards": 4,
+              "healthCards": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 4,
+          "bots": [
+            "courierReplacement",
+            "builder"
+          ],
+          "winner": "courierReplacement",
+          "winnerSeat": 1,
+          "rounds": 53,
+          "actions": 576,
+          "scores": [
+            51,
+            43
+          ],
+          "troops": [
+            "standard",
+            "scout"
+          ],
+          "visited": [
+            10,
+            10
+          ],
+          "activity": [
+            {
+              "deposits": 6,
+              "depositValue": 38,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 4,
+              "combats": 5,
+              "defeats": 0,
+              "powerCards": 13,
+              "healthCards": 5
+            },
+            {
+              "deposits": 6,
+              "depositValue": 35,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 4,
+              "combats": 5,
+              "defeats": 0,
+              "powerCards": 6,
+              "healthCards": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 4,
+          "bots": [
+            "builder",
+            "courierReplacement"
+          ],
+          "winner": "builder",
+          "winnerSeat": 1,
+          "rounds": 32,
+          "actions": 433,
+          "scores": [
+            65,
+            8
+          ],
+          "troops": [
+            "scout",
+            "standard"
+          ],
+          "visited": [
+            10,
+            8
+          ],
+          "activity": [
+            {
+              "deposits": 4,
+              "depositValue": 38,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 5,
+              "combats": 12,
+              "defeats": 0,
+              "powerCards": 9,
+              "healthCards": 5
+            },
+            {
+              "deposits": 4,
+              "depositValue": 4,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 2,
+              "defeats": 0,
+              "powerCards": 7,
+              "healthCards": 0
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 5,
+          "bots": [
+            "courierReplacement",
+            "builder"
+          ],
+          "winner": "builder",
+          "winnerSeat": 2,
+          "rounds": 43,
+          "actions": 670,
+          "scores": [
+            20,
+            51
+          ],
+          "troops": [
+            "standard",
+            "scout"
+          ],
+          "visited": [
+            7,
+            9
+          ],
+          "activity": [
+            {
+              "deposits": 4,
+              "depositValue": 10,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 5,
+              "defeats": 0,
+              "powerCards": 11,
+              "healthCards": 4
+            },
+            {
+              "deposits": 4,
+              "depositValue": 18,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 17,
+              "defeats": 0,
+              "powerCards": 24,
+              "healthCards": 0
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 5,
+          "bots": [
+            "builder",
+            "courierReplacement"
+          ],
+          "winner": "builder",
+          "winnerSeat": 1,
+          "rounds": 37,
+          "actions": 541,
+          "scores": [
+            58,
+            16
+          ],
+          "troops": [
+            "scout",
+            "standard"
+          ],
+          "visited": [
+            10,
+            7
+          ],
+          "activity": [
+            {
+              "deposits": 5,
+              "depositValue": 39,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 9,
+              "defeats": 0,
+              "powerCards": 13,
+              "healthCards": 4
+            },
+            {
+              "deposits": 4,
+              "depositValue": 4,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 1,
+              "combats": 6,
+              "defeats": 0,
+              "powerCards": 7,
+              "healthCards": 5
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 1,
+          "bots": [
+            "courierReplacement",
+            "delver"
+          ],
+          "winner": "delver",
+          "winnerSeat": 2,
+          "rounds": 53,
+          "actions": 694,
+          "scores": [
+            28,
+            53
+          ],
+          "troops": [
+            "standard",
+            "fighter"
+          ],
+          "visited": [
+            10,
+            7
+          ],
+          "activity": [
+            {
+              "deposits": 6,
+              "depositValue": 12,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 5,
+              "combats": 8,
+              "defeats": 0,
+              "powerCards": 35,
+              "healthCards": 1
+            },
+            {
+              "deposits": 2,
+              "depositValue": 30,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 6,
+              "combats": 20,
+              "defeats": 3,
+              "powerCards": 4,
+              "healthCards": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 1,
+          "bots": [
+            "delver",
+            "courierReplacement"
+          ],
+          "winner": "delver",
+          "winnerSeat": 1,
+          "rounds": 42,
+          "actions": 499,
+          "scores": [
+            56,
+            26
+          ],
+          "troops": [
+            "fighter",
+            "standard"
+          ],
+          "visited": [
+            5,
+            8
+          ],
+          "activity": [
+            {
+              "deposits": 2,
+              "depositValue": 32,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 2,
+              "teleports": 0,
+              "combats": 15,
+              "defeats": 2,
+              "powerCards": 7,
+              "healthCards": 3
+            },
+            {
+              "deposits": 4,
+              "depositValue": 22,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 3,
+              "combats": 2,
+              "defeats": 0,
+              "powerCards": 3,
+              "healthCards": 0
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 2,
+          "bots": [
+            "courierReplacement",
+            "delver"
+          ],
+          "winner": "delver",
+          "winnerSeat": 2,
+          "rounds": 37,
+          "actions": 539,
+          "scores": [
+            26,
+            54
+          ],
+          "troops": [
+            "standard",
+            "fighter"
+          ],
+          "visited": [
+            8,
+            6
+          ],
+          "activity": [
+            {
+              "deposits": 4,
+              "depositValue": 22,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 2,
+              "defeats": 0,
+              "powerCards": 11,
+              "healthCards": 1
+            },
+            {
+              "deposits": 3,
+              "depositValue": 22,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 2,
+              "teleports": 3,
+              "combats": 23,
+              "defeats": 2,
+              "powerCards": 21,
+              "healthCards": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 2,
+          "bots": [
+            "delver",
+            "courierReplacement"
+          ],
+          "winner": "delver",
+          "winnerSeat": 1,
+          "rounds": 59,
+          "actions": 725,
+          "scores": [
+            51,
+            38
+          ],
+          "troops": [
+            "fighter",
+            "standard"
+          ],
+          "visited": [
+            4,
+            10
+          ],
+          "activity": [
+            {
+              "deposits": 3,
+              "depositValue": 22,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 23,
+              "defeats": 5,
+              "powerCards": 13,
+              "healthCards": 1
+            },
+            {
+              "deposits": 8,
+              "depositValue": 26,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 6,
+              "defeats": 0,
+              "powerCards": 22,
+              "healthCards": 0
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 3,
+          "bots": [
+            "courierReplacement",
+            "delver"
+          ],
+          "winner": "delver",
+          "winnerSeat": 2,
+          "rounds": 38,
+          "actions": 545,
+          "scores": [
+            21,
+            50
+          ],
+          "troops": [
+            "standard",
+            "fighter"
+          ],
+          "visited": [
+            8,
+            7
+          ],
+          "activity": [
+            {
+              "deposits": 7,
+              "depositValue": 13,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 4,
+              "defeats": 0,
+              "powerCards": 14,
+              "healthCards": 0
+            },
+            {
+              "deposits": 2,
+              "depositValue": 17,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 2,
+              "teleports": 6,
+              "combats": 22,
+              "defeats": 2,
+              "powerCards": 8,
+              "healthCards": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 3,
+          "bots": [
+            "delver",
+            "courierReplacement"
+          ],
+          "winner": "delver",
+          "winnerSeat": 1,
+          "rounds": 34,
+          "actions": 433,
+          "scores": [
+            50,
+            11
+          ],
+          "troops": [
+            "fighter",
+            "standard"
+          ],
+          "visited": [
+            4,
+            5
+          ],
+          "activity": [
+            {
+              "deposits": 3,
+              "depositValue": 24,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 2,
+              "teleports": 0,
+              "combats": 17,
+              "defeats": 0,
+              "powerCards": 8,
+              "healthCards": 5
+            },
+            {
+              "deposits": 3,
+              "depositValue": 11,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 0,
+              "defeats": 0,
+              "powerCards": 1,
+              "healthCards": 0
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 4,
+          "bots": [
+            "courierReplacement",
+            "delver"
+          ],
+          "winner": "delver",
+          "winnerSeat": 2,
+          "rounds": 45,
+          "actions": 595,
+          "scores": [
+            10,
+            51
+          ],
+          "troops": [
+            "standard",
+            "fighter"
+          ],
+          "visited": [
+            9,
+            5
+          ],
+          "activity": [
+            {
+              "deposits": 4,
+              "depositValue": 4,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 1,
+              "combats": 3,
+              "defeats": 0,
+              "powerCards": 0,
+              "healthCards": 3
+            },
+            {
+              "deposits": 4,
+              "depositValue": 16,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 2,
+              "teleports": 4,
+              "combats": 22,
+              "defeats": 0,
+              "powerCards": 2,
+              "healthCards": 0
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 4,
+          "bots": [
+            "delver",
+            "courierReplacement"
+          ],
+          "winner": "delver",
+          "winnerSeat": 1,
+          "rounds": 47,
+          "actions": 647,
+          "scores": [
+            50,
+            24
+          ],
+          "troops": [
+            "fighter",
+            "standard"
+          ],
+          "visited": [
+            7,
+            9
+          ],
+          "activity": [
+            {
+              "deposits": 4,
+              "depositValue": 14,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 20,
+              "defeats": 1,
+              "powerCards": 3,
+              "healthCards": 1
+            },
+            {
+              "deposits": 6,
+              "depositValue": 14,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 6,
+              "combats": 6,
+              "defeats": 0,
+              "powerCards": 8,
+              "healthCards": 5
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 5,
+          "bots": [
+            "courierReplacement",
+            "delver"
+          ],
+          "winner": "delver",
+          "winnerSeat": 2,
+          "rounds": 38,
+          "actions": 521,
+          "scores": [
+            12,
+            50
+          ],
+          "troops": [
+            "standard",
+            "fighter"
+          ],
+          "visited": [
+            8,
+            5
+          ],
+          "activity": [
+            {
+              "deposits": 4,
+              "depositValue": 4,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 5,
+              "defeats": 0,
+              "powerCards": 10,
+              "healthCards": 3
+            },
+            {
+              "deposits": 5,
+              "depositValue": 23,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 1,
+              "teleports": 0,
+              "combats": 17,
+              "defeats": 2,
+              "powerCards": 5,
+              "healthCards": 0
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 5,
+          "bots": [
+            "delver",
+            "courierReplacement"
+          ],
+          "winner": "delver",
+          "winnerSeat": 1,
+          "rounds": 34,
+          "actions": 524,
+          "scores": [
+            50,
+            16
+          ],
+          "troops": [
+            "fighter",
+            "standard"
+          ],
+          "visited": [
+            6,
+            9
+          ],
+          "activity": [
+            {
+              "deposits": 4,
+              "depositValue": 16,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 1,
+              "teleports": 1,
+              "combats": 22,
+              "defeats": 2,
+              "powerCards": 15,
+              "healthCards": 0
+            },
+            {
+              "deposits": 6,
+              "depositValue": 16,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 0,
+              "defeats": 0,
+              "powerCards": 7,
+              "healthCards": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 1,
+          "bots": [
+            "courierReplacement",
+            "opportunist"
+          ],
+          "winner": "opportunist",
+          "winnerSeat": 2,
+          "rounds": 40,
+          "actions": 592,
+          "scores": [
+            30,
+            51
+          ],
+          "troops": [
+            "standard",
+            "scout"
+          ],
+          "visited": [
+            9,
+            8
+          ],
+          "activity": [
+            {
+              "deposits": 6,
+              "depositValue": 24,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 9,
+              "combats": 3,
+              "defeats": 0,
+              "powerCards": 9,
+              "healthCards": 3
+            },
+            {
+              "deposits": 5,
+              "depositValue": 21,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 8,
+              "combats": 21,
+              "defeats": 2,
+              "powerCards": 24,
+              "healthCards": 7
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 1,
+          "bots": [
+            "opportunist",
+            "courierReplacement"
+          ],
+          "winner": "opportunist",
+          "winnerSeat": 1,
+          "rounds": 32,
+          "actions": 496,
+          "scores": [
+            50,
+            12
+          ],
+          "troops": [
+            "scout",
+            "standard"
+          ],
+          "visited": [
+            8,
+            8
+          ],
+          "activity": [
+            {
+              "deposits": 4,
+              "depositValue": 25,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 1,
+              "teleports": 0,
+              "combats": 16,
+              "defeats": 2,
+              "powerCards": 21,
+              "healthCards": 2
+            },
+            {
+              "deposits": 4,
+              "depositValue": 10,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 1,
+              "defeats": 0,
+              "powerCards": 5,
+              "healthCards": 0
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 2,
+          "bots": [
+            "courierReplacement",
+            "opportunist"
+          ],
+          "winner": "opportunist",
+          "winnerSeat": 2,
+          "rounds": 39,
+          "actions": 594,
+          "scores": [
+            23,
+            50
+          ],
+          "troops": [
+            "standard",
+            "scout"
+          ],
+          "visited": [
+            9,
+            8
+          ],
+          "activity": [
+            {
+              "deposits": 7,
+              "depositValue": 19,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 3,
+              "combats": 2,
+              "defeats": 0,
+              "powerCards": 2,
+              "healthCards": 1
+            },
+            {
+              "deposits": 4,
+              "depositValue": 20,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 1,
+              "teleports": 9,
+              "combats": 21,
+              "defeats": 2,
+              "powerCards": 23,
+              "healthCards": 4
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 2,
+          "bots": [
+            "opportunist",
+            "courierReplacement"
+          ],
+          "winner": "opportunist",
+          "winnerSeat": 1,
+          "rounds": 35,
+          "actions": 494,
+          "scores": [
+            50,
+            19
+          ],
+          "troops": [
+            "scout",
+            "standard"
+          ],
+          "visited": [
+            8,
+            5
+          ],
+          "activity": [
+            {
+              "deposits": 4,
+              "depositValue": 26,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 7,
+              "combats": 20,
+              "defeats": 7,
+              "powerCards": 26,
+              "healthCards": 9
+            },
+            {
+              "deposits": 3,
+              "depositValue": 9,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 5,
+              "defeats": 0,
+              "powerCards": 6,
+              "healthCards": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 3,
+          "bots": [
+            "courierReplacement",
+            "opportunist"
+          ],
+          "winner": null,
+          "winnerSeat": null,
+          "rounds": 151,
+          "actions": 1392,
+          "scores": [
+            32,
+            37
+          ],
+          "troops": [
+            "standard",
+            "scout"
+          ],
+          "visited": [
+            9,
+            9
+          ],
+          "activity": [
+            {
+              "deposits": 8,
+              "depositValue": 8,
+              "claims": 10,
+              "takeovers": 4,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 14,
+              "combats": 12,
+              "defeats": 0,
+              "powerCards": 32,
+              "healthCards": 0
+            },
+            {
+              "deposits": 5,
+              "depositValue": 25,
+              "claims": 14,
+              "takeovers": 9,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 26,
+              "combats": 25,
+              "defeats": 10,
+              "powerCards": 23,
+              "healthCards": 2
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 3,
+          "bots": [
+            "opportunist",
+            "courierReplacement"
+          ],
+          "winner": "opportunist",
+          "winnerSeat": 1,
+          "rounds": 57,
+          "actions": 848,
+          "scores": [
+            51,
+            25
+          ],
+          "troops": [
+            "scout",
+            "standard"
+          ],
+          "visited": [
+            10,
+            9
+          ],
+          "activity": [
+            {
+              "deposits": 5,
+              "depositValue": 21,
+              "claims": 3,
+              "takeovers": 2,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 23,
+              "defeats": 2,
+              "powerCards": 28,
+              "healthCards": 5
+            },
+            {
+              "deposits": 7,
+              "depositValue": 15,
+              "claims": 2,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 10,
+              "combats": 5,
+              "defeats": 0,
+              "powerCards": 14,
+              "healthCards": 3
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 4,
+          "bots": [
+            "courierReplacement",
+            "opportunist"
+          ],
+          "winner": "opportunist",
+          "winnerSeat": 2,
+          "rounds": 39,
+          "actions": 499,
+          "scores": [
+            9,
+            52
+          ],
+          "troops": [
+            "standard",
+            "scout"
+          ],
+          "visited": [
+            7,
+            9
+          ],
+          "activity": [
+            {
+              "deposits": 1,
+              "depositValue": 1,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 4,
+              "combats": 4,
+              "defeats": 0,
+              "powerCards": 2,
+              "healthCards": 3
+            },
+            {
+              "deposits": 6,
+              "depositValue": 32,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 7,
+              "combats": 21,
+              "defeats": 7,
+              "powerCards": 25,
+              "healthCards": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 4,
+          "bots": [
+            "opportunist",
+            "courierReplacement"
+          ],
+          "winner": "opportunist",
+          "winnerSeat": 1,
+          "rounds": 40,
+          "actions": 561,
+          "scores": [
+            50,
+            24
+          ],
+          "troops": [
+            "scout",
+            "standard"
+          ],
+          "visited": [
+            9,
+            8
+          ],
+          "activity": [
+            {
+              "deposits": 7,
+              "depositValue": 25,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 1,
+              "teleports": 3,
+              "combats": 17,
+              "defeats": 1,
+              "powerCards": 21,
+              "healthCards": 6
+            },
+            {
+              "deposits": 6,
+              "depositValue": 18,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 3,
+              "defeats": 0,
+              "powerCards": 3,
+              "healthCards": 1
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 5,
+          "bots": [
+            "courierReplacement",
+            "opportunist"
+          ],
+          "winner": "opportunist",
+          "winnerSeat": 2,
+          "rounds": 45,
+          "actions": 612,
+          "scores": [
+            17,
+            50
+          ],
+          "troops": [
+            "standard",
+            "scout"
+          ],
+          "visited": [
+            7,
+            8
+          ],
+          "activity": [
+            {
+              "deposits": 3,
+              "depositValue": 11,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 3,
+              "defeats": 0,
+              "powerCards": 1,
+              "healthCards": 5
+            },
+            {
+              "deposits": 6,
+              "depositValue": 34,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 1,
+              "teleports": 0,
+              "combats": 15,
+              "defeats": 3,
+              "powerCards": 15,
+              "healthCards": 6
+            }
+          ],
+          "error": null
+        },
+        {
+          "seed": 5,
+          "bots": [
+            "opportunist",
+            "courierReplacement"
+          ],
+          "winner": "opportunist",
+          "winnerSeat": 1,
+          "rounds": 41,
+          "actions": 682,
+          "scores": [
+            50,
+            20
+          ],
+          "troops": [
+            "scout",
+            "standard"
+          ],
+          "visited": [
+            8,
+            9
+          ],
+          "activity": [
+            {
+              "deposits": 5,
+              "depositValue": 29,
+              "claims": 1,
+              "takeovers": 0,
+              "recruits": 1,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 6,
+              "combats": 22,
+              "defeats": 6,
+              "powerCards": 27,
+              "healthCards": 7
+            },
+            {
+              "deposits": 8,
+              "depositValue": 10,
+              "claims": 0,
+              "takeovers": 0,
+              "recruits": 0,
+              "recruitmentTakeovers": 0,
+              "purchases": 0,
+              "teleports": 0,
+              "combats": 5,
+              "defeats": 0,
+              "powerCards": 7,
+              "healthCards": 5
+            }
+          ],
+          "error": null
+        }
+      ]
+    }
+  }
+}

@@ -33,7 +33,14 @@
     <main>
       <section class="map">
         <div class="toolbar">
-          <span id="status"></span><button id="step">Bot action</button
+          <span id="status"></span
+          ><label
+            >Active player bot
+            <select
+              id="bot-strategy"
+              aria-label="Active player bot strategy"
+            ></select></label
+          ><button id="step">Bot action</button
           ><button id="turn">Bot turn</button
           ><button id="save">Save game</button
           ><label class="file"
@@ -45,13 +52,15 @@
           Hover over a destination to preview your move.
         </p>
         <p class="hint">
+          Play cards to gain Energy. Each move, entry, or exit costs 1 Energy.
           Click a gold vertex to move or exit. Click the center marker of a
           highlighted tile to enter. All board actions also appear in the action
           list.
         </p>
         <div class="legend">
           Forest · Dark forest (1★) · Black forest (2★) · Mountain (blocked)<br />Forage
-          → Nature · Guild → Sorcery · Mine → Mine cards · Camp → +1 Focus
+          → Foraging cards · Guild → Guild cards · Mine → Mine cards · Camp → +1
+          Energy
         </div>
       </section>
       <aside>
@@ -63,6 +72,10 @@
         <section>
           <h2>Hand</h2>
           <div id="hand"></div>
+        </section>
+        <section>
+          <h2>Shared Marketplace</h2>
+          <div id="market"></div>
         </section>
         <section>
           <h2>Actions</h2>
@@ -81,9 +94,9 @@
     >
       <h2 id="combat-title">Encounter</h2>
       <p id="combat-help">
-        Play cards to prepare, then resolve the fight. Power bonuses last for
-        the rest of this turn. Movement and Focus bonuses remain available if
-        you win.
+        Play cards to prepare, then resolve the fight. Power and Health bonuses
+        last for the rest of this turn. Energy bonuses remain available if you
+        win.
       </p>
       <div id="combat-stats" class="combat-stats"></div>
       <h3>Your hand</h3>
@@ -95,8 +108,8 @@
       <button id="resolve-combat" autofocus>Resolve combat</button>
     </dialog>
     <footer>
-      Prototype 0.1 · Pass-and-play · Provisional cards and costs · Target 20
-      treasure · Camp takeover 2 carried treasure · Recruitment 3
+      Prototype · Card-driven Energy · Pass-and-play · Provisional cards and
+      costs · Target 50 Standing · Camp takeover 2 Coin/treasure · Recruitment 3
     </footer>
     <script type="module" src="src/app.js"></script>
   </body>
